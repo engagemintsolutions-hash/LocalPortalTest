@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Property Report - {{ address }}</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 2cm;
+        }
+
+        body {
+            font-family: 'Helvetica', 'Arial', sans-serif;
+            font-size: 11pt;
+            line-height: 1.5;
+            color: #333;
+        }
+
+        h1 {
+            color: #1a1a1a;
+            font-size: 24pt;
+            margin-bottom: 10px;
+            border-bottom: 3px solid #0066cc;
+            padding-bottom: 10px;
+        }
+
+        h2 {
+            color: #0066cc;
+            font-size: 16pt;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 5px;
+        }
+
+        h3 {
+            color: #444;
+            font-size: 13pt;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .meta {
+            color: #666;
+            font-size: 9pt;
+            text-align: right;
+            margin-bottom: 20px;
+        }
+
+        .summary-box {
+            background-color: #f5f5f5;
+            border-left: 4px solid #0066cc;
+            padding: 15px;
+            margin: 20px 0;
+        }
+
+        .summary-box h3 {
+            margin-top: 0;
+        }
+
+        .data-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin: 15px 0;
+        }
+
+        .data-item {
+            padding: 8px;
+            background-color: #fafafa;
+            border-radius: 4px;
+        }
+
+        .data-label {
+            font-weight: bold;
+            color: #555;
+            font-size: 10pt;
+        }
+
+        .data-value {
+            color: #222;
+            margin-top: 3px;
+        }
+
+        .rating-good {
+            color: #008000;
+            font-weight: bold;
+        }
+
+        .rating-medium {
+            color: #ff8c00;
+            font-weight: bold;
+        }
+
+        .rating-poor {
+            color: #cc0000;
+            font-weight: bold;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+
+        table th {
+            background-color: #0066cc;
+            color: white;
+            padding: 10px;
+            text-align: left;
+            font-size: 10pt;
+        }
+
+        table td {
+            padding: 8px;
+            border-bottom: 1px solid #ddd;
+            font-size: 10pt;
+        }
+
+        table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .footer {
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #ccc;
+            font-size: 8pt;
+            color: #666;
+            text-align: center;
+        }
+
+        .warning {
+            background-color: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 10px;
+            margin: 15px 0;
+        }
+
+        .highlight {
+            background-color: #d4edda;
+            border-left: 4px solid #28a745;
+            padding: 10px;
+            margin: 15px 0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h1>Property Report</h1>
+    <p style="font-size: 14pt; color: #666;">{{ address }}, {{ postcode }}</p>
+</div>
+
+<div class="meta">
+    <p>Report ID: {{ report_id }} | Generated: {{ generated_at }}</p>
+</div>
+
+<!-- Summary -->
+<div class="summary-box">
+    <h3>Property Summary</h3>
+    <p><strong>{{ title }}</strong></p>
+    <p>{{ description }}</p>
+
+    <div class="data-grid">
+        <div class="data-item">
+            <div class="data-label">Price</div>
+            <div class="data-value">{{ price }}</div>
+        </div>
+        <div class="data-item">
+            <div class="data-label">Bedrooms</div>
+            <div class="data-value">{{ bedrooms }}</div>
+        </div>
+        <div class="data-item">
+            <div class="data-label">Property Type</div>
+            <div class="data-value">{{ property_type }}</div>
+        </div>
+        <div class="data-item">
+            <div class="data-label">Tenure</div>
+            <div class="data-value">{{ tenure or 'N/A' }}</div>
+        </div>
+    </div>
+</div>
+
+<!-- Valuation -->
+<h2>Valuation Analysis</h2>
+<div class="data-grid">
+    <div class="data-item">
+        <div class="data-label">AVM Estimate</div>
+        <div class="data-value">{{ avm_estimate }}</div>
+    </div>
+    <div class="data-item">
+        <div class="data-label">Confidence</div>
+        <div class="data-value">{{ avm_confidence }}</div>
+    </div>
+    <div class="data-item">
+        <div class="data-label">Valuation Range</div>
+        <div class="data-value">{{ avm_lower }} - {{ avm_upper }}</div>
+    </div>
+    <div class="data-item">
+        <div class="data-label">Price vs Estimate</div>
+        <div class="data-value">
+            {% if avm_delta_pct %}
+                {% if avm_delta_pct < -5 %}
+                    <span class="rating-good">{{ avm_delta_pct|round(1) }}% (Potentially undervalued)</span>
+                {% elif avm_delta_pct > 5 %}
+                    <span class="rating-poor">+{{ avm_delta_pct|round(1) }}% (Potentially overvalued)</span>
+                {% else %}
+                    <span class="rating-medium">{{ avm_delta_pct|round(1) }}% (Fair value)</span>
+                {% endif %}
+            {% else %}
+                N/A
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+{% if is_undervalued %}
+<div class="highlight">
+    <strong>Value Opportunity:</strong> This property appears to be undervalued based on our AVM estimate.
+</div>
+{% endif %}
+
+<!-- Energy Performance -->
+<h2>Energy Performance</h2>
+<div class="data-grid">
+    <div class="data-item">
+        <div class="data-label">EPC Rating</div>
+        <div class="data-value">
+            {% if epc_rating %}
+                <span class="{% if epc_rating in ['A', 'B', 'C'] %}rating-good{% elif epc_rating in ['D', 'E'] %}rating-medium{% else %}rating-poor{% endif %}">
+                    {{ epc_rating }} ({{ epc_score }}/100)
+                </span>
+            {% else %}
+                N/A
+            {% endif %}
+        </div>
+    </div>
+    <div class="data-item">
+        <div class="data-label">Potential Rating</div>
+        <div class="data-value">{{ epc_potential or 'N/A' }}</div>
+    </div>
+    <div class="data-item">
+        <div class="data-label">CO2 Emissions</div>
+        <div class="data-value">{{ epc_co2|round(1) if epc_co2 else 'N/A' }} tonnes/year</div>
+    </div>
+</div>
+
+<!-- Planning & Legal -->
+<h2>Planning & Legal</h2>
+
+<h3>Conservation Area</h3>
+{% if in_conservation_area %}
+<div class="warning">
+    <strong>Conservation Area:</strong> This property is located in {{ conservation_area_name }}. Planning restrictions may apply.
+</div>
+{% else %}
+<p>This property is not in a conservation area.</p>
+{% endif %}
+
+<h3>Planning History</h3>
+<p>Recent planning applications (last 5 years): <strong>{{ recent_planning_apps }}</strong></p>
+<p>Refusals: <strong>{{ planning_refusals }}</strong></p>
+
+{% if planning_applications %}
+<table>
+    <thead>
+        <tr>
+            <th>Reference</th>
+            <th>Description</th>
+            <th>Decision</th>
+            <th>Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for app in planning_applications %}
+        <tr>
+            <td>{{ app.reference }}</td>
+            <td>{{ app.description }}</td>
+            <td>{{ app.decision }}</td>
+            <td>{{ app.decision_date }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endif %}
+
+<h3>Planning Constraints</h3>
+{% if planning_constraints %}
+<ul>
+    {% for key, value in planning_constraints.items() %}
+    <li><strong>{{ key|replace('_', ' ')|title }}:</strong> {{ value }}</li>
+    {% endfor %}
+</ul>
+{% else %}
+<p>No specific planning constraints identified.</p>
+{% endif %}
+
+<h3>Restrictive Covenants</h3>
+{% if restrictive_covenants %}
+<table>
+    <thead>
+        <tr>
+            <th>Description</th>
+            <th>Date Imposed</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for covenant in restrictive_covenants %}
+        <tr>
+            <td>{{ covenant.description }}</td>
+            <td>{{ covenant.date_imposed }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% else %}
+<p>No restrictive covenants found in available records.</p>
+{% endif %}
+
+<!-- Location & Amenities -->
+<h2>Location & Amenities</h2>
+
+<h3>Schools</h3>
+<div class="data-grid">
+    <div class="data-item">
+        <div class="data-label">School Quality Score</div>
+        <div class="data-value">
+            {% if school_quality_score %}
+                <span class="{% if school_quality_score > 0.75 %}rating-good{% elif school_quality_score > 0.5 %}rating-medium{% else %}rating-poor{% endif %}">
+                    {{ (school_quality_score * 100)|round(0) }}%
+                </span>
+            {% else %}
+                N/A
+            {% endif %}
+        </div>
+    </div>
+    <div class="data-item">
+        <div class="data-label">Nearest Primary</div>
+        <div class="data-value">{{ (nearest_primary_m / 1000)|round(1) if nearest_primary_m else 'N/A' }} km</div>
+    </div>
+    <div class="data-item">
+        <div class="data-label">Nearest Secondary</div>
+        <div class="data-value">{{ (nearest_secondary_m / 1000)|round(1) if nearest_secondary_m else 'N/A' }} km</div>
+    </div>
+</div>
+
+<h3>Transport</h3>
+<div class="data-grid">
+    <div class="data-item">
+        <div class="data-label">Nearest Station</div>
+        <div class="data-value">{{ (nearest_station_m / 1000)|round(1) if nearest_station_m else 'N/A' }} km</div>
+    </div>
+    <div class="data-item">
+        <div class="data-label">Nearest Airport</div>
+        <div class="data-value">
+            {{ nearest_airport_code or 'N/A' }}
+            ({{ (nearest_airport_m / 1000)|round(1) if nearest_airport_m else 'N/A' }} km)
+        </div>
+    </div>
+</div>
+
+<!-- Area Quality -->
+<h2>Area Quality</h2>
+
+<div class="data-grid">
+    <div class="data-item">
+        <div class="data-label">Deprivation Decile (IMD)</div>
+        <div class="data-value">
+            {% if imd_decile %}
+                {{ imd_decile }}/10
+                <span class="{% if imd_decile >= 7 %}rating-good{% elif imd_decile >= 4 %}rating-medium{% else %}rating-poor{% endif %}">
+                    ({{ 'Low deprivation' if imd_decile >= 7 else 'Medium' if imd_decile >= 4 else 'High deprivation' }})
+                </span>
+            {% else %}
+                N/A
+            {% endif %}
+        </div>
+    </div>
+    <div class="data-item">
+        <div class="data-label">Crime Rate</div>
+        <div class="data-value">
+            {% if crime_percentile is not none %}
+                {{ crime_percentile }} percentile
+                <span class="{% if crime_percentile < 33 %}rating-good{% elif crime_percentile < 66 %}rating-medium{% else %}rating-poor{% endif %}">
+                    ({{ 'Low' if crime_percentile < 33 else 'Medium' if crime_percentile < 66 else 'High' }})
+                </span>
+            {% else %}
+                N/A
+            {% endif %}
+        </div>
+    </div>
+    <div class="data-item">
+        <div class="data-label">Flood Risk</div>
+        <div class="data-value">
+            <span class="{% if flood_risk == 'very_low' %}rating-good{% elif flood_risk == 'low' %}rating-medium{% else %}rating-poor{% endif %}">
+                {{ flood_risk|replace('_', ' ')|title if flood_risk else 'N/A' }}
+            </span>
+        </div>
+    </div>
+    <div class="data-item">
+        <div class="data-label">Broadband Speed</div>
+        <div class="data-value">{{ broadband_mbps if broadband_mbps else 'N/A' }} Mbps</div>
+    </div>
+</div>
+
+<div class="footer">
+    <p>This report is generated from publicly available data and proprietary models. While we strive for accuracy, this report should not be considered professional valuation or legal advice.</p>
+    <p>&copy; UK Property Search Engine | Generated {{ generated_at }}</p>
+</div>
+
+</body>
+</html>

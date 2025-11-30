@@ -1,0 +1,1200 @@
+{
+  "cookieContent": {
+    "enableFooter": false,
+    "createdAt": "2023-09-07T07:22:40.442Z",
+    "updatedAt": "2025-05-21T12:45:02.399Z",
+    "publishedAt": "2023-09-07T07:22:43.024Z",
+    "cookiesPopupText": {
+      "id": 8,
+      "content": "## We value your privacy\nWe use necessary cookies to make our website work and we'd like to use other cookies to give you the most relevant experience.\n\nClick \u201cAccept all\u201d to agree to all cookies, or for more options click on \u201cChange Settings\u201d. For more information see our [cookie policy](#Policies).",
+      "section": "Policies"
+    },
+    "privacyAndCookiesPolicy": {
+      "id": 8,
+      "section": "Policies",
+      "policies": [
+        {
+          "id": 29,
+          "tabName": "Introduction",
+          "content": "To make your experience visiting the Foxtons website as simple and convenient as possible we place small data files known as \"cookies\" on your computer. This practice is used by many websites.\n\nCookies are created when your browser loads the website. The website sends information to the browser which then creates a text file. Cookies are stored on your device for various periods of time, from as short time as the duration of your browsing session to several months.\n\nEvery time you come back to the website, the browser retrieves and sends cookies to the server, which helps to improve your experience of the website by:\n\n- Remembering settings, so you don't have to re-enter them every time you visit\n- Remembering your last properties and searches, helping you to keep on top of new listings\n- Measuring use of the website so that we can see where we can improve\n- You can manage and/or delete these small files from your device, but please be aware that this will limit the functionality that we are able to offer to you.",
+          "section": null,
+          "title": "WHAT ARE COOKIES?",
+          "cookieName": "null"
+        },
+        {
+          "id": 30,
+          "tabName": "Strictly necessary",
+          "content": "Strictly necessary cookies allow you to log into your account and view account details without a need to log in again every time you navigate to subsequent page. These cannot be disabled.\n\nfoxtons_session - Stores information about whether you are logged in into your account or not.\nvisit_secure_token2 (session) - Stores information necessary to access your account.\ncookie_policy_displayed - Stores information about the cookie policy declaration.\nsearch - Stores your preferences as to how you prefer your results to be displayed i.e display 10 properties per page and price filter \u2018from highest to lowest'.\nis_logged_in - Recognize when a user is logged in, to allow access to restricted areas of the site.\nMSPTC, MUID, _clck, _clsk, CLID - Microsoft Clarity and Bing cookies are used to anonymously track user visits across websites and collect browsing behaviour to improve our website functionality.",
+          "section": null,
+          "title": "STRICTLY NECESSARY COOKIES",
+          "cookieName": "null"
+        },
+        {
+          "id": 31,
+          "tabName": "Functionality cookies",
+          "content": "Functionality cookies allow the website to remember settings such as the screen size, which lets us serve the right content without overloading any network or device capacity.\n\n- Remembering settings, so you don't have to re-enter them every time you visit\n- Remembering your last properties and searches, helping you to keep on top of new listings\n- Measuring use of the website so that we can see where we can improve",
+          "section": null,
+          "title": "FUNCTIONALITY COOKIES",
+          "cookieName": "functional"
+        },
+        {
+          "id": 32,
+          "tabName": "Performance cookies",
+          "content": "Performance cookies let us collect information about how the website is used. For example, we may record what pages are visited most. This data allows us to see where we could optimise the website and make it more efficient.\n\nFoxtons:tbp, twp2, tws. tco, referrer Foxtons uses performance cookies to help understand how our visitors use the website and how we can improve our website.\n\nWe also host the following third-party solutions, which may set the following cookies:\n\nGoogle Analytics:_ga, _gat, _gat_UA-, utmx, utmxx Google Analytics cookies are used to distinguish users and sessions and gather usage data related to your visit to our website so we can improve our website.\n\nAddThis:atssc, _atuvc, _atuvs, Some pages may have the AddThis social plugin to allow you to share pages to your social network and for Foxtons to view reports on which pages were shared and how.\n\nCrazyegg:_ceir, is_returning, _CEFT, _ceg.s, _ceg.u, s, u, cer.s, cer.v\n\nCrazyegg is a third-party optimisation solution which helps us to test, analyse and improve each user's experience on the website based on their online behaviour.",
+          "section": null,
+          "title": "PERFORMANCE COOKIES",
+          "cookieName": "performance"
+        }
+      ]
+    }
+  },
+  "headerProps": [
+    {
+      "id": "559",
+      "title": "Buy",
+      "titleLink": "",
+      "subtitle": [
+        {
+          "id": "560",
+          "tag": "Buy",
+          "subtitle": "Property search",
+          "subtitleLink": "",
+          "identifier": "Buy",
+          "childNav": []
+        },
+        {
+          "id": "561",
+          "tag": "Buy",
+          "subtitle": "Get a valuation",
+          "subtitleLink": "/valuations",
+          "identifier": null,
+          "childNav": []
+        },
+        {
+          "id": "563",
+          "tag": "Buy",
+          "subtitle": "Moving home",
+          "subtitleLink": "",
+          "identifier": null,
+          "childNav": [
+            {
+              "id": "562",
+              "tag": "Buy",
+              "childName": "Register with Foxtons",
+              "childNavLink": "/myfoxtons/applicants"
+            },
+            {
+              "id": "564",
+              "tag": "Buy",
+              "childName": "Find a property",
+              "childNavLink": ""
+            },
+            {
+              "id": "565",
+              "tag": "Buy",
+              "childName": "Advantages of choosing Foxtons",
+              "childNavLink": "/buy/buy_whyuse"
+            }
+          ]
+        },
+        {
+          "id": "566",
+          "tag": "Buy",
+          "subtitle": "Help for buyers",
+          "subtitleLink": "",
+          "identifier": null,
+          "childNav": [
+            {
+              "id": "567",
+              "tag": "Buy",
+              "childName": "How much can I borrow",
+              "childNavLink": "/buy/mortgages/how-much-can-i-borrow"
+            },
+            {
+              "id": "571",
+              "tag": "Buy",
+              "childName": "Guide to buying",
+              "childNavLink": "/buy/buy_process"
+            },
+            {
+              "id": "568",
+              "tag": "Buy",
+              "childName": "Mortgages",
+              "childNavLink": "/buy/buy_mortgages"
+            },
+            {
+              "id": "572",
+              "tag": "Buy",
+              "childName": "Conveyancing",
+              "childNavLink": "/buy/conveyancing"
+            },
+            {
+              "id": "569",
+              "tag": "Buy",
+              "childName": "Stamp Duty calculator",
+              "childNavLink": "/buy/stampduty"
+            },
+            {
+              "id": "576",
+              "tag": "Buy",
+              "childName": "Property surveys and lease extensions",
+              "childNavLink": "/buy/arnold-and-baldwin"
+            },
+            {
+              "id": "570",
+              "tag": "Buy",
+              "childName": "Protection against property fraud",
+              "childNavLink": "/help/property-fraud"
+            }
+          ]
+        },
+        {
+          "id": "575",
+          "tag": "Buy",
+          "subtitle": "New Homes",
+          "subtitleLink": "",
+          "identifier": null,
+          "childNav": [
+            {
+              "id": "573",
+              "tag": "Buy",
+              "childName": "New Homes availability",
+              "childNavLink": "/newhomes"
+            },
+            {
+              "id": "574",
+              "tag": "Buy",
+              "childName": "Why buy a new build",
+              "childNavLink": "/buy/buy_newhomes"
+            }
+          ]
+        },
+        {
+          "id": "710",
+          "tag": "Buy",
+          "subtitle": "Auctions",
+          "subtitleLink": "/auctions",
+          "identifier": null,
+          "childNav": []
+        },
+        {
+          "id": "657",
+          "tag": "Buy",
+          "subtitle": "Locations we cover",
+          "subtitleLink": "/locations",
+          "identifier": null,
+          "childNav": []
+        },
+        {
+          "id": "704",
+          "tag": "Buy",
+          "subtitle": "Properties for sale",
+          "subtitleLink": "/properties-for-sale/london",
+          "identifier": null,
+          "childNav": []
+        },
+        {
+          "id": "702",
+          "tag": "Buy",
+          "subtitle": "Houses for sale",
+          "subtitleLink": "/houses-for-sale/london",
+          "identifier": null,
+          "childNav": []
+        },
+        {
+          "id": "703",
+          "tag": "Buy",
+          "subtitle": "Flats & apartments for sale",
+          "subtitleLink": "/flats-for-sale/london",
+          "identifier": null,
+          "childNav": []
+        }
+      ]
+    },
+    {
+      "id": "579",
+      "title": "Rent",
+      "titleLink": "",
+      "subtitle": [
+        {
+          "id": "580",
+          "tag": "Rent",
+          "subtitle": "Property search",
+          "subtitleLink": "",
+          "identifier": "Long Let",
+          "childNav": []
+        },
+        {
+          "id": "581",
+          "tag": "Rent",
+          "subtitle": "Register with Foxtons",
+          "subtitleLink": "/myfoxtons/applicants",
+          "identifier": null,
+          "childNav": []
+        },
+        {
+          "id": "708",
+          "tag": "Rent",
+          "subtitle": "Why use Foxtons",
+          "subtitleLink": "/let/let_whyuse",
+          "identifier": null,
+          "childNav": []
+        },
+        {
+          "id": "656",
+          "tag": "Rent",
+          "subtitle": "Build to Rent",
+          "subtitleLink": "/buildtorent",
+          "identifier": null,
+          "childNav": []
+        },
+        {
+          "id": "584",
+          "tag": "Rent",
+          "subtitle": "Specialist Lets",
+          "subtitleLink": "",
+          "identifier": null,
+          "childNav": [
+            {
+              "id": "585",
+              "tag": "Rent",
+              "childName": "Short lets",
+              "childNavLink": "/let/short-lets"
+            },
+            {
+              "id": "586",
+              "tag": "Rent",
+              "childName": "Corporate relocation",
+              "childNavLink": "/corporate"
+            },
+            {
+              "id": "659",
+              "tag": "Rent",
+              "childName": "Student accommodation",
+              "childNavLink": "/students"
+            }
+          ]
+        },
+        {
+          "id": "587",
+          "tag": "Rent",
+          "subtitle": "Help for renters",
+          "subtitleLink": "",
+          "identifier": null,
+          "childNav": [
+            {
+              "id": "589",
+              "tag": "Rent",
+              "childName": "Guide to renting",
+              "childNavLink": "/let/let_process"
+            },
+            {
+              "id": "591",
+              "tag": "Rent",
+              "childName": "Tenant support",
+              "childNavLink": "/let/tenant-support"
+            },
+            {
+              "id": "588",
+              "tag": "Rent",
+              "childName": "My tenancy in My Foxtons",
+              "childNavLink": "/myfoxtons/tenants"
+            },
+            {
+              "id": "590",
+              "tag": "Rent",
+              "childName": "Right to Rent",
+              "childNavLink": "/let/right-to-rent"
+            },
+            {
+              "id": "592",
+              "tag": "Rent",
+              "childName": "Fees & terms",
+              "childNavLink": "/let/fees_and_terms"
+            }
+          ]
+        },
+        {
+          "id": "701",
+          "tag": "Rent",
+          "subtitle": "Properties to rent",
+          "subtitleLink": "/properties-to-rent/london",
+          "identifier": null,
+          "childNav": []
+        },
+        {
+          "id": "699",
+          "tag": "Rent",
+          "subtitle": "Houses to rent",
+          "subtitleLink": "/houses-to-rent/london",
+          "identifier": null,
+          "childNav": []
+        },
+        {
+          "id": "700",
+          "tag": "Rent",
+          "subtitle": "Flats & apartments to rent",
+          "subtitleLink": "/flats-to-rent/london",
+          "identifier": null,
+          "childNav": []
+        }
+      ]
+    },
+    {
+      "id": "593",
+      "title": "Landlords",
+      "titleLink": "",
+      "subtitle": [
+        {
+          "id": "594",
+          "tag": "Landlords",
+          "subtitle": "Get a valuation",
+          "subtitleLink": "/valuations",
+          "identifier": null,
+          "childNav": []
+        },
+        {
+          "id": "595",
+          "tag": "Landlords",
+          "subtitle": "Why use Foxtons",
+          "subtitleLink": "/landlord",
+          "identifier": null,
+          "childNav": []
+        },
+        {
+          "id": "596",
+          "tag": "Landlords",
+          "subtitle": "Property management",
+          "subtitleLink": "/landlord/property-management",
+          "identifier": null,
+          "childNav": []
+        },
+        {
+          "id": "712",
+          "tag": "Landlords",
+          "subtitle": "Renters' Rights Act",
+          "subtitleLink": "/renters-rights-act",
+          "identifier": null,
+          "childNav": []
+        },
+        {
+          "id": "707",
+          "tag": "Landlords",
+          "subtitle": "Rent protection",
+          "subtitleLink": "/landlord/rent-protection",
+          "identifier": null,
+          "childNav": []
+        },
+        {
+          "id": "599",
+          "tag": "Landlords",
+          "subtitle": "Help for Landlords",
+          "subtitleLink": "",
+          "identifier": null,
+          "childNav": [
+            {
+              "id": "598",
+              "tag": "Landlords",
+              "childName": "Rental Yield calculator",
+              "childNavLink": "/landlord/yield-calculator"
+            },
+            {
+              "id": "600",
+              "tag": "Landlords",
+              "childName": "Buy to let mortgages",
+              "childNavLink": "/landlord/buy-to-let-mortgages"
+            },
+            {
+              "id": "601",
+              "tag": "Landlords",
+              "childName": "Landlord advice",
+              "childNavLink": "/landlord/help"
+            },
+            {
+              "id": "709",
+              "tag": "Landlords",
+              "childName": "Landlord guide",
+              "childNavLink": "/landlord/landlords_process"
+            },
+            {
+              "id": "603",
+              "tag": "Landlords",
+              "childName": "My Foxtons for Landlords",
+              "childNavLink": "/myfoxtons/landlords"
+            }
+          ]
+        },
+        {
+          "id": "605",
+          "tag": "Landlords",
+          "subtitle": "Legal & Compliance",
+          "subtitleLink": "",
+          "identifier": null,
+          "childNav": [
+            {
+              "id": "604",
+              "tag": "Landlords",
+              "childName": "Legal requirements",
+              "childNavLink": "/landlord/compliance"
+            },
+            {
+              "id": "606",
+              "tag": "Landlords",
+              "childName": "EPCs",
+              "childNavLink": "/landlord/rental_epcs"
+            },
+            {
+              "id": "608",
+              "tag": "Landlords",
+              "childName": "AML",
+              "childNavLink": "/help/aml-documents"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "611",
+      "title": "Sell",
+      "titleLink": "",
+      "subtitle": [
+        {
+          "id": "612",
+          "tag": "Sell",
+          "subtitle": "Get a valuation",
+          "subtitleLink": "/valuations",
+          "identifier": null,
+          "childNav": []
+        },
+        {
+          "id": "613",
+          "tag": "Sell",
+          "subtitle": "Sell your home",
+          "subtitleLink": "/sell",
+          "identifier": null,
+          "childNav": []
+        },
+        {
+          "id": "620",
+          "tag": "Sell",
+          "subtitle": "Auctions",
+          "subtitleLink": "/auctions",
+          "identifier": null,
+          "childNav": []
+        },
+        {
+          "id": "615",
+          "tag": "Sell",
+          "subtitle": "Help for sellers",
+          "subtitleLink": "",
+          "identifier": null,
+          "childNav": [
+            {
+              "id": "616",
+              "tag": "Sell",
+              "childName": "Guide to selling",
+              "childNavLink": "/sell/sell_process"
+            },
+            {
+              "id": "614",
+              "tag": "Sell",
+              "childName": "Conveyancing",
+              "childNavLink": "/sell/conveyancing"
+            },
+            {
+              "id": "617",
+              "tag": "Sell",
+              "childName": "Mortgages",
+              "childNavLink": "/sell/sell_mortgages"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "623",
+      "title": "Discover",
+      "titleLink": "",
+      "subtitle": [
+        {
+          "id": "621",
+          "tag": "Discover",
+          "subtitle": "Houses prices",
+          "subtitleLink": "/living-in",
+          "identifier": null,
+          "childNav": []
+        },
+        {
+          "id": "624",
+          "tag": "Discover",
+          "subtitle": "Area guide",
+          "subtitleLink": "/local-life",
+          "identifier": null,
+          "childNav": []
+        },
+        {
+          "id": "622",
+          "tag": "Discover",
+          "subtitle": "Schools",
+          "subtitleLink": "/education",
+          "identifier": null,
+          "childNav": []
+        },
+        {
+          "id": "626",
+          "tag": "Discover",
+          "subtitle": "Blog",
+          "subtitleLink": "/discover/news",
+          "identifier": null,
+          "childNav": []
+        },
+        {
+          "id": "663",
+          "tag": "Discover",
+          "subtitle": "Interior design",
+          "subtitleLink": "/interiors",
+          "identifier": null,
+          "childNav": []
+        },
+        {
+          "id": "628",
+          "tag": "Discover",
+          "subtitle": "About us",
+          "subtitleLink": "",
+          "identifier": null,
+          "childNav": [
+            {
+              "id": "627",
+              "tag": "Discover",
+              "childName": "Our history",
+              "childNavLink": "/foxtons/about"
+            },
+            {
+              "id": "631",
+              "tag": "Discover",
+              "childName": "Foxtons minis",
+              "childNavLink": "/foxtons/foxtons_mini_cooper"
+            },
+            {
+              "id": "630",
+              "tag": "Discover",
+              "childName": "Community",
+              "childNavLink": "/foxtons/community"
+            },
+            {
+              "id": "629",
+              "tag": "Discover",
+              "childName": "Testimonials",
+              "childNavLink": "/testimonials"
+            },
+            {
+              "id": "632",
+              "tag": "Discover",
+              "childName": "Investor relations",
+              "childNavLink": "https://www.foxtonsgroup.co.uk"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "636",
+      "title": "Contact",
+      "titleLink": "",
+      "subtitle": [
+        {
+          "id": "633",
+          "tag": "Contact",
+          "subtitle": "Find your nearest office",
+          "subtitleLink": "",
+          "identifier": "Office",
+          "childNav": []
+        },
+        {
+          "id": "635",
+          "tag": "Contact",
+          "subtitle": "Our Services",
+          "subtitleLink": "",
+          "identifier": null,
+          "childNav": [
+            {
+              "id": "641",
+              "tag": "Contact",
+              "childName": "Register to find a new home",
+              "childNavLink": "/auth/login"
+            },
+            {
+              "id": "637",
+              "tag": "Contact",
+              "childName": "Get a Valuation",
+              "childNavLink": "/valuations"
+            },
+            {
+              "id": "639",
+              "tag": "Contact",
+              "childName": "New Homes development",
+              "childNavLink": "/sell/new-homes-developers"
+            },
+            {
+              "id": "638",
+              "tag": "Contact",
+              "childName": "Corporate relocations",
+              "childNavLink": "/corporate/contact"
+            },
+            {
+              "id": "655",
+              "tag": "Contact",
+              "childName": "Build to Rent development",
+              "childNavLink": "/buildtorentdevelopment"
+            },
+            {
+              "id": "658",
+              "tag": "Contact",
+              "childName": "Asia Pacific",
+              "childNavLink": "/APAC"
+            },
+            {
+              "id": "706",
+              "tag": "Contact",
+              "childName": "Foxtons Private Office",
+              "childNavLink": "/sell/privateoffice"
+            }
+          ]
+        },
+        {
+          "id": "644",
+          "tag": "Contact",
+          "subtitle": "Customer Service",
+          "subtitleLink": "",
+          "identifier": null,
+          "childNav": [
+            {
+              "id": "645",
+              "tag": "Contact",
+              "childName": "Opening hours",
+              "childNavLink": "/help/contact"
+            },
+            {
+              "id": "642",
+              "tag": "Contact",
+              "childName": "My Foxtons",
+              "childNavLink": "/contact/lettings"
+            },
+            {
+              "id": "643",
+              "tag": "Contact",
+              "childName": "Feedback",
+              "childNavLink": "/contact/feedback"
+            },
+            {
+              "id": "640",
+              "tag": "Contact",
+              "childName": "Complaints",
+              "childNavLink": "/help/complaints"
+            }
+          ]
+        },
+        {
+          "id": "646",
+          "tag": "Contact",
+          "subtitle": "Others Enquiries",
+          "subtitleLink": "",
+          "identifier": null,
+          "childNav": [
+            {
+              "id": "648",
+              "tag": "Contact",
+              "childName": "Press",
+              "childNavLink": "/press"
+            },
+            {
+              "id": "650",
+              "tag": "Contact",
+              "childName": "Reports",
+              "childNavLink": "/reports"
+            },
+            {
+              "id": "649",
+              "tag": "Contact",
+              "childName": "Investor relations",
+              "childNavLink": "http://www.foxtonsgroup.co.uk/"
+            },
+            {
+              "id": "651",
+              "tag": "Contact",
+              "childName": "All other enquiries",
+              "childNavLink": "/contact/form"
+            }
+          ]
+        },
+        {
+          "id": "662",
+          "tag": "Contact",
+          "subtitle": "Careers",
+          "subtitleLink": "https://careers.foxtons.co.uk/",
+          "identifier": null,
+          "childNav": []
+        }
+      ]
+    }
+  ],
+  "footerProps": {
+    "bottomSection": {
+      "id": 8,
+      "bottomSectionLinks": [
+        {
+          "id": 176,
+          "label": "\u00a9 Foxtons Estate Agents",
+          "url": "/"
+        },
+        {
+          "id": 178,
+          "label": "Investors",
+          "url": "https://www.foxtonsgroup.co.uk/"
+        },
+        {
+          "id": 177,
+          "label": "Terms and Conditions & Privacy Policy",
+          "url": "/help/termsconditions"
+        },
+        {
+          "id": 179,
+          "label": "Cookies Policy",
+          "url": "/help/cookies"
+        },
+        {
+          "id": 201,
+          "label": "Modern Slavery Statements ",
+          "url": "component:ModernSlaveryStatementsModal"
+        },
+        {
+          "id": 202,
+          "label": "Health and Safety Statement of Intent",
+          "url": "https://page-assets.foxtons.co.uk/img/help/health_and_safety_statement_of_intent.pdf"
+        },
+        {
+          "id": 180,
+          "label": "Sitemap",
+          "url": "/sitemap"
+        }
+      ]
+    },
+    "footerSections": [
+      {
+        "id": 29,
+        "title": "About Foxtons",
+        "links": [
+          {
+            "id": 181,
+            "label": "About Foxtons Estate Agent",
+            "url": "/foxtons/about"
+          },
+          {
+            "id": 182,
+            "label": "Sales jobs in London",
+            "url": "https://careers.foxtons.co.uk/"
+          },
+          {
+            "id": 183,
+            "label": "Property Management in London",
+            "url": "/landlord/property-management"
+          },
+          {
+            "id": 184,
+            "label": "Branch Finder",
+            "url": "/help/contact"
+          },
+          {
+            "id": 185,
+            "label": "News from Foxtons",
+            "url": "/discover/news?Page=1&category=foxtons20%news"
+          },
+          {
+            "id": 206,
+            "label": "Foxtons Accessibility Information",
+            "url": "https://www.accessable.co.uk/foxtons-estate-agents"
+          },
+          {
+            "id": 186,
+            "label": "Awards",
+            "url": "/foxtons/awards "
+          }
+        ]
+      },
+      {
+        "id": 30,
+        "title": "Our estate agencies",
+        "links": [
+          {
+            "id": 187,
+            "label": "Central London estate agents",
+            "url": "/contact/estate-agents-in-central-london"
+          },
+          {
+            "id": 188,
+            "label": "East London estate agents",
+            "url": "/contact/estate-agents-in-east-london"
+          },
+          {
+            "id": 189,
+            "label": "North London estate agents",
+            "url": "/contact/estate-agents-in-north-london"
+          },
+          {
+            "id": 190,
+            "label": "South London estate agents",
+            "url": "/contact/estate-agents-in-south-london"
+          },
+          {
+            "id": 191,
+            "label": "Surrey estate agents",
+            "url": "/contact/estate-agents-in-surrey"
+          },
+          {
+            "id": 192,
+            "label": "West London estate agents",
+            "url": "/contact/estate-agents-in-west-london"
+          }
+        ]
+      },
+      {
+        "id": 31,
+        "title": "Popular searches",
+        "links": [
+          {
+            "id": 193,
+            "label": "London property for sale",
+            "url": "/properties-for-sale/london"
+          },
+          {
+            "id": 194,
+            "label": "London lettings",
+            "url": "/properties-to-rent/london"
+          },
+          {
+            "id": 195,
+            "label": "London short lets",
+            "url": "/short-let-properties/london"
+          },
+          {
+            "id": 196,
+            "label": "New Homes in London",
+            "url": "/buy/buy_newhomes"
+          }
+        ]
+      },
+      {
+        "id": 32,
+        "title": "Property intelligence",
+        "links": [
+          {
+            "id": 197,
+            "label": "Area guides",
+            "url": "/living-in"
+          },
+          {
+            "id": 198,
+            "label": "House price reports",
+            "url": "/living-in/house-prices"
+          },
+          {
+            "id": 199,
+            "label": "Rental reports",
+            "url": "/living-in/rentals"
+          },
+          {
+            "id": 200,
+            "label": "Home valuation service",
+            "url": "/valuations"
+          }
+        ]
+      }
+    ],
+    "socialMediaIcons": {
+      "id": 8,
+      "icons": [
+        {
+          "id": 91,
+          "link": "https://www.facebook.com/FoxtonsEstateAgent",
+          "image": {
+            "data": {
+              "id": 5250,
+              "attributes": {
+                "name": "facebook_1c82dab47d.png",
+                "alternativeText": null,
+                "caption": null,
+                "width": 36,
+                "height": 36,
+                "formats": {
+                  "large": {
+                    "ext": ".webp",
+                    "url": "https://cms-assets.foxtons.co.uk/large_facebook_1c82dab47d_3ad65f606c.webp",
+                    "hash": "large_facebook_1c82dab47d_3ad65f606c",
+                    "mime": "image/webp",
+                    "name": "large_facebook_1c82dab47d.png",
+                    "path": null,
+                    "size": 300.46,
+                    "width": 2500,
+                    "height": 2500
+                  },
+                  "small": {
+                    "ext": ".webp",
+                    "url": "https://cms-assets.foxtons.co.uk/small_facebook_1c82dab47d_3ad65f606c.webp",
+                    "hash": "small_facebook_1c82dab47d_3ad65f606c",
+                    "mime": "image/webp",
+                    "name": "small_facebook_1c82dab47d.png",
+                    "path": null,
+                    "size": 160.98,
+                    "width": 1500,
+                    "height": 1500
+                  },
+                  "medium": {
+                    "ext": ".webp",
+                    "url": "https://cms-assets.foxtons.co.uk/medium_facebook_1c82dab47d_3ad65f606c.webp",
+                    "hash": "medium_facebook_1c82dab47d_3ad65f606c",
+                    "mime": "image/webp",
+                    "name": "medium_facebook_1c82dab47d.png",
+                    "path": null,
+                    "size": 261.5,
+                    "width": 2000,
+                    "height": 2000
+                  }
+                },
+                "hash": "facebook_1c82dab47d_3ad65f606c",
+                "ext": ".png",
+                "mime": "image/png",
+                "size": 0.39,
+                "url": "https://cms-assets.foxtons.co.uk/facebook_1c82dab47d_3ad65f606c.png",
+                "previewUrl": null,
+                "provider": "aws-s3",
+                "providermetadata": null,
+                "createdAt": "2024-07-21T15:25:42.599Z",
+                "updatedAt": "2024-07-21T15:25:42.599Z"
+              }
+            }
+          }
+        },
+        {
+          "id": 90,
+          "link": "https://twitter.com/i/flow/login?redirect_after_login=%2Ffoxtons",
+          "image": {
+            "data": {
+              "id": 5251,
+              "attributes": {
+                "name": "tweeter_outline_299e9ece27_e309083498_9433923329.png",
+                "alternativeText": null,
+                "caption": null,
+                "width": 36,
+                "height": 36,
+                "formats": {
+                  "large": {
+                    "ext": ".webp",
+                    "url": "https://cms-assets.foxtons.co.uk/large_tweeter_outline_299e9ece27_e309083498_9433923329_1ca6c370de.webp",
+                    "hash": "large_tweeter_outline_299e9ece27_e309083498_9433923329_1ca6c370de",
+                    "mime": "image/webp",
+                    "name": "large_tweeter_outline_299e9ece27_e309083498_9433923329.png",
+                    "path": null,
+                    "size": 377,
+                    "width": 2500,
+                    "height": 2500
+                  },
+                  "small": {
+                    "ext": ".webp",
+                    "url": "https://cms-assets.foxtons.co.uk/small_tweeter_outline_299e9ece27_e309083498_9433923329_1ca6c370de.webp",
+                    "hash": "small_tweeter_outline_299e9ece27_e309083498_9433923329_1ca6c370de",
+                    "mime": "image/webp",
+                    "name": "small_tweeter_outline_299e9ece27_e309083498_9433923329.png",
+                    "path": null,
+                    "size": 193.38,
+                    "width": 1500,
+                    "height": 1500
+                  },
+                  "medium": {
+                    "ext": ".webp",
+                    "url": "https://cms-assets.foxtons.co.uk/medium_tweeter_outline_299e9ece27_e309083498_9433923329_1ca6c370de.webp",
+                    "hash": "medium_tweeter_outline_299e9ece27_e309083498_9433923329_1ca6c370de",
+                    "mime": "image/webp",
+                    "name": "medium_tweeter_outline_299e9ece27_e309083498_9433923329.png",
+                    "path": null,
+                    "size": 316.76,
+                    "width": 2000,
+                    "height": 2000
+                  }
+                },
+                "hash": "tweeter_outline_299e9ece27_e309083498_9433923329_1ca6c370de",
+                "ext": ".png",
+                "mime": "image/png",
+                "size": 0.43,
+                "url": "https://cms-assets.foxtons.co.uk/tweeter_outline_299e9ece27_e309083498_9433923329_1ca6c370de.png",
+                "previewUrl": null,
+                "provider": "aws-s3",
+                "providermetadata": null,
+                "createdAt": "2024-07-21T15:25:57.346Z",
+                "updatedAt": "2024-07-21T15:25:57.346Z"
+              }
+            }
+          }
+        },
+        {
+          "id": 92,
+          "link": "https://www.instagram.com/foxtonsestateagents/",
+          "image": {
+            "data": {
+              "id": 5252,
+              "attributes": {
+                "name": "instagram_outline_a06ff9523d.png",
+                "alternativeText": null,
+                "caption": null,
+                "width": 36,
+                "height": 36,
+                "formats": {
+                  "large": {
+                    "ext": ".webp",
+                    "url": "https://cms-assets.foxtons.co.uk/large_instagram_outline_a06ff9523d_4dc29cd6fa.webp",
+                    "hash": "large_instagram_outline_a06ff9523d_4dc29cd6fa",
+                    "mime": "image/webp",
+                    "name": "large_instagram_outline_a06ff9523d.png",
+                    "path": null,
+                    "size": 378.31,
+                    "width": 2500,
+                    "height": 2500
+                  },
+                  "small": {
+                    "ext": ".webp",
+                    "url": "https://cms-assets.foxtons.co.uk/small_instagram_outline_a06ff9523d_4dc29cd6fa.webp",
+                    "hash": "small_instagram_outline_a06ff9523d_4dc29cd6fa",
+                    "mime": "image/webp",
+                    "name": "small_instagram_outline_a06ff9523d.png",
+                    "path": null,
+                    "size": 203.42,
+                    "width": 1500,
+                    "height": 1500
+                  },
+                  "medium": {
+                    "ext": ".webp",
+                    "url": "https://cms-assets.foxtons.co.uk/medium_instagram_outline_a06ff9523d_4dc29cd6fa.webp",
+                    "hash": "medium_instagram_outline_a06ff9523d_4dc29cd6fa",
+                    "mime": "image/webp",
+                    "name": "medium_instagram_outline_a06ff9523d.png",
+                    "path": null,
+                    "size": 332.34,
+                    "width": 2000,
+                    "height": 2000
+                  }
+                },
+                "hash": "instagram_outline_a06ff9523d_4dc29cd6fa",
+                "ext": ".png",
+                "mime": "image/png",
+                "size": 0.43,
+                "url": "https://cms-assets.foxtons.co.uk/instagram_outline_a06ff9523d_4dc29cd6fa.png",
+                "previewUrl": null,
+                "provider": "aws-s3",
+                "providermetadata": null,
+                "createdAt": "2024-07-21T15:26:11.394Z",
+                "updatedAt": "2024-07-21T15:26:11.394Z"
+              }
+            }
+          }
+        },
+        {
+          "id": 93,
+          "link": "https://uk.linkedin.com/company/foxtons",
+          "image": {
+            "data": {
+              "id": 5253,
+              "attributes": {
+                "name": "linkedin_outline_c66505ceb8.png",
+                "alternativeText": null,
+                "caption": null,
+                "width": 36,
+                "height": 36,
+                "formats": {
+                  "large": {
+                    "ext": ".webp",
+                    "url": "https://cms-assets.foxtons.co.uk/large_linkedin_outline_c66505ceb8_cf067b0e44.webp",
+                    "hash": "large_linkedin_outline_c66505ceb8_cf067b0e44",
+                    "mime": "image/webp",
+                    "name": "large_linkedin_outline_c66505ceb8.png",
+                    "path": null,
+                    "size": 317.51,
+                    "width": 2500,
+                    "height": 2500
+                  },
+                  "small": {
+                    "ext": ".webp",
+                    "url": "https://cms-assets.foxtons.co.uk/small_linkedin_outline_c66505ceb8_cf067b0e44.webp",
+                    "hash": "small_linkedin_outline_c66505ceb8_cf067b0e44",
+                    "mime": "image/webp",
+                    "name": "small_linkedin_outline_c66505ceb8.png",
+                    "path": null,
+                    "size": 170.98,
+                    "width": 1500,
+                    "height": 1500
+                  },
+                  "medium": {
+                    "ext": ".webp",
+                    "url": "https://cms-assets.foxtons.co.uk/medium_linkedin_outline_c66505ceb8_cf067b0e44.webp",
+                    "hash": "medium_linkedin_outline_c66505ceb8_cf067b0e44",
+                    "mime": "image/webp",
+                    "name": "medium_linkedin_outline_c66505ceb8.png",
+                    "path": null,
+                    "size": 275.31,
+                    "width": 2000,
+                    "height": 2000
+                  }
+                },
+                "hash": "linkedin_outline_c66505ceb8_cf067b0e44",
+                "ext": ".png",
+                "mime": "image/png",
+                "size": 0.43,
+                "url": "https://cms-assets.foxtons.co.uk/linkedin_outline_c66505ceb8_cf067b0e44.png",
+                "previewUrl": null,
+                "provider": "aws-s3",
+                "providermetadata": null,
+                "createdAt": "2024-07-21T15:26:24.109Z",
+                "updatedAt": "2024-07-21T15:26:24.109Z"
+              }
+            }
+          }
+        }
+      ],
+      "foxtonsLogo": null
+    },
+    "modernSlaveryStatementsModal": {
+      "id": 1,
+      "title": "Modern Slavery Statements",
+      "footerModalItems": [
+        {
+          "id": 8,
+          "linkText": "Modern Slavery Statement 2025",
+          "href": "https://page-assets.foxtons.co.uk/img/help/modern_slavery_and_human_trafficking_statement_foxtons_2025.pdf"
+        },
+        {
+          "id": 7,
+          "linkText": "Modern Slavery Statement 2024",
+          "href": "https://page-assets.foxtons.co.uk/img/help/modern_slavery_and_human_trafficking_statement_foxtons_2024.pdf"
+        },
+        {
+          "id": 2,
+          "linkText": "Modern Slavery Statement 2023",
+          "href": "https://page-assets.foxtons.co.uk/img/help/modern_slavery_and_human_trafficking_statement_foxtons_2023.pdf"
+        },
+        {
+          "id": 1,
+          "linkText": "Modern Slavery Statement 2022",
+          "href": "https://page-assets.foxtons.co.uk/img/help/modern_slavery_and_human_trafficking_statement_foxtons_2022.pdf"
+        },
+        {
+          "id": 3,
+          "linkText": "Modern Slavery Statement 2021",
+          "href": "https://page-assets.foxtons.co.uk/img/help/modern_slavery_and_human_trafficking_statement_foxtons_2021.pdf"
+        },
+        {
+          "id": 4,
+          "linkText": "Modern Slavery Statement 2020",
+          "href": "https://page-assets.foxtons.co.uk/img/help/modern_slavery_and_human_trafficking_statement_foxtons_2020.pdf"
+        }
+      ]
+    }
+  }
+}
