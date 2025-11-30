@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Property Valuation Report - Doorstep</title>
+  <link rel="stylesheet" href="valuation-report.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="report-header">
+    <div class="header-content">
+      <div class="logo-section">
+        <img src="doorstep-logo.png" alt="Doorstep" class="report-logo">
+        <span class="report-subtitle">Property Valuation Report</span>
+      </div>
+      <div class="report-date">
+        <span id="report-date"></span>
+      </div>
+    </div>
+  </header>
+
+  <div class="report-container">
+
+    <!-- Executive Summary -->
+    <section class="report-section hero-section">
+      <div class="property-address">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+          <circle cx="12" cy="10" r="3"></circle>
+        </svg>
+        <h1 id="property-address-text">8 Mccorquodale Road, Wolverton, Milton Keynes, MK12 5GP</h1>
+      </div>
+
+      <!-- Main Valuation Card -->
+      <div class="valuation-hero">
+        <div class="main-value-card">
+          <div class="value-label">Estimated Market Value</div>
+          <div class="value-amount" id="main-valuation">£202,000</div>
+          <div class="value-range">
+            <span class="range-label">Value Range:</span>
+            <span class="range-values" id="value-range">£182,000 - £222,000</span>
+          </div>
+          <div class="value-range-slider">
+            <div class="slider-track">
+              <div class="slider-fill" style="left: 20%; width: 60%;"></div>
+              <div class="slider-marker" style="left: 50%;">
+                <div class="marker-dot"></div>
+              </div>
+            </div>
+            <div class="slider-labels">
+              <span>£182k</span>
+              <span>£222k</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Confidence Score -->
+        <div class="confidence-card">
+          <div class="confidence-label">Confidence Score</div>
+          <div class="confidence-gauge-container">
+            <canvas id="confidenceGauge" width="180" height="180"></canvas>
+            <div class="confidence-score-text">
+              <span class="confidence-number" id="confidence-score">78</span>
+              <span class="confidence-percent">%</span>
+            </div>
+          </div>
+          <div class="confidence-level" id="confidence-level">High Confidence</div>
+        </div>
+      </div>
+
+      <!-- Key Metrics Grid -->
+      <div class="metrics-grid">
+        <div class="metric-card">
+          <div class="metric-icon" style="background: linear-gradient(135deg, #10B981 0%, #059669 100%);">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+              <line x1="12" y1="1" x2="12" y2="23"></line>
+              <polyline points="17 6 12 1 7 6"></polyline>
+              <polyline points="7 18 12 23 17 18"></polyline>
+            </svg>
+          </div>
+          <div class="metric-content">
+            <div class="metric-label">Price Change</div>
+            <div class="metric-value positive" id="price-change">+£34,050</div>
+            <div class="metric-subtext">Since last sale (Sept 2007)</div>
+          </div>
+        </div>
+
+        <div class="metric-card">
+          <div class="metric-icon" style="background: linear-gradient(135deg, #19727F 0%, #0E3B44 100%);">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+              <rect x="3" y="3" width="7" height="7"></rect>
+              <rect x="14" y="3" width="7" height="7"></rect>
+              <rect x="14" y="14" width="7" height="7"></rect>
+              <rect x="3" y="14" width="7" height="7"></rect>
+            </svg>
+          </div>
+          <div class="metric-content">
+            <div class="metric-label">Rental Yield</div>
+            <div class="metric-value" id="rental-yield">5.1%</div>
+            <div class="metric-subtext">£865 pcm estimated</div>
+          </div>
+        </div>
+
+        <div class="metric-card">
+          <div class="metric-icon" style="background: linear-gradient(135deg, #EF6A68 0%, #E84745 100%);">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+              <polyline points="9 22 9 12 15 12 15 22"></polyline>
+            </svg>
+          </div>
+          <div class="metric-content">
+            <div class="metric-label">Last Sale</div>
+            <div class="metric-value" id="last-sale">£167,950</div>
+            <div class="metric-subtext">September 2007</div>
+          </div>
+        </div>
+
+        <div class="metric-card">
+          <div class="metric-icon" style="background: linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%);">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+              <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+              <polyline points="2 17 12 22 22 17"></polyline>
+              <polyline points="2 12 12 17 22 12"></polyline>
+            </svg>
+          </div>
+          <div class="metric-content">
+            <div class="metric-label">Property Size</div>
+            <div class="metric-value" id="property-size">775 sqft</div>
+            <div class="metric-subtext">2 bed, 2 bath, 1 reception</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Key Insights -->
+      <div class="insights-section">
+        <h3>Key Insights</h3>
+        <div class="insights-grid">
+          <div class="insight-card positive">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <p>Property has appreciated <strong>20.3%</strong> since last sale in 2007</p>
+          </div>
+          <div class="insight-card positive">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <p>Rental yield of <strong>5.1%</strong> is above area average (4.3%)</p>
+          </div>
+          <div class="insight-card positive">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <p><strong>Low flood risk</strong>, excellent transport links to central Milton Keynes</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Property Details -->
+    <section class="report-section">
+      <h2 class="section-title">Property Details</h2>
+      <div class="property-details-grid">
+        <div class="detail-card">
+          <div class="detail-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#19727F" stroke-width="2">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+            </svg>
+          </div>
+          <div class="detail-label">Property Type</div>
+          <div class="detail-value">Purpose Built Flat</div>
+        </div>
+
+        <div class="detail-card">
+          <div class="detail-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#19727F" stroke-width="2">
+              <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+            </svg>
+          </div>
+          <div class="detail-label">Total Floor Area</div>
+          <div class="detail-value">775 sqft</div>
+        </div>
+
+        <div class="detail-card">
+          <div class="detail-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#19727F" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+          </div>
+          <div class="detail-label">Year Built</div>
+          <div class="detail-value">2007</div>
+        </div>
+
+        <div class="detail-card">
+          <div class="detail-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#19727F" stroke-width="2">
+              <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+              <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+            </svg>
+          </div>
+          <div class="detail-label">Receptions</div>
+          <div class="detail-value">1</div>
+        </div>
+
+        <div class="detail-card">
+          <div class="detail-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#19727F" stroke-width="2">
+              <path d="M2 4v16"></path>
+              <path d="M2 8h18a2 2 0 0 1 2 2v10"></path>
+              <path d="M2 17h20"></path>
+              <path d="M6 8v9"></path>
+            </svg>
+          </div>
+          <div class="detail-label">Bedrooms</div>
+          <div class="detail-value">2</div>
+        </div>
+
+        <div class="detail-card">
+          <div class="detail-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#19727F" stroke-width="2">
+              <path d="M9 6h11"></path>
+              <path d="M9 12h11"></path>
+              <path d="M9 18h11"></path>
+              <path d="M5 6h.01"></path>
+              <path d="M5 12h.01"></path>
+              <path d="M5 18h.01"></path>
+            </svg>
+          </div>
+          <div class="detail-label">Bathrooms</div>
+          <div class="detail-value">2</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Price Trend Chart -->
+    <section class="report-section">
+      <h2 class="section-title">Price Trends</h2>
+      <p class="section-subtitle">5-year price history for 2-bedroom flats/maisonettes in MK12</p>
+      <div class="chart-container">
+        <canvas id="priceTrendChart"></canvas>
+      </div>
+      <div class="chart-legend">
+        <div class="legend-item">
+          <div class="legend-color" style="background: #19727F;"></div>
+          <span>This Property Type</span>
+        </div>
+        <div class="legend-item">
+          <div class="legend-color" style="background: #10B981;"></div>
+          <span>Milton Keynes Average</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Comparable Properties -->
+    <section class="report-section">
+      <h2 class="section-title">Comparable Properties</h2>
+      <p class="section-subtitle">Recent sales of similar properties in the area</p>
+
+      <div class="comparables-grid" id="comparables-grid">
+        <!-- Will be populated by JavaScript -->
+      </div>
+    </section>
+
+    <!-- Market Insights -->
+    <section class="report-section">
+      <h2 class="section-title">Market Insights</h2>
+
+      <div class="market-stats-grid">
+        <div class="stat-card">
+          <div class="stat-value">97%</div>
+          <div class="stat-label">of asking price achieved</div>
+          <div class="stat-bar">
+            <div class="stat-bar-fill" style="width: 97%; background: #10B981;"></div>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-value">10 weeks</div>
+          <div class="stat-label">average time on market</div>
+          <div class="stat-icon">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#19727F" stroke-width="2">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="16" y1="2" x2="16" y2="6"></line>
+              <line x1="8" y1="2" x2="8" y2="6"></line>
+              <line x1="3" y1="10" x2="21" y2="10"></line>
+            </svg>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-value">3,006</div>
+          <div class="stat-label">searches in past 28 days</div>
+          <div class="stat-icon">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#19727F" stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <path d="m21 21-4.35-4.35"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Area Analysis -->
+    <section class="report-section highlight-section">
+      <h2 class="section-title">Area Analysis</h2>
+      <p class="section-subtitle">Comprehensive insights into the local area</p>
+
+      <!-- Schools -->
+      <div class="area-subsection">
+        <h3 class="subsection-title">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+            <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+          </svg>
+          Nearby Schools
+        </h3>
+        <div class="schools-grid">
+          <div class="school-card">
+            <div class="school-rating outstanding">Outstanding</div>
+            <div class="school-name">Wyvern Primary School</div>
+            <div class="school-distance">0.3 miles</div>
+            <div class="school-type">Primary • Ages 4-11</div>
+          </div>
+          <div class="school-card">
+            <div class="school-rating good">Good</div>
+            <div class="school-name">Radcliffe School</div>
+            <div class="school-distance">0.8 miles</div>
+            <div class="school-type">Secondary • Ages 11-18</div>
+          </div>
+          <div class="school-card">
+            <div class="school-rating outstanding">Outstanding</div>
+            <div class="school-name">St. Mary's CE Primary</div>
+            <div class="school-distance">1.1 miles</div>
+            <div class="school-type">Primary • Ages 4-11</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Transport -->
+      <div class="area-subsection">
+        <h3 class="subsection-title">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
+            <rect x="9" y="9" width="6" height="6"></rect>
+            <line x1="9" y1="1" x2="9" y2="4"></line>
+            <line x1="15" y1="1" x2="15" y2="4"></line>
+            <line x1="9" y1="20" x2="9" y2="23"></line>
+            <line x1="15" y1="20" x2="15" y2="23"></line>
+            <line x1="20" y1="9" x2="23" y2="9"></line>
+            <line x1="20" y1="14" x2="23" y2="14"></line>
+            <line x1="1" y1="9" x2="4" y2="9"></line>
+            <line x1="1" y1="14" x2="4" y2="14"></line>
+          </svg>
+          Transport Links
+        </h3>
+        <div class="transport-grid">
+          <div class="transport-card">
+            <div class="transport-icon train">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                <rect x="4" y="6" width="16" height="12" rx="2"></rect>
+                <path d="M4 11h16M12 6v5"></path>
+              </svg>
+            </div>
+            <div class="transport-info">
+              <div class="transport-name">Wolverton Station</div>
+              <div class="transport-distance">0.6 miles • 12 min walk</div>
+              <div class="transport-service">Direct to London Euston (50 mins)</div>
+            </div>
+          </div>
+          <div class="transport-card">
+            <div class="transport-icon bus">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                <path d="M8 6v6M16 6v6"></path>
+                <path d="M2 12h19.6"></path>
+                <path d="M18 18h3s.5-1.7.8-2.8c.1-.4.2-.8.2-1.2 0-.4-.1-.8-.2-1.2l-1.4-5C20.1 6.8 19.1 6 18 6H4a2 2 0 0 0-2 2v10h3"></path>
+                <circle cx="7" cy="18" r="2"></circle>
+                <path d="M9 18h5"></path>
+                <circle cx="16" cy="18" r="2"></circle>
+              </svg>
+            </div>
+            <div class="transport-info">
+              <div class="transport-name">Bus Stop</div>
+              <div class="transport-distance">0.1 miles • 2 min walk</div>
+              <div class="transport-service">Routes 4, 5, 7 to MK Centre</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Demographics Chart -->
+      <div class="area-subsection">
+        <h3 class="subsection-title">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+            <circle cx="9" cy="7" r="4"></circle>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+          </svg>
+          Local Demographics
+        </h3>
+        <div class="chart-container" style="max-width: 600px;">
+          <canvas id="demographicsChart"></canvas>
+        </div>
+      </div>
+
+      <!-- Crime & Safety -->
+      <div class="area-subsection">
+        <h3 class="subsection-title">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+          </svg>
+          Crime & Safety
+        </h3>
+        <div class="crime-summary">
+          <div class="crime-stat">
+            <div class="crime-comparison good">
+              <span class="crime-value">23% below</span>
+              <span class="crime-label">national average</span>
+            </div>
+          </div>
+        </div>
+        <div class="chart-container" style="max-width: 600px;">
+          <canvas id="crimeChart"></canvas>
+        </div>
+      </div>
+
+      <!-- Environmental Risks -->
+      <div class="area-subsection">
+        <h3 class="subsection-title">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+            <polyline points="7.5 4.21 12 6.81 16.5 4.21"></polyline>
+            <polyline points="7.5 19.79 7.5 14.6 3 12"></polyline>
+            <polyline points="21 12 16.5 14.6 16.5 19.79"></polyline>
+            <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+            <line x1="12" y1="22.08" x2="12" y2="12"></line>
+          </svg>
+          Environmental Factors
+        </h3>
+        <div class="environmental-grid">
+          <div class="env-card good">
+            <div class="env-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+              </svg>
+            </div>
+            <div class="env-label">Flood Risk</div>
+            <div class="env-value">Very Low</div>
+          </div>
+          <div class="env-card good">
+            <div class="env-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0-6 0"></path>
+                <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 0 1-2.827 0l-4.244-4.243a8 8 0 1 1 11.314 0z"></path>
+              </svg>
+            </div>
+            <div class="env-label">Air Quality</div>
+            <div class="env-value">Good</div>
+          </div>
+          <div class="env-card good">
+            <div class="env-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2z"></path>
+                <path d="M12 6v6l4 2"></path>
+              </svg>
+            </div>
+            <div class="env-label">Green Space</div>
+            <div class="env-value">0.3 miles</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Confidence Breakdown -->
+    <section class="report-section">
+      <h2 class="section-title">Confidence Score Breakdown</h2>
+      <p class="section-subtitle">Understanding the accuracy of this valuation</p>
+
+      <div class="confidence-factors">
+        <div class="factor-card">
+          <div class="factor-header">
+            <span class="factor-name">Data Quality</span>
+            <span class="factor-score high">95%</span>
+          </div>
+          <div class="factor-bar">
+            <div class="factor-bar-fill high" style="width: 95%;"></div>
+          </div>
+          <p class="factor-description">Excellent data coverage: EPC records, Land Registry history, 12 recent comparables</p>
+        </div>
+
+        <div class="factor-card">
+          <div class="factor-header">
+            <span class="factor-name">Market Activity</span>
+            <span class="factor-score medium">72%</span>
+          </div>
+          <div class="factor-bar">
+            <div class="factor-bar-fill medium" style="width: 72%;"></div>
+          </div>
+          <p class="factor-description">Moderate sales volume in the area, active market with good comparable evidence</p>
+        </div>
+
+        <div class="factor-card">
+          <div class="factor-header">
+            <span class="factor-name">Property Uniqueness</span>
+            <span class="factor-score high">85%</span>
+          </div>
+          <div class="factor-bar">
+            <div class="factor-bar-fill high" style="width: 85%;"></div>
+          </div>
+          <p class="factor-description">Standard property type with many similar comparables in the local market</p>
+        </div>
+
+        <div class="factor-card">
+          <div class="factor-header">
+            <span class="factor-name">Area Stability</span>
+            <span class="factor-score medium">68%</span>
+          </div>
+          <div class="factor-bar">
+            <div class="factor-bar-fill medium" style="width: 68%;"></div>
+          </div>
+          <p class="factor-description">Steady price growth, moderate volatility in recent years</p>
+        </div>
+      </div>
+
+      <div class="overall-confidence">
+        <div class="overall-label">Overall Confidence Score</div>
+        <div class="overall-score">78%</div>
+        <div class="overall-description">This valuation is based on <strong>38+ authoritative data sources</strong> and <strong>dual-model AI analysis</strong>, providing high confidence in the estimate.</div>
+      </div>
+    </section>
+
+    <!-- Footer CTA -->
+    <section class="report-section cta-section">
+      <div class="cta-content">
+        <h2>Want a Professional Valuation?</h2>
+        <p>Get a comprehensive desktop valuation report powered by 38+ data sources for your entire portfolio.</p>
+        <a href="mailto:contact@doorstepsolutions.uk" class="cta-button">Request Demo</a>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="report-footer">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img src="doorstep-logo.png" alt="Doorstep">
+      </div>
+      <div class="footer-text">
+        <p>This report is for informational purposes only and should not be relied upon as professional advice.</p>
+        <p>Valuation powered by Doorstep Intelligence • 38+ Data Sources</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="valuation-report.js"></script>
+</body>
+</html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Property Details - Doorstep</title>
+  <link rel="icon" type="image/png" href="doorstep-logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="listing-detail.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-content">
+        <a href="index.html" class="logo-link">
+          <img src="doorstep-logo.png" alt="Doorstep" class="header-logo">
+        </a>
+        <nav class="main-nav">
+          <a href="index.html">Home</a>
+          <a href="property-search.html">Back to Search</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="listing-detail-page">
+    <div class="container">
+
+      <div id="loading" class="loading-container">
+        <div class="spinner"></div>
+        <p>Loading property details...</p>
+      </div>
+
+      <div id="property-content" style="display: none;">
+        <!-- Property Hero -->
+        <section class="property-hero">
+          <div class="property-price-header">
+            <h1 id="property-price"></h1>
+            <div class="property-status" id="property-status"></div>
+          </div>
+          <h2 id="property-title"></h2>
+          <p id="property-address"></p>
+        </section>
+
+        <!-- Quick Facts -->
+        <section class="quick-facts">
+          <div class="fact-card">
+            <span class="fact-label">Bedrooms</span>
+            <span class="fact-value" id="bedrooms">-</span>
+          </div>
+          <div class="fact-card">
+            <span class="fact-label">Bathrooms</span>
+            <span class="fact-value" id="bathrooms">-</span>
+          </div>
+          <div class="fact-card">
+            <span class="fact-label">Property Type</span>
+            <span class="fact-value" id="property-type">-</span>
+          </div>
+          <div class="fact-card">
+            <span class="fact-label">EPC Rating</span>
+            <span class="fact-value epc-rating" id="epc-rating">-</span>
+          </div>
+        </section>
+
+        <!-- Description -->
+        <section class="property-section">
+          <h3>Description</h3>
+          <p id="property-description"></p>
+        </section>
+
+        <!-- Key Features -->
+        <section class="property-section">
+          <h3>Key Features</h3>
+          <div class="features-grid">
+            <div class="feature-item">
+              <strong>EPC Score:</strong>
+              <span id="epc-score">-</span> / 100
+            </div>
+            <div class="feature-item">
+              <strong>Conservation Area:</strong>
+              <span id="conservation-area">-</span>
+            </div>
+            <div class="feature-item">
+              <strong>Flood Risk:</strong>
+              <span id="flood-risk">-</span>
+            </div>
+            <div class="feature-item">
+              <strong>IMD Decile:</strong>
+              <span id="imd-decile">-</span> / 10
+            </div>
+            <div class="feature-item">
+              <strong>Crime Rate:</strong>
+              <span id="crime-rate">-</span>
+            </div>
+            <div class="feature-item">
+              <strong>Broadband Speed:</strong>
+              <span id="broadband-speed">-</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Valuation -->
+        <section class="property-section">
+          <h3>Valuation Analysis</h3>
+          <div class="valuation-card">
+            <div class="valuation-row">
+              <span>AVM Estimate:</span>
+              <strong id="avm-estimate">-</strong>
+            </div>
+            <div class="valuation-row">
+              <span>Confidence:</span>
+              <strong id="avm-confidence">-</strong>
+            </div>
+            <div class="valuation-row">
+              <span>Price vs Estimate:</span>
+              <strong id="avm-delta" class="delta-value">-</strong>
+            </div>
+          </div>
+          <div id="undervalued-alert" class="alert alert-success" style="display: none;">
+            <strong>Great Value!</strong> This property appears to be undervalued based on our AVM estimate.
+          </div>
+        </section>
+
+        <!-- Location & Amenities -->
+        <section class="property-section">
+          <h3>Location & Amenities</h3>
+          <div class="amenities-grid">
+            <div class="amenity-item">
+              <div class="amenity-icon">🏫</div>
+              <div class="amenity-details">
+                <strong>School Quality</strong>
+                <p id="school-quality">-</p>
+                <small id="school-distances">-</small>
+              </div>
+            </div>
+            <div class="amenity-item">
+              <div class="amenity-icon">🚆</div>
+              <div class="amenity-details">
+                <strong>Transport</strong>
+                <p id="transport-station">-</p>
+                <small id="transport-airport">-</small>
+              </div>
+            </div>
+            <div class="amenity-item">
+              <div class="amenity-icon">🏛️</div>
+              <div class="amenity-details">
+                <strong>Planning</strong>
+                <p id="planning-apps">-</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Purchase Detailed Report -->
+        <section class="property-section report-cta">
+          <div class="report-card">
+            <h3>Get the Full Report</h3>
+            <p>Unlock comprehensive property insights including:</p>
+            <ul>
+              <li>Detailed planning application history</li>
+              <li>Restrictive covenants</li>
+              <li>Comparable sales analysis</li>
+              <li>Full area quality metrics</li>
+              <li>School catchment information</li>
+            </ul>
+            <button class="btn btn-primary btn-large" onclick="purchaseReport()">
+              Purchase Report - £5.00
+            </button>
+          </div>
+        </section>
+
+      </div>
+
+      <div id="error-message" class="error-container" style="display: none;">
+        <p>Unable to load property details. Please try again.</p>
+        <a href="property-search.html" class="btn btn-primary">Back to Search</a>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-column">
+          <img src="doorstep-logo.png" alt="Doorstep" class="footer-logo">
+          <p>AI-powered property search</p>
+        </div>
+        <div class="footer-column">
+          <h4>Quick Links</h4>
+          <a href="index.html">Home</a>
+          <a href="property-search.html">Property Search</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="listing-detail.js"></script>
+
+</body>
+</html>

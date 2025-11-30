@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Property Map - Doorstep</title>
+  <link rel="icon" type="image/png" href="doorstep-logo.png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <style>
+    #map { height: calc(100vh - 80px); width: 100%; }
+    .property-popup { max-width: 280px; }
+    .popup-price { font-size: 20px; font-weight: 700; color: #EF6A68; margin-bottom: 8px; }
+    .popup-title { font-size: 14px; font-weight: 600; margin-bottom: 4px; }
+    .popup-address { font-size: 12px; color: #666; margin-bottom: 8px; }
+    .popup-match { background: linear-gradient(90deg, #EF6A68, #19727F); color: white; padding: 4px 8px; border-radius: 4px; font-size: 12px; font-weight: 600; display: inline-block; }
+    .popup-btn { background: #EF6A68; color: white; padding: 8px 16px; border-radius: 4px; text-decoration: none; display: block; text-align: center; margin-top: 8px; font-weight: 600; font-size: 13px; }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <div class="header-content">
+        <a href="index.html" class="logo-link">
+          <img src="doorstep-logo.png" alt="Doorstep" class="header-logo">
+        </a>
+        <nav class="main-nav">
+          <a href="questionnaire-expanded.html">Search</a>
+          <a href="map-view.html" class="active">Map View</a>
+          <a href="index.html">Home</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <div id="map"></div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+    // Initialize map centered on London
+    const map = L.map('map').setView([51.5074, -0.1278], 11);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '© OpenStreetMap contributors'
+    }).addTo(map);
+
+    // Load properties from API
+    fetch('http://localhost:8000/')
+      .then(res => res.json())
+      .then(data => {
+        if (data.properties_loaded > 0) {
+          loadProperties();
+        }
+      });
+
+    async function loadProperties() {
+      // Mock search to get all properties
+      const response = await fetch('http://localhost:8000/api/search', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ budget_max: 100000000, bedrooms_min: 0 })
+      });
+
+      const data = await response.json();
+
+      data.results.forEach(prop => {
+        const matchPercent = Math.round(prop.match_score * 100);
+        const price = new Intl.NumberFormat('en-GB', {
+          style: 'currency',
+          currency: 'GBP',
+          maximumFractionDigits: 0
+        }).format(prop.price);
+
+        // Color based on match score
+        const color = matchPercent >= 80 ? '#28a745' : matchPercent >= 60 ? '#F59E0B' : '#EF6A68';
+
+        // Create marker
+        const marker = L.circleMarker([prop.latitude, prop.longitude], {
+          radius: 8,
+          fillColor: color,
+          color: '#fff',
+          weight: 2,
+          opacity: 1,
+          fillOpacity: 0.8
+        }).addTo(map);
+
+        // Popup content
+        const popupContent = `
+          <div class="property-popup">
+            <div class="popup-price">${price}</div>
+            <div class="popup-title">${prop.title || 'Property for sale'}</div>
+            <div class="popup-address">${prop.address || prop.postcode}</div>
+            <div class="popup-match">Match: ${matchPercent}%</div>
+            <a href="professional-report.html?listing_id=${prop.listing_id}" class="popup-btn">
+              View Details & Get £5 Report
+            </a>
+          </div>
+        `;
+
+        marker.bindPopup(popupContent);
+      });
+    }
+  </script>
+</body>
+</html>

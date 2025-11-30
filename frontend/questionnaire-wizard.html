@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find Your Perfect Home - Doorstep</title>
+  <link rel="icon" type="image/png" href="doorstep-logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="questionnaire-wizard.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-content">
+        <a href="index.html" class="logo-link">
+          <img src="doorstep-logo.png" alt="Doorstep" class="header-logo">
+        </a>
+        <nav class="main-nav">
+          <a href="index.html">Home</a>
+          <a href="questionnaire-wizard.html" class="active">Find a Home</a>
+          <a href="professionals.html">Valuations</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="wizard-page">
+    <div class="wizard-container">
+
+      <!-- Progress Bar -->
+      <div class="progress-container">
+        <div class="progress-bar">
+          <div class="progress-fill" id="progress-fill"></div>
+        </div>
+        <div class="progress-steps">
+          <div class="progress-step active" data-step="1">
+            <div class="step-circle">1</div>
+            <span>Budget</span>
+          </div>
+          <div class="progress-step" data-step="2">
+            <div class="step-circle">2</div>
+            <span>Property</span>
+          </div>
+          <div class="progress-step" data-step="3">
+            <div class="step-circle">3</div>
+            <span>Location</span>
+          </div>
+          <div class="progress-step" data-step="4">
+            <div class="step-circle">4</div>
+            <span>Priorities</span>
+          </div>
+          <div class="progress-step" data-step="5">
+            <div class="step-circle">5</div>
+            <span>Results</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 1: Budget -->
+      <div class="wizard-step active" id="step-1">
+        <div class="step-content">
+          <h1>What's your budget?</h1>
+          <p class="subtitle">We'll find properties within your price range</p>
+
+          <div class="form-group-large">
+            <label>Maximum budget</label>
+            <div class="budget-input">
+              <span class="currency">£</span>
+              <input type="number" id="budget-max" placeholder="500,000" step="10000" required>
+            </div>
+            <small>Enter the maximum you can spend</small>
+          </div>
+
+          <div class="form-group-large">
+            <label>Minimum budget (optional)</label>
+            <div class="budget-input">
+              <span class="currency">£</span>
+              <input type="number" id="budget-min" placeholder="200,000" step="10000">
+            </div>
+          </div>
+
+          <div class="popular-budgets">
+            <p>Popular budgets:</p>
+            <button type="button" class="budget-quick" onclick="setBudget(300000)">£300,000</button>
+            <button type="button" class="budget-quick" onclick="setBudget(500000)">£500,000</button>
+            <button type="button" class="budget-quick" onclick="setBudget(750000)">£750,000</button>
+            <button type="button" class="budget-quick" onclick="setBudget(1000000)">£1,000,000</button>
+          </div>
+
+          <button class="btn btn-primary btn-next" onclick="nextStep()">Continue</button>
+        </div>
+      </div>
+
+      <!-- Step 2: Property Requirements -->
+      <div class="wizard-step" id="step-2">
+        <div class="step-content">
+          <h1>What type of property?</h1>
+          <p class="subtitle">Tell us about your ideal home</p>
+
+          <div class="form-group-large">
+            <label>How many bedrooms?</label>
+            <div class="bedroom-selector">
+              <button type="button" class="bedroom-btn" data-beds="1">1</button>
+              <button type="button" class="bedroom-btn" data-beds="2">2</button>
+              <button type="button" class="bedroom-btn active" data-beds="3">3</button>
+              <button type="button" class="bedroom-btn" data-beds="4">4</button>
+              <button type="button" class="bedroom-btn" data-beds="5">5+</button>
+            </div>
+          </div>
+
+          <div class="form-group-large">
+            <label>Property type</label>
+            <div class="property-type-grid">
+              <div class="property-type-card" data-type="flat">
+                <h3>Flat</h3>
+                <p>Apartment or Maisonette</p>
+              </div>
+              <div class="property-type-card" data-type="terraced">
+                <h3>Terraced</h3>
+                <p>Town House</p>
+              </div>
+              <div class="property-type-card" data-type="semi_detached">
+                <h3>Semi-Detached</h3>
+                <p>Shared Wall</p>
+              </div>
+              <div class="property-type-card" data-type="detached">
+                <h3>Detached</h3>
+                <p>Standalone House</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="wizard-nav">
+            <button class="btn btn-secondary" onclick="prevStep()">Back</button>
+            <button class="btn btn-primary btn-next" onclick="nextStep()">Continue</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 3: Location -->
+      <div class="wizard-step" id="step-3">
+        <div class="step-content">
+          <h1>Where do you want to live?</h1>
+          <p class="subtitle">Search by postcode or area</p>
+
+          <div class="form-group-large">
+            <label>Postcode areas</label>
+            <input type="text" id="postcode-areas" placeholder="e.g. SW1, W1, NW3" class="large-input">
+            <small>Separate multiple areas with commas</small>
+          </div>
+
+          <div class="form-group-large">
+            <label>Search radius</label>
+            <div class="radius-slider-container">
+              <input type="range" id="radius-slider" min="1" max="20" value="5" step="0.5">
+              <div class="radius-value"><span id="radius-value">5</span> km</div>
+            </div>
+          </div>
+
+          <div class="location-extras">
+            <h3>Transport preferences (optional)</h3>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label>Near airport</label>
+                <select id="target-airport">
+                  <option value="">Any</option>
+                  <option value="LHR">London Heathrow</option>
+                  <option value="LGW">London Gatwick</option>
+                  <option value="STN">Stansted</option>
+                  <option value="LTN">Luton</option>
+                  <option value="LCY">London City</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Max distance to airport</label>
+                <input type="number" id="max-airport-dist" placeholder="15" min="1" max="50"> km
+              </div>
+            </div>
+          </div>
+
+          <div class="wizard-nav">
+            <button class="btn btn-secondary" onclick="prevStep()">Back</button>
+            <button class="btn btn-primary btn-next" onclick="nextStep()">Continue</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 4: Priorities -->
+      <div class="wizard-step" id="step-4">
+        <div class="step-content">
+          <h1>What matters most to you?</h1>
+          <p class="subtitle">Drag the sliders to show what's important</p>
+
+          <div class="priorities-grid">
+            <div class="priority-card">
+              <div class="priority-icon">SCH</div>
+              <div class="priority-content">
+                <h3>Good Schools</h3>
+                <p>Outstanding rated schools nearby</p>
+                <input type="range" id="priority-schools" min="0" max="100" value="20" class="priority-slider">
+                <div class="priority-value"><span id="val-schools">20</span>%</div>
+              </div>
+            </div>
+
+            <div class="priority-card">
+              <div class="priority-icon">TRN</div>
+              <div class="priority-content">
+                <h3>Easy Commute</h3>
+                <p>Close to stations & transport</p>
+                <input type="range" id="priority-commute" min="0" max="100" value="20" class="priority-slider">
+                <div class="priority-value"><span id="val-commute">20</span>%</div>
+              </div>
+            </div>
+
+            <div class="priority-card">
+              <div class="priority-icon">SAF</div>
+              <div class="priority-content">
+                <h3>Safe Area</h3>
+                <p>Low crime & high quality</p>
+                <input type="range" id="priority-safety" min="0" max="100" value="20" class="priority-slider">
+                <div class="priority-value"><span id="val-safety">20</span>%</div>
+              </div>
+            </div>
+
+            <div class="priority-card">
+              <div class="priority-icon">EPC</div>
+              <div class="priority-content">
+                <h3>Energy Efficient</h3>
+                <p>Good EPC rating</p>
+                <input type="range" id="priority-energy" min="0" max="100" value="20" class="priority-slider">
+                <div class="priority-value"><span id="val-energy">20</span>%</div>
+              </div>
+            </div>
+
+            <div class="priority-card">
+              <div class="priority-icon">VAL</div>
+              <div class="priority-content">
+                <h3>Great Value</h3>
+                <p>Undervalued properties</p>
+                <input type="range" id="priority-value" min="0" max="100" value="20" class="priority-slider">
+                <div class="priority-value"><span id="val-value">20</span>%</div>
+              </div>
+            </div>
+
+            <div class="priority-card">
+              <div class="priority-icon">CON</div>
+              <div class="priority-content">
+                <h3>Conservation Area</h3>
+                <p>Protected historic area</p>
+                <input type="range" id="priority-conservation" min="0" max="100" value="0" class="priority-slider">
+                <div class="priority-value"><span id="val-conservation">0</span>%</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="priority-total">
+            <span>Total importance:</span>
+            <span id="total-priority" class="priority-total-value">100%</span>
+          </div>
+
+          <div class="wizard-nav">
+            <button class="btn btn-secondary" onclick="prevStep()">Back</button>
+            <button class="btn btn-primary btn-large" onclick="searchProperties()">
+              <span>Find My Perfect Home</span>
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M19 19L13 13M15 8C15 11.866 11.866 15 8 15C4.13401 15 1 11.866 1 8C1 4.13401 4.13401 1 8 1C11.866 1 15 4.13401 15 8Z" stroke="currentColor" stroke-width="2"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 5: Results (will be populated by JavaScript) -->
+      <div class="wizard-step" id="step-5">
+        <div class="step-content">
+          <div id="loading-state" style="display: none;">
+            <div class="loading-spinner">
+              <div class="spinner"></div>
+              <p>Finding your perfect homes...</p>
+            </div>
+          </div>
+
+          <div id="results-content" style="display: none;">
+            <!-- Results will be inserted here -->
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <script src="questionnaire-wizard.js"></script>
+
+</body>
+</html>

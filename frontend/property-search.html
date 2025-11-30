@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Property Search Portal - Doorstep</title>
+  <meta name="description" content="Search for properties with AI-powered enrichment and intelligent matching">
+  <link rel="icon" type="image/png" href="doorstep-logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="property-search.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-content">
+        <a href="index.html" class="logo-link">
+          <img src="doorstep-logo.png" alt="Doorstep" class="header-logo">
+        </a>
+        <button class="mobile-menu-toggle" onclick="toggleMobileMenu()" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="main-nav" id="main-nav">
+          <a href="index.html">Home</a>
+          <a href="professionals.html">Valuations</a>
+          <a href="property-search.html" class="active">Search</a>
+          <a href="marketing.html">Marketing</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="property-search-page">
+    <div class="container">
+
+      <!-- Page Header -->
+      <section class="page-header">
+        <h1>Find Your Perfect Property</h1>
+        <p class="subtitle">AI-powered search with comprehensive property data</p>
+      </section>
+
+      <!-- Search Form -->
+      <section class="search-section">
+        <div class="search-card">
+          <h2>Tell us what you're looking for</h2>
+
+          <form id="search-form" class="questionnaire-form">
+
+            <!-- Budget Section -->
+            <div class="form-section">
+              <h3><span class="section-number">1</span> Budget</h3>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="budget-min">Minimum (£)</label>
+                  <input type="number" id="budget-min" name="budget_min" placeholder="e.g. 200,000" step="10000">
+                </div>
+                <div class="form-group">
+                  <label for="budget-max">Maximum (£) *</label>
+                  <input type="number" id="budget-max" name="budget_max" placeholder="e.g. 500,000" step="10000" required>
+                </div>
+              </div>
+            </div>
+
+            <!-- Property Requirements -->
+            <div class="form-section">
+              <h3><span class="section-number">2</span> Property Requirements</h3>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="bedrooms-min">Minimum Bedrooms *</label>
+                  <select id="bedrooms-min" name="bedrooms_min" required>
+                    <option value="1">1</option>
+                    <option value="2" selected>2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5+</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="bedrooms-max">Maximum Bedrooms</label>
+                  <select id="bedrooms-max" name="bedrooms_max">
+                    <option value="">No limit</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5+</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label>Property Types</label>
+                <div class="checkbox-group">
+                  <label class="checkbox-label">
+                    <input type="checkbox" name="property_types" value="flat" checked>
+                    <span>Flat/Apartment</span>
+                  </label>
+                  <label class="checkbox-label">
+                    <input type="checkbox" name="property_types" value="terraced" checked>
+                    <span>Terraced</span>
+                  </label>
+                  <label class="checkbox-label">
+                    <input type="checkbox" name="property_types" value="semi_detached">
+                    <span>Semi-Detached</span>
+                  </label>
+                  <label class="checkbox-label">
+                    <input type="checkbox" name="property_types" value="detached">
+                    <span>Detached</span>
+                  </label>
+                  <label class="checkbox-label">
+                    <input type="checkbox" name="property_types" value="bungalow">
+                    <span>Bungalow</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <!-- Location -->
+            <div class="form-section">
+              <h3><span class="section-number">3</span> Location</h3>
+              <div class="form-group">
+                <label for="postcode-areas">Postcode Areas *</label>
+                <input type="text" id="postcode-areas" name="postcode_areas" placeholder="e.g. SW1, SW3, W1" required>
+                <small>Separate multiple postcodes with commas</small>
+              </div>
+
+              <div class="form-group">
+                <label for="radius">Search Radius (km)</label>
+                <input type="number" id="radius" name="radius_km" placeholder="e.g. 5" step="0.5" value="5">
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="target-airports">Target Airports (optional)</label>
+                  <input type="text" id="target-airports" name="target_airports" placeholder="e.g. LHR, LGW">
+                  <small>IATA codes separated by commas</small>
+                </div>
+                <div class="form-group">
+                  <label for="max-airport-distance">Max Distance to Airport (km)</label>
+                  <input type="number" id="max-airport-distance" name="max_distance_to_airport_km" placeholder="e.g. 15" step="1">
+                </div>
+              </div>
+            </div>
+
+            <!-- Preferences (Weighted) -->
+            <div class="form-section">
+              <h3><span class="section-number">4</span> What matters most to you?</h3>
+              <p class="section-description">Slide to indicate how important each factor is (total must not exceed 100%)</p>
+
+              <div class="preference-sliders">
+                <div class="preference-item">
+                  <label for="pref-schools">
+                    <span class="pref-label">School Quality</span>
+                    <span class="pref-value" id="pref-schools-value">20%</span>
+                  </label>
+                  <input type="range" id="pref-schools" name="weight_schools" min="0" max="100" value="20" step="5">
+                </div>
+
+                <div class="preference-item">
+                  <label for="pref-commute">
+                    <span class="pref-label">Commute/Transport</span>
+                    <span class="pref-value" id="pref-commute-value">20%</span>
+                  </label>
+                  <input type="range" id="pref-commute" name="weight_commute" min="0" max="100" value="20" step="5">
+                </div>
+
+                <div class="preference-item">
+                  <label for="pref-safety">
+                    <span class="pref-label">Safety & Area Quality</span>
+                    <span class="pref-value" id="pref-safety-value">20%</span>
+                  </label>
+                  <input type="range" id="pref-safety" name="weight_safety" min="0" max="100" value="20" step="5">
+                </div>
+
+                <div class="preference-item">
+                  <label for="pref-energy">
+                    <span class="pref-label">Energy Efficiency</span>
+                    <span class="pref-value" id="pref-energy-value">20%</span>
+                  </label>
+                  <input type="range" id="pref-energy" name="weight_energy" min="0" max="100" value="20" step="5">
+                </div>
+
+                <div class="preference-item">
+                  <label for="pref-value">
+                    <span class="pref-label">Value for Money</span>
+                    <span class="pref-value" id="pref-value-value">20%</span>
+                  </label>
+                  <input type="range" id="pref-value" name="weight_value" min="0" max="100" value="20" step="5">
+                </div>
+
+                <div class="preference-item">
+                  <label for="pref-conservation">
+                    <span class="pref-label">Conservation Area</span>
+                    <span class="pref-value" id="pref-conservation-value">0%</span>
+                  </label>
+                  <input type="range" id="pref-conservation" name="weight_conservation" min="0" max="100" value="0" step="5">
+                </div>
+              </div>
+
+              <div class="preference-total">
+                <span>Total Weight:</span>
+                <span id="total-weight" class="total-weight-value">100%</span>
+              </div>
+            </div>
+
+            <!-- Additional Filters -->
+            <div class="form-section">
+              <h3><span class="section-number">5</span> Additional Filters (Optional)</h3>
+
+              <div class="form-group">
+                <label for="min-epc">Minimum EPC Rating</label>
+                <select id="min-epc" name="min_epc_rating">
+                  <option value="">Any</option>
+                  <option value="A">A</option>
+                  <option value="B">B</option>
+                  <option value="C">C</option>
+                  <option value="D">D</option>
+                  <option value="E">E</option>
+                  <option value="F">F</option>
+                  <option value="G">G</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="checkbox-label">
+                  <input type="checkbox" id="conservation-only" name="must_be_in_conservation_area">
+                  <span>Only show properties in conservation areas</span>
+                </label>
+              </div>
+
+              <div class="form-group">
+                <label>Exclude Flood Risk Levels</label>
+                <div class="checkbox-group">
+                  <label class="checkbox-label">
+                    <input type="checkbox" name="exclude_flood_risk" value="high">
+                    <span>High</span>
+                  </label>
+                  <label class="checkbox-label">
+                    <input type="checkbox" name="exclude_flood_risk" value="medium">
+                    <span>Medium</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary btn-large">
+                <span>Search Properties</span>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                  <path d="M19 19L13 13M15 8C15 11.866 11.866 15 8 15C4.13401 15 1 11.866 1 8C1 4.13401 4.13401 1 8 1C11.866 1 15 4.13401 15 8Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+              </button>
+            </div>
+
+          </form>
+        </div>
+      </section>
+
+      <!-- Results Section (initially hidden) -->
+      <section class="results-section" id="results-section" style="display: none;">
+        <div class="results-header">
+          <h2>Search Results</h2>
+          <p id="results-count">Found <span id="result-count-number">0</span> properties</p>
+        </div>
+
+        <div id="results-grid" class="results-grid">
+          <!-- Results will be inserted here by JavaScript -->
+        </div>
+
+        <div id="loading-spinner" class="loading-spinner" style="display: none;">
+          <div class="spinner"></div>
+          <p>Searching properties...</p>
+        </div>
+
+        <div id="no-results" class="no-results" style="display: none;">
+          <p>No properties found matching your criteria. Try adjusting your filters.</p>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-column">
+          <img src="doorstep-logo.png" alt="Doorstep" class="footer-logo">
+          <p>AI-powered property search with comprehensive enrichment</p>
+        </div>
+        <div class="footer-column">
+          <h4>Quick Links</h4>
+          <a href="index.html">Home</a>
+          <a href="property-search.html">Property Search</a>
+          <a href="professionals.html">Valuations</a>
+        </div>
+        <div class="footer-column">
+          <h4>Legal</h4>
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="terms-of-service.html">Terms of Service</a>
+          <a href="cookie-policy.html">Cookie Policy</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Doorstep. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="property-search.js"></script>
+
+</body>
+</html>

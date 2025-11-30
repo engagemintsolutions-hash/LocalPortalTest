@@ -1,0 +1,1069 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Why Doorstep | Property Intelligence Platform</title>
+  <meta name="description" content="Discover why Doorstep is the smarter way to understand property. Instant valuations, transparent data, pay only for what you use.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Why Doorstep Page Specific Styles */
+
+    .why-page {
+      overflow-x: hidden;
+    }
+
+    /* Hero Section */
+    .why-hero-section {
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      background: linear-gradient(135deg, #FAFBFC 0%, #F0F9FA 50%, #E8F4F5 100%);
+      overflow: hidden;
+    }
+
+    .why-hero-section::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 80%;
+      height: 150%;
+      background: radial-gradient(ellipse, rgba(25, 114, 127, 0.06) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .why-hero-section::after {
+      content: '';
+      position: absolute;
+      bottom: -30%;
+      left: -10%;
+      width: 50%;
+      height: 80%;
+      background: radial-gradient(ellipse, rgba(239, 106, 104, 0.04) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    /* Floating decorative elements */
+    .hero-decoration {
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0.5;
+      animation: float 6s ease-in-out infinite;
+    }
+
+    .hero-decoration-1 {
+      width: 300px;
+      height: 300px;
+      top: 10%;
+      right: 5%;
+      background: linear-gradient(135deg, rgba(25, 114, 127, 0.08) 0%, rgba(25, 114, 127, 0.02) 100%);
+      animation-delay: 0s;
+    }
+
+    .hero-decoration-2 {
+      width: 200px;
+      height: 200px;
+      bottom: 20%;
+      right: 15%;
+      background: linear-gradient(135deg, rgba(239, 106, 104, 0.06) 0%, rgba(239, 106, 104, 0.02) 100%);
+      animation-delay: -2s;
+    }
+
+    .hero-decoration-3 {
+      width: 150px;
+      height: 150px;
+      top: 30%;
+      left: 5%;
+      background: linear-gradient(135deg, rgba(25, 114, 127, 0.05) 0%, transparent 100%);
+      animation-delay: -4s;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-20px) rotate(5deg); }
+    }
+
+    .why-hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 750px;
+    }
+
+    .why-hero-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: white;
+      border: 1px solid rgba(25, 114, 127, 0.2);
+      padding: 10px 20px;
+      border-radius: 50px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--color-teal);
+      margin-bottom: 32px;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+    }
+
+    .why-hero-label svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    .why-hero-section h1 {
+      font-size: 64px;
+      font-weight: 800;
+      color: var(--color-teal-dark);
+      line-height: 1.1;
+      margin-bottom: 28px;
+      letter-spacing: -0.03em;
+    }
+
+    .why-hero-section h1 span {
+      display: block;
+      background: linear-gradient(135deg, var(--color-teal) 0%, #0a5c66 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .why-hero-subtitle {
+      font-size: 22px;
+      color: var(--color-text-secondary);
+      line-height: 1.7;
+      margin-bottom: 40px;
+      max-width: 600px;
+    }
+
+    .why-hero-cta {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .why-hero-cta .btn {
+      padding: 16px 32px;
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    /* Stats Bar */
+    .stats-bar {
+      background: white;
+      border-top: 1px solid #E5E7EB;
+      border-bottom: 1px solid #E5E7EB;
+      padding: 40px 0;
+    }
+
+    .stats-grid {
+      display: flex;
+      justify-content: center;
+      gap: 80px;
+    }
+
+    .stat-item {
+      text-align: center;
+    }
+
+    .stat-number {
+      font-size: 48px;
+      font-weight: 800;
+      color: var(--color-teal-dark);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .stat-number span {
+      color: var(--color-teal);
+    }
+
+    .stat-label {
+      font-size: 15px;
+      color: var(--color-text-secondary);
+      font-weight: 500;
+    }
+
+    /* Pillars Section */
+    .pillars-section {
+      padding: 120px 0;
+      background: white;
+    }
+
+    .pillars-header {
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto 80px;
+    }
+
+    .pillars-header h2 {
+      font-size: 44px;
+      color: var(--color-teal-dark);
+      margin-bottom: 16px;
+    }
+
+    .pillars-header p {
+      font-size: 19px;
+      color: var(--color-text-secondary);
+      margin: 0;
+    }
+
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+    }
+
+    .pillar-card {
+      position: relative;
+      padding: 48px 36px;
+      background: linear-gradient(180deg, #FAFBFC 0%, #F5F7F8 100%);
+      border-radius: 24px;
+      border: 1px solid #E8EAED;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      overflow: hidden;
+    }
+
+    .pillar-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--color-teal) 0%, var(--color-teal-light) 100%);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .pillar-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 24px 48px rgba(0, 0, 0, 0.08);
+      border-color: transparent;
+    }
+
+    .pillar-card:hover::before {
+      opacity: 1;
+    }
+
+    .pillar-icon {
+      width: 72px;
+      height: 72px;
+      background: linear-gradient(135deg, var(--color-teal) 0%, #0a5c66 100%);
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 28px;
+      box-shadow: 0 8px 24px rgba(25, 114, 127, 0.25);
+    }
+
+    .pillar-icon svg {
+      width: 36px;
+      height: 36px;
+      color: white;
+    }
+
+    .pillar-card h3 {
+      font-size: 24px;
+      color: var(--color-teal-dark);
+      margin-bottom: 14px;
+      font-weight: 700;
+    }
+
+    .pillar-card p {
+      font-size: 16px;
+      color: var(--color-text-secondary);
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    /* Values Section */
+    .values-section {
+      padding: 120px 0;
+      background: linear-gradient(135deg, var(--color-teal-dark) 0%, #0a4d54 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .values-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      opacity: 0.5;
+    }
+
+    .values-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .values-header {
+      text-align: center;
+      margin-bottom: 80px;
+    }
+
+    .values-header h2 {
+      font-size: 44px;
+      color: white;
+      margin-bottom: 16px;
+    }
+
+    .values-header p {
+      font-size: 19px;
+      color: rgba(255, 255, 255, 0.7);
+      margin: 0;
+    }
+
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .value-card {
+      background: rgba(255, 255, 255, 0.06);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      padding: 40px;
+      transition: all 0.3s ease;
+    }
+
+    .value-card:hover {
+      background: rgba(255, 255, 255, 0.1);
+      transform: translateY(-4px);
+    }
+
+    .value-number {
+      display: inline-block;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--color-coral);
+      background: rgba(239, 106, 104, 0.15);
+      padding: 6px 14px;
+      border-radius: 20px;
+      margin-bottom: 20px;
+      letter-spacing: 1px;
+    }
+
+    .value-card h4 {
+      font-size: 22px;
+      color: white;
+      margin-bottom: 12px;
+      font-weight: 700;
+    }
+
+    .value-card p {
+      font-size: 16px;
+      color: rgba(255, 255, 255, 0.75);
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    /* Products Section */
+    .products-section {
+      padding: 120px 0;
+      background: linear-gradient(180deg, #F8FAFB 0%, white 100%);
+    }
+
+    .products-header {
+      text-align: center;
+      margin-bottom: 80px;
+    }
+
+    .products-header h2 {
+      font-size: 44px;
+      color: var(--color-teal-dark);
+      margin-bottom: 16px;
+    }
+
+    .products-header p {
+      font-size: 19px;
+      color: var(--color-text-secondary);
+      margin: 0;
+    }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .product-card {
+      background: white;
+      border-radius: 28px;
+      padding: 48px;
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
+      border: 1px solid #E8EAED;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .product-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 5px;
+    }
+
+    .product-card.valuations::before {
+      background: linear-gradient(90deg, var(--color-teal) 0%, var(--color-teal-light) 100%);
+    }
+
+    .product-card.marketing::before {
+      background: linear-gradient(90deg, var(--color-coral) 0%, #F9A08A 100%);
+    }
+
+    .product-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 24px 64px rgba(0, 0, 0, 0.1);
+    }
+
+    .product-icon {
+      width: 80px;
+      height: 80px;
+      border-radius: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 28px;
+    }
+
+    .product-card.valuations .product-icon {
+      background: linear-gradient(135deg, #E8F4F5 0%, #D4EAEC 100%);
+      color: var(--color-teal);
+    }
+
+    .product-card.marketing .product-icon {
+      background: linear-gradient(135deg, #FEF2F2 0%, #FECACA 100%);
+      color: var(--color-coral);
+    }
+
+    .product-icon svg {
+      width: 40px;
+      height: 40px;
+    }
+
+    .product-card h3 {
+      font-size: 28px;
+      color: var(--color-teal-dark);
+      margin-bottom: 12px;
+    }
+
+    .product-tagline {
+      font-size: 17px;
+      color: var(--color-text-secondary);
+      margin-bottom: 28px;
+      line-height: 1.6;
+    }
+
+    .product-features {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 32px;
+    }
+
+    .product-features li {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 0;
+      font-size: 15px;
+      color: var(--color-text-secondary);
+      border-bottom: 1px solid #F3F4F6;
+    }
+
+    .product-features li:last-child {
+      border-bottom: none;
+    }
+
+    .product-features li svg {
+      width: 20px;
+      height: 20px;
+      color: #10B981;
+      flex-shrink: 0;
+    }
+
+    .product-pricing {
+      background: #F8FAFB;
+      border-radius: 16px;
+      padding: 24px;
+      margin-bottom: 28px;
+    }
+
+    .pricing-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 0;
+    }
+
+    .pricing-row:not(:last-child) {
+      border-bottom: 1px solid #E5E7EB;
+      padding-bottom: 16px;
+      margin-bottom: 8px;
+    }
+
+    .pricing-label {
+      font-size: 14px;
+      color: var(--color-text-secondary);
+    }
+
+    .pricing-value {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--color-teal-dark);
+    }
+
+    .pricing-value.coming-soon {
+      color: var(--color-coral);
+      font-size: 16px;
+    }
+
+    .product-cta {
+      display: flex;
+      gap: 12px;
+    }
+
+    .product-cta .btn {
+      flex: 1;
+      padding: 16px 24px;
+      font-weight: 600;
+      text-align: center;
+    }
+
+    /* CTA Section */
+    .final-cta-section {
+      padding: 120px 0;
+      background: linear-gradient(135deg, #0E3B44 0%, #19727F 100%);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .final-cta-section::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(ellipse at center, rgba(255,255,255,0.05) 0%, transparent 50%);
+      animation: pulse 8s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); opacity: 0.5; }
+      50% { transform: scale(1.1); opacity: 0.3; }
+    }
+
+    .final-cta-content {
+      position: relative;
+      z-index: 2;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .final-cta-section h2 {
+      font-size: 44px;
+      color: white;
+      margin-bottom: 20px;
+    }
+
+    .final-cta-section p {
+      font-size: 19px;
+      color: rgba(255, 255, 255, 0.8);
+      margin-bottom: 40px;
+      line-height: 1.7;
+    }
+
+    .final-cta-buttons {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .final-cta-buttons .btn {
+      padding: 18px 36px;
+      font-size: 17px;
+      font-weight: 600;
+    }
+
+    .final-cta-buttons .btn-secondary {
+      background: transparent;
+      border-color: rgba(255, 255, 255, 0.3);
+      color: white;
+    }
+
+    .final-cta-buttons .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.5);
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .why-hero-section h1 {
+        font-size: 52px;
+      }
+
+      .stats-grid {
+        gap: 48px;
+      }
+
+      .pillars-grid {
+        gap: 24px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .why-hero-section {
+        min-height: auto;
+        padding: 120px 0 80px;
+      }
+
+      .why-hero-section h1 {
+        font-size: 40px;
+      }
+
+      .why-hero-subtitle {
+        font-size: 18px;
+      }
+
+      .stats-grid {
+        flex-wrap: wrap;
+        gap: 32px;
+      }
+
+      .stat-item {
+        flex: 1 1 40%;
+      }
+
+      .stat-number {
+        font-size: 36px;
+      }
+
+      .pillars-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .pillars-header h2,
+      .values-header h2,
+      .products-header h2,
+      .final-cta-section h2 {
+        font-size: 32px;
+      }
+
+      .values-grid,
+      .products-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .product-card {
+        padding: 32px;
+      }
+
+      .hero-decoration {
+        display: none;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .why-hero-section h1 {
+        font-size: 32px;
+      }
+
+      .why-hero-cta {
+        flex-direction: column;
+      }
+
+      .why-hero-cta .btn {
+        width: 100%;
+      }
+
+      .stat-item {
+        flex: 1 1 100%;
+      }
+
+      .product-cta {
+        flex-direction: column;
+      }
+
+      .final-cta-buttons {
+        flex-direction: column;
+      }
+
+      .final-cta-buttons .btn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body class="why-page">
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-content">
+        <a href="index.html" class="header-logo">
+          <img src="doorstep-logo.png" alt="Doorstep" style="height: 40px;">
+        </a>
+        <nav class="main-nav" id="main-nav">
+          <a href="index.html">Home</a>
+          <a href="professionals.html">Valuations</a>
+          <a href="marketing.html">Marketing</a>
+          <a href="the-doorstep-difference.html" class="btn btn-primary active">Why Doorstep</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="why-hero-section">
+    <div class="hero-decoration hero-decoration-1"></div>
+    <div class="hero-decoration hero-decoration-2"></div>
+    <div class="hero-decoration hero-decoration-3"></div>
+
+    <div class="container">
+      <div class="why-hero-content">
+        <div class="why-hero-label">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+            <path d="M2 17l10 5 10-5"/>
+            <path d="M2 12l10 5 10-5"/>
+          </svg>
+          Why Doorstep
+        </div>
+        <h1>
+          Property intelligence,
+          <span>delivered.</span>
+        </h1>
+        <p class="why-hero-subtitle">
+          We believe property decisions should be powered by data, not guesswork.
+          Instant access to the insights that used to take weeks and cost thousands.
+        </p>
+        <div class="why-hero-cta">
+          <a href="index.html" class="btn btn-primary">Get a Valuation</a>
+          <a href="professionals.html" class="btn btn-secondary">For Professionals</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Bar -->
+  <section class="stats-bar">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="stat-number">±3.5<span>%</span></div>
+          <div class="stat-label">Average accuracy</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">38<span>+</span></div>
+          <div class="stat-label">Data sources</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">&lt;60<span>s</span></div>
+          <div class="stat-label">Delivery time</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">£2<span>.49</span></div>
+          <div class="stat-label">Starting price</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Three Pillars -->
+  <section class="pillars-section">
+    <div class="container">
+      <div class="pillars-header">
+        <h2>Built different</h2>
+        <p>Three principles that set us apart from every other property platform</p>
+      </div>
+
+      <div class="pillars-grid">
+        <div class="pillar-card">
+          <div class="pillar-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M12 6v6l4 2"/>
+            </svg>
+          </div>
+          <h3>Pay per use</h3>
+          <p>No subscriptions. No annual contracts. No minimum commitments. Use us once or a thousand times — you only pay for what you need, when you need it.</p>
+        </div>
+
+        <div class="pillar-card">
+          <div class="pillar-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              <path d="M9 12l2 2 4-4"/>
+            </svg>
+          </div>
+          <h3>Transparent data</h3>
+          <p>Every valuation shows its working. See the comparables, the adjustments, the confidence score. No black boxes, no hidden algorithms — just clear, auditable intelligence.</p>
+        </div>
+
+        <div class="pillar-card">
+          <div class="pillar-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="3" width="18" height="18" rx="2"/>
+              <path d="M3 9h18"/>
+              <path d="M9 21V9"/>
+            </svg>
+          </div>
+          <h3>Purpose-built</h3>
+          <p>Not a wrapper around ChatGPT. Our valuation models are trained specifically on UK property data and validated against deterministic benchmarks. Specialist precision, not generic guesswork.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Values Section -->
+  <section class="values-section">
+    <div class="container">
+      <div class="values-content">
+        <div class="values-header">
+          <h2>What we believe</h2>
+          <p>The principles that guide everything we build</p>
+        </div>
+
+        <div class="values-grid">
+          <div class="value-card">
+            <div class="value-number">01</div>
+            <h4>Augment, don't replace</h4>
+            <p>We elevate professionals, not eliminate them. Surveyors review, not research. Agents close deals, not format brochures. Technology should multiply human expertise.</p>
+          </div>
+
+          <div class="value-card">
+            <div class="value-number">02</div>
+            <h4>Accessible to everyone</h4>
+            <p>Institutional-grade property intelligence shouldn't be locked behind enterprise contracts. From first-time buyers to FTSE lenders — everyone deserves accurate data.</p>
+          </div>
+
+          <div class="value-card">
+            <div class="value-number">03</div>
+            <h4>Speed without compromise</h4>
+            <p>Instant doesn't mean approximate. We've engineered systems that deliver in seconds what used to take days — without sacrificing accuracy or depth.</p>
+          </div>
+
+          <div class="value-card">
+            <div class="value-number">04</div>
+            <h4>Radical transparency</h4>
+            <p>Trust is built on visibility. We show our data sources, our methodology, our limitations. If we're uncertain, we say so. No smoke and mirrors.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <section class="products-section">
+    <div class="container">
+      <div class="products-header">
+        <h2>Two ways we help</h2>
+        <p>Choose the solution that fits your needs</p>
+      </div>
+
+      <div class="products-grid">
+        <div class="product-card valuations">
+          <div class="product-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M12 6v6l4 2"/>
+              <path d="M16 16l2 2"/>
+            </svg>
+          </div>
+          <h3>Valuations</h3>
+          <p class="product-tagline">Instant, accurate property intelligence powered by 38+ authoritative data sources.</p>
+
+          <ul class="product-features">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+              ±3.5% average accuracy
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+              Full comparable analysis
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+              Environmental & risk data
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+              Audit-ready reporting
+            </li>
+          </ul>
+
+          <div class="product-pricing">
+            <div class="pricing-row">
+              <span class="pricing-label">Homeowners</span>
+              <span class="pricing-value">From £2.49</span>
+            </div>
+            <div class="pricing-row">
+              <span class="pricing-label">Professionals</span>
+              <span class="pricing-value">From £19</span>
+            </div>
+          </div>
+
+          <div class="product-cta">
+            <a href="index.html" class="btn btn-primary">Get Started</a>
+            <a href="professionals.html" class="btn btn-secondary">Learn More</a>
+          </div>
+        </div>
+
+        <div class="product-card marketing">
+          <div class="product-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="3" width="18" height="18" rx="2"/>
+              <circle cx="8.5" cy="8.5" r="1.5"/>
+              <path d="M21 15l-5-5L5 21"/>
+            </svg>
+          </div>
+          <h3>Marketing</h3>
+          <p class="product-tagline">From photos to complete marketing pack in 60 seconds. AI-powered content for agents.</p>
+
+          <ul class="product-features">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+              Professional PDF brochures
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+              Portal-ready listings
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+              Social media content
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+              Email campaigns
+            </li>
+          </ul>
+
+          <div class="product-pricing">
+            <div class="pricing-row">
+              <span class="pricing-label">Per property</span>
+              <span class="pricing-value">£2</span>
+            </div>
+            <div class="pricing-row">
+              <span class="pricing-label">Status</span>
+              <span class="pricing-value coming-soon">Coming Soon</span>
+            </div>
+          </div>
+
+          <div class="product-cta">
+            <a href="marketing.html" class="btn btn-primary" style="background: var(--color-coral); border-color: var(--color-coral);">Explore</a>
+            <a href="marketing.html#waitlist" class="btn btn-secondary">Join Waitlist</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="final-cta-section" id="contact">
+    <div class="container">
+      <div class="final-cta-content">
+        <h2>Ready to get started?</h2>
+        <p>Join thousands who've discovered a smarter way to understand property value.</p>
+        <div class="final-cta-buttons">
+          <a href="index.html" class="btn btn-primary">Get Your First Valuation</a>
+          <a href="index.html#contact" class="btn btn-secondary">Get In Touch</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-top">
+        <div class="footer-column footer-brand">
+          <img src="doorstep-logo.png" alt="Doorstep" class="footer-logo">
+          <p class="footer-tagline">Property intelligence, delivered.</p>
+        </div>
+
+        <div class="footer-column">
+          <h4>Product</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">For Homeowners</a></li>
+            <li><a href="professionals.html">For Professionals</a></li>
+            <li><a href="marketing.html">Marketing</a></li>
+            <li><a href="the-doorstep-difference.html">Why Doorstep</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Resources</h4>
+          <ul class="footer-links">
+            <li><a href="data-sources.html">Data Sources</a></li>
+            <li><a href="professional-report.html" target="_blank">Sample Report</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Legal</h4>
+          <ul class="footer-links">
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="terms-of-service.html">Terms of Service</a></li>
+            <li><a href="cookie-policy.html">Cookie Policy</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column footer-contact">
+          <h4>Get In Touch</h4>
+          <div class="footer-contact-info">
+            <a href="mailto:contact@doorstepsolutions.uk" class="footer-email">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="4" width="20" height="16" rx="2"/>
+                <path d="m2 7 10 7 10-7"/>
+              </svg>
+              contact@doorstepsolutions.uk
+            </a>
+            <p class="footer-address">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              London, United Kingdom
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-bottom-left">
+          <p>&copy; 2025 Doorstep Solutions Ltd. All rights reserved. Company No. 15847293</p>
+        </div>
+        <div class="footer-bottom-right">
+          <div class="footer-badges">
+            <span class="security-badge">ISO 27001</span>
+            <span class="security-badge">GDPR Compliant</span>
+            <span class="security-badge">SOC 2 Type II</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

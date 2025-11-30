@@ -1,0 +1,2495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Doorstep - Valuations built on strong foundations</title>
+  <meta name="description" content="Portfolio valuations with the speed of AI and the clarity of human oversight. We elevate surveyors, not replace them.">
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="doorstep-logo.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="doorstep-logo.png">
+  <link rel="apple-touch-icon" href="doorstep-logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=20251126-41">
+  <script>
+    // Header scroll effect
+    document.addEventListener('DOMContentLoaded', function() {
+      const header = document.querySelector('.site-header');
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > 50) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
+      });
+    });
+  </script>
+</head>
+<body class="homepage">
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-content">
+        <a href="index.html" class="logo-link">
+          <img src="doorstep-logo.png" alt="Doorstep" class="header-logo">
+        </a>
+        <button class="mobile-menu-toggle" onclick="toggleMobileMenu()" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="main-nav" id="main-nav">
+          <a href="index.html">Home</a>
+          <a href="professionals.html">Valuations</a>
+          <a href="marketing.html">Marketing</a>
+          <a href="the-doorstep-difference.html" class="btn btn-primary">Why Doorstep</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section with photo background -->
+  <section class="hero hero-with-photo" id="hero">
+    <!-- Property Photo Background -->
+    <div class="hero-photo-bg">
+      <img src="elegant-1498629.jpg" alt="Elegant property interior" class="hero-photo-img" loading="eager">
+      <div class="hero-photo-overlay"></div>
+
+      <!-- Floating Price Animations -->
+      <div class="floating-prices">
+        <div class="floating-price fp-1"><span>£425,000</span></div>
+        <div class="floating-price fp-2"><span>£1.2M</span></div>
+        <div class="floating-price fp-3"><span>£892,000</span></div>
+        <div class="floating-price fp-4"><span>£315,000</span></div>
+        <div class="floating-price fp-5"><span>£567,000</span></div>
+        <div class="floating-price fp-6"><span>£729,000</span></div>
+        <div class="floating-price fp-7"><span>£2.1M</span></div>
+        <div class="floating-price fp-8"><span>£485,000</span></div>
+      </div>
+    </div>
+
+    <!-- Integrated Navigation -->
+    <nav class="hero-nav">
+      <a href="professionals.html">Valuations</a>
+      <a href="marketing.html">Marketing</a>
+      <a href="the-doorstep-difference.html" class="hero-nav-cta">Why Doorstep</a>
+    </nav>
+
+    <!-- Dynamic geometric background -->
+    <div class="hero-backdrop">
+      <!-- Animated gradient orbs -->
+      <div class="hero-orb hero-orb-1"></div>
+      <div class="hero-orb hero-orb-2"></div>
+      <div class="hero-orb hero-orb-3"></div>
+
+      <!-- Grid pattern overlay -->
+      <div class="hero-grid"></div>
+
+      <!-- Floating data points representing properties -->
+      <div class="hero-data-points">
+        <div class="data-point dp-1"><span>£425k</span></div>
+        <div class="data-point dp-2"><span>£892k</span></div>
+        <div class="data-point dp-3"><span>£315k</span></div>
+        <div class="data-point dp-4"><span>£1.2M</span></div>
+        <div class="data-point dp-5"><span>£567k</span></div>
+        <div class="data-point dp-6"><span>£729k</span></div>
+      </div>
+
+      <!-- Connection lines between points -->
+      <svg class="hero-connections" viewBox="0 0 1200 600" preserveAspectRatio="none">
+        <defs>
+          <linearGradient id="lineGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#19727F;stop-opacity:0"/>
+            <stop offset="50%" style="stop-color:#19727F;stop-opacity:0.3"/>
+            <stop offset="100%" style="stop-color:#19727F;stop-opacity:0"/>
+          </linearGradient>
+        </defs>
+        <path class="connection-line cl-1" d="M100,150 Q300,100 500,200" stroke="url(#lineGrad1)" stroke-width="1" fill="none"/>
+        <path class="connection-line cl-2" d="M700,100 Q900,180 1100,120" stroke="url(#lineGrad1)" stroke-width="1" fill="none"/>
+        <path class="connection-line cl-3" d="M200,400 Q400,350 600,450" stroke="url(#lineGrad1)" stroke-width="1" fill="none"/>
+        <path class="connection-line cl-4" d="M800,380 Q950,300 1050,400" stroke="url(#lineGrad1)" stroke-width="1" fill="none"/>
+      </svg>
+
+      <!-- Abstract city skyline silhouette -->
+      <div class="hero-skyline">
+        <svg viewBox="0 0 1440 200" preserveAspectRatio="none">
+          <defs>
+            <linearGradient id="skylineGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" style="stop-color:#19727F;stop-opacity:0.08"/>
+              <stop offset="100%" style="stop-color:#19727F;stop-opacity:0.02"/>
+            </linearGradient>
+          </defs>
+          <!-- Buildings silhouette -->
+          <path d="M0,200 L0,160 L40,160 L40,120 L60,120 L60,100 L80,100 L80,120 L100,120 L100,140 L140,140 L140,80 L160,80 L160,60 L180,60 L180,80 L200,80 L200,100 L220,100 L220,130 L260,130 L260,90 L280,90 L280,70 L300,70 L300,50 L320,50 L320,70 L340,70 L340,110 L380,110 L380,150 L420,150 L420,100 L440,100 L440,80 L460,80 L460,60 L480,60 L480,40 L500,40 L500,60 L520,60 L520,90 L560,90 L560,120 L600,120 L600,80 L620,80 L620,50 L640,50 L640,30 L660,30 L660,50 L680,50 L680,80 L720,80 L720,110 L760,110 L760,70 L780,70 L780,90 L800,90 L800,130 L840,130 L840,100 L860,100 L860,70 L880,70 L880,50 L900,50 L900,70 L920,70 L920,100 L960,100 L960,140 L1000,140 L1000,90 L1020,90 L1020,60 L1040,60 L1040,80 L1080,80 L1080,110 L1120,110 L1120,70 L1140,70 L1140,90 L1180,90 L1180,130 L1220,130 L1220,100 L1260,100 L1260,140 L1300,140 L1300,120 L1340,120 L1340,150 L1380,150 L1380,170 L1440,170 L1440,200 Z" fill="url(#skylineGrad)"/>
+        </svg>
+      </div>
+    </div>
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-text">
+          <div class="hero-headline-row">
+            <img src="doorstep-logo.png" alt="Doorstep" class="hero-logo-inline">
+            <div class="hero-headline-content">
+              <h1 class="hero-headline">Next-Generation Valuations Built on Strong Foundations</h1>
+
+              <!-- Instant Valuation Tool -->
+              <div class="instant-valuation-tool">
+                <div class="valuation-input-container">
+                  <div class="input-wrapper">
+                    <input type="text" id="property-address" class="valuation-input" placeholder="">
+                    <span class="input-placeholder"><span class="typing-cursor"></span>Enter postcode or address</span>
+                  </div>
+                  <button class="valuation-btn" onclick="generateValuation()">Get instant valuation</button>
+                </div>
+                <a href="professional-report.html" class="sample-report-link" target="_blank">View Sample Report →</a>
+
+                <!-- Valuation Result (hidden by default) -->
+                <div class="valuation-result" id="valuation-result" style="display: none;">
+              <div class="valuation-result-header">
+                <div class="result-address" id="result-address"></div>
+                <div class="result-estimated">Estimated Value</div>
+                <div class="result-price" id="result-price">£625,000</div>
+                <div class="result-range" id="result-range">Range: £595,000 - £655,000</div>
+
+                <!-- Confidence Gauge -->
+                <div class="confidence-gauge">
+                  <div class="confidence-label">Valuation Confidence</div>
+                  <div class="confidence-meter">
+                    <div class="confidence-bar" id="confidence-bar"></div>
+                  </div>
+                  <div class="confidence-text" id="confidence-text">Medium Confidence</div>
+                </div>
+              </div>
+              <div class="valuation-upsell">
+                <div class="upsell-header">
+                  <h4>Want to understand how we calculated this?</h4>
+                  <p>Choose the report that's right for you</p>
+                </div>
+
+                <!-- Report Options -->
+                <div class="report-options">
+                  <!-- Executive Summary Option -->
+                  <div class="report-option">
+                    <div class="report-option-header">
+                      <div class="report-option-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </div>
+                      <div class="report-option-title">
+                        <h5>Executive Summary</h5>
+                      </div>
+                    </div>
+                    <div class="report-option-body">
+                      <p class="report-option-description">Perfect for homeowners and buyers</p>
+                      <ul class="report-option-features">
+                        <li>Key valuation insights</li>
+                        <li>Comparable properties</li>
+                        <li>Market overview</li>
+                        <li>Confidence assessment</li>
+                        <li>2-3 page summary</li>
+                      </ul>
+                      <div class="report-option-price" style="margin-top: 12px; margin-bottom: 12px;">£2.49</div>
+                      <button class="btn btn-secondary report-option-btn" onclick="openExecutiveSample()">View Sample</button>
+                      <button class="btn btn-primary report-option-btn" onclick="purchaseExecutiveReport()" style="margin-top: 8px;">Pay & Generate</button>
+                    </div>
+                  </div>
+
+                  <!-- Professional Property Report Option -->
+                  <div class="report-option report-option-featured">
+                    <div class="report-option-badge-corner">PROFESSIONAL</div>
+                    <div class="report-option-header">
+                      <div class="report-option-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </div>
+                      <div class="report-option-title">
+                        <h5>Professional Property Report</h5>
+                      </div>
+                    </div>
+                    <div class="report-option-body">
+                      <p class="report-option-description">Surveyor-grade pre-inspection intelligence</p>
+                      <ul class="report-option-features">
+                        <li>Complete valuation methodology</li>
+                        <li>15-20 detailed comparables</li>
+                        <li>Environmental & risk assessment</li>
+                        <li>Market conditions analysis</li>
+                        <li>Planning & area intelligence</li>
+                        <li>25+ page comprehensive report</li>
+                      </ul>
+                      <div class="report-option-price" style="margin-top: 12px; margin-bottom: 12px;">£9.99</div>
+                      <button class="btn btn-secondary report-option-btn" onclick="openProfessionalSample()">View Sample</button>
+                      <button class="btn btn-primary report-option-btn" onclick="purchaseProfessionalReport()" style="margin-top: 8px;">Pay & Generate</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Report Preview Section - Redesigned -->
+  <section class="report-preview-section" id="device-showcase">
+    <div class="container">
+      <div class="dual-device-showcase">
+        <!-- Mobile Device - Executive Summary -->
+        <div class="device-column mobile-column">
+          <div class="phone-device">
+            <div class="phone-frame">
+              <div class="phone-screen">
+                <!-- Screen Header -->
+                <div class="screen-header">
+                  <span class="screen-header-title">Executive Summary</span>
+                  <div>
+                    <span class="screen-header-price">£2.49</span>
+                    <a href="valuation-report.html" class="screen-header-link" target="_blank">View Sample →</a>
+                  </div>
+                </div>
+                <!-- Tab Navigation -->
+                <div class="phone-tabs">
+                  <button class="phone-tab active">Overview</button>
+                  <button class="phone-tab">Trends</button>
+                  <button class="phone-tab">Comps</button>
+                  <button class="phone-tab">Area</button>
+                </div>
+
+                <!-- Tab Content -->
+                <div class="phone-content">
+                  <!-- Tab 0: Overview (First panel user sees) -->
+                  <div class="phone-panel active" data-panel="0">
+                    <div class="phone-hero-value">
+                      <div class="phv-label">Estimated Market Value</div>
+                      <div class="phv-amount">£202,000</div>
+                      <div class="phv-range">Range: £182,000 - £222,000</div>
+                    </div>
+                    <div class="phone-confidence-row">
+                      <div class="pcr-gauge">
+                        <svg viewBox="0 0 60 60" class="confidence-ring">
+                          <circle cx="30" cy="30" r="26" fill="none" stroke="#E5E7EB" stroke-width="6"/>
+                          <circle cx="30" cy="30" r="26" fill="none" stroke="#19727F" stroke-width="6"
+                            stroke-dasharray="163.36" stroke-dashoffset="35.94" stroke-linecap="round"
+                            transform="rotate(-90 30 30)"/>
+                        </svg>
+                        <span class="pcr-score">78%</span>
+                      </div>
+                      <div class="pcr-info">
+                        <span class="pcr-label">Confidence Score</span>
+                        <span class="pcr-level">High Confidence</span>
+                      </div>
+                    </div>
+                    <div class="phone-key-metrics">
+                      <div class="pkm-item">
+                        <span class="pkm-icon positive">↑</span>
+                        <div class="pkm-content">
+                          <span class="pkm-value">+£34,050</span>
+                          <span class="pkm-label">Since last sale</span>
+                        </div>
+                      </div>
+                      <div class="pkm-item">
+                        <span class="pkm-icon">%</span>
+                        <div class="pkm-content">
+                          <span class="pkm-value">5.1%</span>
+                          <span class="pkm-label">Rental yield</span>
+                        </div>
+                      </div>
+                      <div class="pkm-item">
+                        <span class="pkm-icon">⌂</span>
+                        <div class="pkm-content">
+                          <span class="pkm-value">775 sqft</span>
+                          <span class="pkm-label">2 bed, 2 bath</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="phone-insights">
+                      <div class="phi-item positive">
+                        <span class="phi-check">✓</span>
+                        <span>+20.3% appreciation since 2007</span>
+                      </div>
+                      <div class="phi-item positive">
+                        <span class="phi-check">✓</span>
+                        <span>Yield above area average</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Tab 1: Trends -->
+                  <div class="phone-panel" data-panel="1">
+                    <div class="panel-chart-header">
+                      <h4>Price History (5yr)</h4>
+                      <span class="chart-badge good">+£34k since purchase</span>
+                    </div>
+                    <div class="panel-chart">
+                      <svg viewBox="0 0 260 100" class="mini-chart">
+                        <defs>
+                          <linearGradient id="miniGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" style="stop-color:#19727F;stop-opacity:0.3"/>
+                            <stop offset="100%" style="stop-color:#19727F;stop-opacity:0"/>
+                          </linearGradient>
+                        </defs>
+                        <path d="M10,70 Q50,65 90,55 T170,40 T250,25 L250,90 L10,90 Z" fill="url(#miniGrad)"/>
+                        <path d="M10,70 Q50,65 90,55 T170,40 T250,25" stroke="#19727F" stroke-width="2.5" fill="none"/>
+                        <circle cx="250" cy="25" r="4" fill="#19727F"/>
+                      </svg>
+                    </div>
+                    <div class="panel-chart-labels">
+                      <span>2020</span><span>2021</span><span>2022</span><span>2023</span><span>2024</span>
+                    </div>
+                    <div class="phone-trend-table">
+                      <div class="ptt-row"><span>2024</span><span>£202,000</span><span class="positive">+2%</span></div>
+                      <div class="ptt-row"><span>2023</span><span>£198,000</span><span class="negative">-6%</span></div>
+                      <div class="ptt-row"><span>2022</span><span>£210,000</span><span class="negative">-4%</span></div>
+                      <div class="ptt-row"><span>2021</span><span>£218,000</span><span class="positive">+8%</span></div>
+                    </div>
+                  </div>
+
+                  <!-- Tab 2: Comparables -->
+                  <div class="phone-panel" data-panel="2">
+                    <h4 class="panel-title">Recent Sales Nearby</h4>
+                    <div class="panel-comps">
+                      <div class="panel-comp">
+                        <div class="pc-match-badge">92%</div>
+                        <div class="pc-info">
+                          <span class="pc-price">£195,000</span>
+                          <span class="pc-addr">12 Mccorquodale Rd</span>
+                          <span class="pc-details">2 bed • 0.1mi • Mar 2024</span>
+                        </div>
+                      </div>
+                      <div class="panel-comp">
+                        <div class="pc-match-badge">87%</div>
+                        <div class="pc-info">
+                          <span class="pc-price">£208,000</span>
+                          <span class="pc-addr">45 Cambridge St</span>
+                          <span class="pc-details">2 bed • 0.3mi • Feb 2024</span>
+                        </div>
+                      </div>
+                      <div class="panel-comp">
+                        <div class="pc-match-badge">84%</div>
+                        <div class="pc-info">
+                          <span class="pc-price">£198,500</span>
+                          <span class="pc-addr">8 Station Road</span>
+                          <span class="pc-details">2 bed • 0.4mi • Jan 2024</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="phone-comp-summary">
+                      <span>15 comparables analysed</span>
+                      <span>Avg: £200,500</span>
+                    </div>
+                  </div>
+
+                  <!-- Tab 3: Area -->
+                  <div class="phone-panel" data-panel="3">
+                    <h4 class="panel-title">Area Intelligence</h4>
+                    <div class="panel-area-list">
+                      <div class="panel-area-item">
+                        <div class="pai-icon schools"></div>
+                        <div class="pai-info">
+                          <span class="pai-label">Schools</span>
+                          <span class="pai-value">Outstanding</span>
+                          <span class="pai-detail">Wyvern Primary 0.3mi</span>
+                        </div>
+                      </div>
+                      <div class="panel-area-item">
+                        <div class="pai-icon transport"></div>
+                        <div class="pai-info">
+                          <span class="pai-label">Transport</span>
+                          <span class="pai-value">Excellent</span>
+                          <span class="pai-detail">50min to London</span>
+                        </div>
+                      </div>
+                      <div class="panel-area-item">
+                        <div class="pai-icon safety"></div>
+                        <div class="pai-info">
+                          <span class="pai-label">Crime Rate</span>
+                          <span class="pai-value good">23% below avg</span>
+                        </div>
+                      </div>
+                      <div class="panel-area-item">
+                        <div class="pai-icon flood"></div>
+                        <div class="pai-info">
+                          <span class="pai-label">Flood Risk</span>
+                          <span class="pai-value good">Very Low</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Laptop Device - Professional Report -->
+        <div class="device-column laptop-column">
+          <div class="laptop-device">
+            <div class="laptop-frame">
+              <div class="laptop-screen">
+                <!-- Screen Header -->
+                <div class="laptop-screen-header">
+                  <span class="screen-header-title">Professional Report</span>
+                  <div>
+                    <span class="screen-header-price">£9.99</span>
+                    <a href="professional-report.html" class="screen-header-link" target="_blank">View Sample →</a>
+                  </div>
+                </div>
+                <div class="laptop-content">
+                  <div class="laptop-report-preview">
+                    <div class="lrp-sidebar">
+                      <div class="lrp-nav-item active">Executive Summary</div>
+                      <div class="lrp-nav-item">Valuation Analysis</div>
+                      <div class="lrp-nav-item">Transaction History</div>
+                      <div class="lrp-nav-item">Comparables</div>
+                      <div class="lrp-nav-item">Market Intelligence</div>
+                      <div class="lrp-nav-item">Property Details</div>
+                      <div class="lrp-nav-item">Planning & Dev</div>
+                      <div class="lrp-nav-item">Area Analysis</div>
+                      <div class="lrp-nav-item">Methodology</div>
+                    </div>
+                    <div class="lrp-main">
+                      <!-- Executive Summary Content -->
+                      <div class="lrp-content-panel active" data-lrp="0">
+                        <div class="lrp-header">
+                          <div class="lrp-title">Executive Intelligence Dashboard</div>
+                          <div class="lrp-risk-badge low">Low Risk</div>
+                        </div>
+                        <div class="lrp-property-card">
+                          <div class="lrp-address">8 Mccorquodale Road, Wolverton, Milton Keynes, MK12 5GP</div>
+                          <div class="lrp-meta-row">
+                            <span>UPRN: 10013319852</span>
+                            <span>Purpose Built Flat</span>
+                            <span>Leasehold</span>
+                          </div>
+                        </div>
+                        <div class="lrp-risk-flags">
+                          <div class="lrp-flag good"><span>✓</span> Flood Risk: Very Low</div>
+                          <div class="lrp-flag good"><span>✓</span> Ground Stability: OK</div>
+                          <div class="lrp-flag good"><span>✓</span> No Major Planning</div>
+                          <div class="lrp-flag good"><span>✓</span> Not Listed</div>
+                        </div>
+                        <div class="lrp-stats-grid">
+                          <div class="lrp-stat">
+                            <span class="lrp-stat-label">Current Estimate</span>
+                            <span class="lrp-stat-value">£202,000</span>
+                            <span class="lrp-stat-change positive">+20.3% since last sale</span>
+                          </div>
+                          <div class="lrp-stat">
+                            <span class="lrp-stat-label">Confidence Score</span>
+                            <span class="lrp-stat-value">78%</span>
+                            <span class="lrp-stat-change">High Confidence</span>
+                          </div>
+                          <div class="lrp-stat">
+                            <span class="lrp-stat-label">Rental Yield</span>
+                            <span class="lrp-stat-value">5.1%</span>
+                            <span class="lrp-stat-change">£865 pcm</span>
+                          </div>
+                          <div class="lrp-stat">
+                            <span class="lrp-stat-label">Price per sqft</span>
+                            <span class="lrp-stat-value">£261</span>
+                            <span class="lrp-stat-change positive">+8% vs area avg</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Valuation Analysis Content -->
+                      <div class="lrp-content-panel" data-lrp="1">
+                        <div class="lrp-header">
+                          <div class="lrp-title">Valuation Analysis</div>
+                        </div>
+                        <div class="lrp-valuation-main">
+                          <div class="lrp-val-primary">
+                            <span class="lrp-val-label">Doorstep Estimate</span>
+                            <span class="lrp-val-amount">£202,000</span>
+                            <span class="lrp-val-range">Range: £182,000 - £222,000</span>
+                          </div>
+                          <div class="lrp-confidence-bars">
+                            <div class="lrp-conf-bar"><span>Data Quality</span><div class="lrp-bar"><div style="width:95%"></div></div><span>95%</span></div>
+                            <div class="lrp-conf-bar"><span>Market Activity</span><div class="lrp-bar"><div style="width:72%"></div></div><span>72%</span></div>
+                            <div class="lrp-conf-bar"><span>Property Uniqueness</span><div class="lrp-bar"><div style="width:85%"></div></div><span>85%</span></div>
+                            <div class="lrp-conf-bar"><span>Area Stability</span><div class="lrp-bar"><div style="width:68%"></div></div><span>68%</span></div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Transaction History Content -->
+                      <div class="lrp-content-panel" data-lrp="2">
+                        <div class="lrp-header">
+                          <div class="lrp-title">Transaction History & Ownership</div>
+                        </div>
+                        <div class="lrp-transaction">
+                          <div class="lrp-trans-date">September 2007</div>
+                          <div class="lrp-trans-price">£167,950</div>
+                          <div class="lrp-trans-type">Sold - Leasehold</div>
+                          <div class="lrp-trans-appreciation positive">+£34,050 (+20.3%)</div>
+                        </div>
+                        <div class="lrp-ownership-info">
+                          <span>Ownership Duration: 17 years</span>
+                          <span>Avg Annual Growth: 1.19%</span>
+                        </div>
+                      </div>
+
+                      <!-- Comparables Content -->
+                      <div class="lrp-content-panel" data-lrp="3">
+                        <div class="lrp-header">
+                          <div class="lrp-title">Comparable Properties Analysis</div>
+                          <span class="lrp-subtitle">15 comparable properties identified</span>
+                        </div>
+                        <div class="lrp-comp-table">
+                          <div class="lrp-comp-header">
+                            <span>Address</span><span>Distance</span><span>Price</span><span>Match</span>
+                          </div>
+                          <div class="lrp-comp-row">
+                            <span>12 Mccorquodale Rd</span><span>0.1mi</span><span>£195,000</span><span class="match-high">92%</span>
+                          </div>
+                          <div class="lrp-comp-row">
+                            <span>45 Cambridge St</span><span>0.3mi</span><span>£208,000</span><span class="match-high">87%</span>
+                          </div>
+                          <div class="lrp-comp-row">
+                            <span>8 Station Road</span><span>0.4mi</span><span>£198,500</span><span class="match-med">84%</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Market Intelligence Content -->
+                      <div class="lrp-content-panel" data-lrp="4">
+                        <div class="lrp-header">
+                          <div class="lrp-title">Market Conditions & Intelligence</div>
+                        </div>
+                        <div class="lrp-market-stats">
+                          <div class="lrp-mstat"><span class="lrp-mstat-val">97%</span><span>Asking price achieved</span></div>
+                          <div class="lrp-mstat"><span class="lrp-mstat-val">10 days</span><span>Avg time on market</span></div>
+                          <div class="lrp-mstat"><span class="lrp-mstat-val">3,006</span><span>Searches (28d)</span></div>
+                          <div class="lrp-mstat"><span class="lrp-mstat-val">23</span><span>Active listings</span></div>
+                        </div>
+                      </div>
+
+                      <!-- Property Details Content -->
+                      <div class="lrp-content-panel" data-lrp="5">
+                        <div class="lrp-header">
+                          <div class="lrp-title">Property Details & Characteristics</div>
+                        </div>
+                        <div class="lrp-details-grid">
+                          <div class="lrp-detail-group">
+                            <div class="lrp-detail-title">Accommodation</div>
+                            <div class="lrp-detail-row"><span>Bedrooms</span><span>2</span></div>
+                            <div class="lrp-detail-row"><span>Bathrooms</span><span>2</span></div>
+                            <div class="lrp-detail-row"><span>Floor Area</span><span>775 sqft</span></div>
+                          </div>
+                          <div class="lrp-detail-group">
+                            <div class="lrp-detail-title">Energy & Council</div>
+                            <div class="lrp-detail-row"><span>EPC Rating</span><span>C (74)</span></div>
+                            <div class="lrp-detail-row"><span>Council Tax</span><span>Band B</span></div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Planning Content -->
+                      <div class="lrp-content-panel" data-lrp="6">
+                        <div class="lrp-header">
+                          <div class="lrp-title">Planning & Development Intelligence</div>
+                        </div>
+                        <div class="lrp-planning-summary">
+                          <span class="lrp-plan-count">0</span> applications at property
+                          <span class="lrp-plan-count">3</span> within 200m
+                        </div>
+                        <div class="lrp-planning-list">
+                          <div class="lrp-plan-item"><span class="lrp-plan-status approved">Approved</span><span>24/00145/FUL - Rear extension</span></div>
+                          <div class="lrp-plan-item"><span class="lrp-plan-status approved">Approved</span><span>23/02891/FUL - Change of use</span></div>
+                          <div class="lrp-plan-item"><span class="lrp-plan-status refused">Refused</span><span>23/01204/FUL - Mixed use dev</span></div>
+                        </div>
+                      </div>
+
+                      <!-- Area Analysis Content -->
+                      <div class="lrp-content-panel" data-lrp="7">
+                        <div class="lrp-header">
+                          <div class="lrp-title">Location & Area Analysis</div>
+                        </div>
+                        <div class="lrp-area-section">
+                          <div class="lrp-area-title">Nearby Schools</div>
+                          <div class="lrp-school"><span class="lrp-school-rating outstanding">Outstanding</span>Wyvern Primary - 0.3mi</div>
+                          <div class="lrp-school"><span class="lrp-school-rating good">Good</span>Radcliffe School - 0.8mi</div>
+                        </div>
+                        <div class="lrp-area-section">
+                          <div class="lrp-area-title">Transport</div>
+                          <div class="lrp-transport">Wolverton Station - 0.6mi (50min to London)</div>
+                        </div>
+                      </div>
+
+                      <!-- Methodology Content -->
+                      <div class="lrp-content-panel" data-lrp="8">
+                        <div class="lrp-header">
+                          <div class="lrp-title">Data Sources & Methodology</div>
+                        </div>
+                        <div class="lrp-sources">
+                          <div class="lrp-source-title">38+ Authoritative Data Sources</div>
+                          <div class="lrp-source-list">
+                            <span>HM Land Registry</span>
+                            <span>Ordnance Survey</span>
+                            <span>EPC Register</span>
+                            <span>VOA Council Tax</span>
+                            <span>Planning Portal</span>
+                            <span>Environment Agency</span>
+                            <span>Police.uk</span>
+                            <span>Ofsted</span>
+                            <span>+30 more</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="laptop-base"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Scroll-triggered animation - only start when section is in view
+    let phoneInterval = null;
+    let laptopInterval = null;
+    let phoneTab = 0;
+    let laptopNav = 0;
+    let animationStarted = false;
+    let phoneInteractionMode = false;
+    let laptopInteractionMode = false;
+
+    function stopPhoneAnimation() {
+      if (phoneInterval) {
+        clearInterval(phoneInterval);
+        phoneInterval = null;
+      }
+      phoneInteractionMode = true;
+    }
+
+    function stopLaptopAnimation() {
+      if (laptopInterval) {
+        clearInterval(laptopInterval);
+        laptopInterval = null;
+      }
+      laptopInteractionMode = true;
+    }
+
+    function selectPhoneTab(index) {
+      stopPhoneAnimation();
+      phoneTab = index;
+      document.querySelectorAll('.phone-tab').forEach((tab, i) => tab.classList.toggle('active', i === index));
+      document.querySelectorAll('.phone-panel').forEach((panel, i) => panel.classList.toggle('active', i === index));
+    }
+
+    function selectLaptopNav(index) {
+      stopLaptopAnimation();
+      laptopNav = index;
+      document.querySelectorAll('.lrp-nav-item').forEach((item, i) => item.classList.toggle('active', i === index));
+      document.querySelectorAll('.lrp-content-panel').forEach((panel, i) => panel.classList.toggle('active', i === index));
+    }
+
+    function startDeviceAnimations() {
+      if (animationStarted) return;
+      animationStarted = true;
+
+      // Auto-cycle phone tabs (only if not in interaction mode)
+      phoneInterval = setInterval(() => {
+        if (phoneInteractionMode) return;
+        phoneTab = (phoneTab + 1) % 4;
+        document.querySelectorAll('.phone-tab').forEach((tab, i) => tab.classList.toggle('active', i === phoneTab));
+        document.querySelectorAll('.phone-panel').forEach((panel, i) => panel.classList.toggle('active', i === phoneTab));
+      }, 3500);
+
+      // Auto-cycle laptop nav and content panels (only if not in interaction mode)
+      laptopInterval = setInterval(() => {
+        if (laptopInteractionMode) return;
+        laptopNav = (laptopNav + 1) % 9;
+        document.querySelectorAll('.lrp-nav-item').forEach((item, i) => item.classList.toggle('active', i === laptopNav));
+        document.querySelectorAll('.lrp-content-panel').forEach((panel, i) => panel.classList.toggle('active', i === laptopNav));
+      }, 3000);
+    }
+
+    // Add click handlers for phone tabs
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('.phone-tab').forEach((tab, index) => {
+        tab.addEventListener('click', () => selectPhoneTab(index));
+        tab.style.cursor = 'pointer';
+      });
+
+      // Add click handlers for laptop nav items
+      document.querySelectorAll('.lrp-nav-item').forEach((item, index) => {
+        item.addEventListener('click', () => selectLaptopNav(index));
+        item.style.cursor = 'pointer';
+      });
+    });
+
+    // Intersection Observer to detect when section comes into view
+    const deviceSection = document.getElementById('device-showcase');
+    if (deviceSection) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting && entry.intersectionRatio > 0.2) {
+            startDeviceAnimations();
+          }
+        });
+      }, { threshold: 0.2 });
+      observer.observe(deviceSection);
+    }
+  </script>
+
+  <!-- Trust Stats Banner -->
+  <div class="trust-stats-banner">
+    <div class="container">
+      <div class="trust-banner-items">
+        <div class="trust-banner-item"><strong>50,000+</strong> Properties Valued</div>
+        <div class="trust-banner-divider"></div>
+        <div class="trust-banner-item"><strong>±3.5%</strong> Average Accuracy</div>
+        <div class="trust-banner-divider"></div>
+        <div class="trust-banner-item"><strong>Instant</strong> Delivery</div>
+        <div class="trust-banner-divider"></div>
+        <div class="trust-banner-item"><strong>38+</strong> Data Sources</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Two Products Section -->
+  <section class="two-products-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Two Ways to Your Doorstep</h2>
+        <p class="section-subtitle">Choose the service that fits your needs</p>
+      </div>
+
+      <div class="two-products-grid">
+        <!-- Valuations Product -->
+        <div class="product-card">
+          <div class="product-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="24" cy="24" r="22" fill="#F0F9FA" stroke="#19727F" stroke-width="2"/>
+              <path d="M24 14v20M14 24h20" stroke="#19727F" stroke-width="2.5" stroke-linecap="round"/>
+              <circle cx="24" cy="24" r="6" fill="#19727F" fill-opacity="0.2" stroke="#19727F" stroke-width="2"/>
+            </svg>
+          </div>
+          <h3>Property Valuations</h3>
+          <p class="product-description">Instant, accurate property valuations powered by 38+ data sources and AI. From £2.49 for homeowners, £19 for professionals.</p>
+          <ul class="product-features">
+            <li>Instant delivery</li>
+            <li>±3.5% accuracy</li>
+            <li>Full comparable analysis</li>
+            <li>Environmental & risk data</li>
+          </ul>
+          <div class="product-pricing">
+            <span class="product-price">From £2.49</span>
+            <span class="product-audience">Homeowners & Professionals</span>
+          </div>
+          <div class="product-cta">
+            <a href="#hero" class="btn btn-primary">Get a Valuation</a>
+            <a href="professionals.html" class="product-link">For bulk valuations →</a>
+          </div>
+        </div>
+
+        <!-- Marketing Product -->
+        <div class="product-card">
+          <div class="product-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="24" cy="24" r="22" fill="#FFF5F5" stroke="#EF6A68" stroke-width="2"/>
+              <rect x="14" y="16" width="20" height="16" rx="2" stroke="#EF6A68" stroke-width="2" fill="none"/>
+              <circle cx="20" cy="23" r="2" fill="#EF6A68"/>
+              <path d="M15 28l5-4 3 2 6-5 5 4" stroke="#EF6A68" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3>Property Marketing</h3>
+          <p class="product-description">AI-powered marketing packs for estate agents. From photos to brochures, listings, and social posts in 60 seconds.</p>
+          <ul class="product-features">
+            <li>PDF brochures</li>
+            <li>Portal-ready listings</li>
+            <li>Social media content</li>
+            <li>Email campaigns</li>
+          </ul>
+          <div class="product-pricing">
+            <span class="product-price">£2 per property</span>
+            <span class="product-audience">Estate Agents</span>
+          </div>
+          <div class="product-cta">
+            <a href="marketing.html" class="btn btn-primary" style="background: #EF6A68; border-color: #EF6A68;">Explore Marketing</a>
+            <a href="marketing.html#waitlist" class="product-link">Join the waitlist →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section class="pricing-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Opportunity knocks</h2>
+        <p class="section-subtitle">Open the door to accurate pricing</p>
+      </div>
+
+      <div class="pricing-cards">
+        <!-- Executive Summary -->
+        <div class="pricing-card">
+          <div class="pricing-card-header">
+            <h3>Executive Summary</h3>
+            <p class="pricing-tagline">Perfect for homeowners & buyers</p>
+          </div>
+          <ul class="pricing-features">
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg> Key valuation insights</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg> Comparable properties</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg> Market overview</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg> Confidence assessment</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg> 2-3 page summary</li>
+          </ul>
+          <div class="pricing-card-actions">
+            <a href="valuation-report.html" class="btn btn-secondary" target="_blank">View Sample</a>
+            <a href="#hero" class="btn btn-green">Get for £2.49</a>
+          </div>
+        </div>
+
+        <!-- Professional Report -->
+        <div class="pricing-card pricing-card-featured" style="background: linear-gradient(135deg, #0E3B44 0%, #1a5f6a 100%); color: white; overflow: visible; margin-top: 12px;">
+          <div class="pricing-card-badge">RECOMMENDED</div>
+          <div class="pricing-card-header">
+            <h3 style="color: #ffffff;">Professional Report</h3>
+            <p class="pricing-tagline" style="color: rgba(255,255,255,0.85);">Surveyor-grade pre-inspection intelligence</p>
+          </div>
+          <ul class="pricing-features">
+            <li style="color: rgba(255,255,255,0.9);"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg> Everything in Executive, plus:</li>
+            <li style="color: rgba(255,255,255,0.9);"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg> 15-20 detailed comparables</li>
+            <li style="color: rgba(255,255,255,0.9);"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg> Environmental & risk assessment</li>
+            <li style="color: rgba(255,255,255,0.9);"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg> Planning & area intelligence</li>
+            <li style="color: rgba(255,255,255,0.9);"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg> 25+ page comprehensive report</li>
+          </ul>
+          <div class="pricing-card-actions">
+            <a href="professional-report.html" class="btn btn-secondary" style="color: white; border-color: rgba(255,255,255,0.4);" target="_blank">View Sample</a>
+            <a href="#hero" class="btn btn-green">Get for £9.99</a>
+          </div>
+        </div>
+      </div>
+
+      <p class="pricing-enterprise-link">Need valuations at scale? <a href="professionals.html">See our professional solutions &rarr;</a></p>
+    </div>
+  </section>
+
+  <!-- Comparison Section -->
+  <section class="comparison-section-v2">
+    <div class="container">
+      <div class="comparison-hero">
+        <div class="comparison-hero-content">
+          <span class="comparison-badge">The Doorstep Difference</span>
+          <h2>Accuracy, delivered.</h2>
+          <p>Free estimates leave you out in the cold. Step inside with valuations that get within 3.5% of actual sale prices.</p>
+        </div>
+
+        <div class="data-sources-cloud">
+          <p class="cloud-intro">Powered by 38+ authoritative UK data sources</p>
+          <div class="cloud-logos">
+            <span class="cloud-logo-item">Land Registry</span>
+            <span class="cloud-logo-item">EPC Ratings</span>
+            <span class="cloud-logo-item">Ofsted</span>
+            <span class="cloud-logo-item">TfL</span>
+            <span class="cloud-logo-item">Flood Risk</span>
+            <span class="cloud-logo-item">Ofcom</span>
+            <span class="cloud-logo-item">Planning Data</span>
+            <span class="cloud-logo-item">Census</span>
+          </div>
+          <a href="data-sources.html" class="cloud-link">View all 38+ sources →</a>
+        </div>
+      </div>
+
+      <div class="comparison-features">
+        <div class="comparison-feature">
+          <div class="cf-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+            </svg>
+          </div>
+          <h4>Instant Delivery</h4>
+          <p>Get your professional valuation report in seconds, not days</p>
+        </div>
+
+        <div class="comparison-feature">
+          <div class="cf-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+              <polyline points="14,2 14,8 20,8"/>
+              <line x1="16" y1="13" x2="8" y2="13"/>
+              <line x1="16" y1="17" x2="8" y2="17"/>
+            </svg>
+          </div>
+          <h4>Full Report</h4>
+          <p>Detailed methodology, comparables, and market analysis included</p>
+        </div>
+
+        <div class="comparison-feature">
+          <div class="cf-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+              <polyline points="22 4 12 14.01 9 11.01"/>
+            </svg>
+          </div>
+          <h4>38+ Data Sources</h4>
+          <p>Land Registry, EPC, schools, transport, flood risk and more</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Visual Analysis Section -->
+  <section class="visual-analysis-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Intelligence at every level</h2>
+        <p class="section-subtitle">We analyse both the property and its surroundings</p>
+      </div>
+
+      <div class="visual-analysis-grid">
+        <!-- Satellite View -->
+        <div class="analysis-card">
+          <div class="analysis-image-container">
+            <img src="satellite-view.jpg" alt="Satellite view analysis" class="analysis-image">
+            <!-- Location Tags - positioned in a grid pattern to avoid overlap -->
+            <div class="analysis-tag tag-school" style="top: 8%; left: 5%;">
+              <svg class="tag-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+              <span class="tag-content">
+                <strong>Ofsted Outstanding</strong>
+                <span>0.3 miles</span>
+              </span>
+            </div>
+            <div class="analysis-tag tag-crime" style="top: 8%; right: 5%;">
+              <svg class="tag-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              <span class="tag-content">
+                <strong>Crime Rate</strong>
+                <span>Low</span>
+              </span>
+            </div>
+            <div class="analysis-tag tag-transport" style="top: 45%; left: 5%;">
+              <svg class="tag-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18M9 3v18"/></svg>
+              <span class="tag-content">
+                <strong>Northern Line</strong>
+                <span>0.4 miles</span>
+              </span>
+            </div>
+            <div class="analysis-tag tag-imd" style="top: 45%; right: 5%;">
+              <svg class="tag-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+              <span class="tag-content">
+                <strong>IMD Decile</strong>
+                <span>7 of 10</span>
+              </span>
+            </div>
+            <div class="analysis-tag tag-flood" style="bottom: 8%; left: 5%;">
+              <svg class="tag-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v6M12 22c-4 0-6-2.5-6-5 0-4 6-9 6-9s6 5 6 9c0 2.5-2 5-6 5z"/></svg>
+              <span class="tag-content">
+                <strong>Flood Risk</strong>
+                <span>Very Low</span>
+              </span>
+            </div>
+            <div class="analysis-tag tag-amenities" style="bottom: 8%; right: 5%;">
+              <svg class="tag-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+              <span class="tag-content">
+                <strong>Amenities</strong>
+                <span>12 within 0.5mi</span>
+              </span>
+            </div>
+          </div>
+          <div class="analysis-caption">
+            <h3>Location Intelligence</h3>
+            <p>Schools, transport, crime rates, flood risk and local amenities - all mapped and measured.</p>
+          </div>
+        </div>
+
+        <!-- Property View -->
+        <div class="analysis-card">
+          <div class="analysis-image-container">
+            <img src="property-front.jpg" alt="Property view analysis" class="analysis-image">
+            <!-- Property Tags - positioned in a grid pattern to avoid overlap -->
+            <div class="analysis-tag tag-epc" style="top: 8%; left: 5%;">
+              <svg class="tag-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+              <span class="tag-content">
+                <strong>EPC Rating</strong>
+                <span>C (72)</span>
+              </span>
+            </div>
+            <div class="analysis-tag tag-beds" style="top: 8%; right: 5%;">
+              <svg class="tag-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 4v16M22 4v16M2 8h20M2 16h20"/><path d="M6 8v8M18 8v8"/></svg>
+              <span class="tag-content">
+                <strong>4 Bedrooms</strong>
+                <span>2 Bathrooms</span>
+              </span>
+            </div>
+            <div class="analysis-tag tag-size" style="top: 45%; left: 5%;">
+              <svg class="tag-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 21H3V3"/><path d="M21 3v18"/><path d="M3 21h18"/><path d="M7 17L17 7M17 7h-6M17 7v6"/></svg>
+              <span class="tag-content">
+                <strong>1,450 sq ft</strong>
+                <span>135 m²</span>
+              </span>
+            </div>
+            <div class="analysis-tag tag-age" style="top: 45%; right: 5%;">
+              <svg class="tag-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+              <span class="tag-content">
+                <strong>Built 1935</strong>
+                <span>Semi-detached</span>
+              </span>
+            </div>
+            <div class="analysis-tag tag-council" style="bottom: 8%; left: 5%;">
+              <svg class="tag-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+              <span class="tag-content">
+                <strong>Council Tax</strong>
+                <span>Band E</span>
+              </span>
+            </div>
+            <div class="analysis-tag tag-sold" style="bottom: 8%; right: 5%;">
+              <svg class="tag-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 8v4l3 3"/><circle cx="12" cy="12" r="10"/></svg>
+              <span class="tag-content">
+                <strong>Last Sold</strong>
+                <span>£385k (2019)</span>
+              </span>
+            </div>
+          </div>
+          <div class="analysis-caption">
+            <h3>Property Intelligence</h3>
+            <p>Size, age, EPC rating, council tax and transaction history - every detail verified.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Journey Section -->
+  <section class="journey-section" id="how-it-works">
+    <div class="container">
+      <div class="section-header">
+        <h2>Get your valuation in 3 simple steps</h2>
+      </div>
+      <div class="journey-steps">
+        <div class="journey-step">
+          <div class="step-icon">
+            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20 30 L70 15 L70 40 L20 55 Z" fill="#EF6A68"/>
+            </svg>
+          </div>
+          <div class="step-content">
+            <h3>Enter your address</h3>
+            <p>Simply type your postcode or full address into our search bar. We'll identify your property instantly.</p>
+          </div>
+        </div>
+        <div class="journey-step">
+          <div class="step-icon">
+            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20 30 L70 15 L70 40 L20 55 Z" fill="#EF6A68"/>
+              <path d="M30 50 L75 35 L75 60 L30 75 Z" fill="#19727F"/>
+            </svg>
+          </div>
+          <div class="step-content">
+            <h3>We analyse your property</h3>
+            <p>Our AI cross-references 38+ data sources to deliver precise valuations with full comparable analysis.</p>
+          </div>
+        </div>
+        <div class="journey-step">
+          <div class="step-icon">
+            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20 30 L70 15 L70 40 L20 55 Z" fill="#EF6A68"/>
+              <path d="M30 50 L75 35 L75 60 L30 75 Z" fill="#19727F"/>
+              <path d="M40 65 L80 50 L80 75 L40 90 Z" fill="#4DA7B3"/>
+            </svg>
+          </div>
+          <div class="step-content">
+            <h3>Receive your report</h3>
+            <p>Get your professional valuation report delivered instantly, complete with comparables and market analysis.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Video Section -->
+  <section class="video-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>See Doorstep in action</h2>
+        <p class="section-subtitle">Watch how we deliver accurate valuations in seconds</p>
+      </div>
+      <div class="video-container">
+        <div class="video-placeholder">
+          <div class="video-placeholder-content">
+            <svg class="play-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/>
+              <polygon points="10 8 16 12 10 16 10 8" fill="currentColor"/>
+            </svg>
+            <p>Video coming soon</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Case Study Section -->
+  <section class="case-study-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Real results from real homeowners</h2>
+        <p class="section-subtitle">See how Doorstep helped these property decisions</p>
+      </div>
+      <div class="case-studies-grid">
+        <div class="case-study-card-featured">
+          <div class="case-study-quote">
+            <svg class="quote-icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+            </svg>
+            <blockquote>
+              "We were about to list at £425,000 based on an estate agent's estimate. Doorstep's report showed comparable sales data that supported £465,000. We sold for £458,000 - that's £33,000 more than we would have asked for."
+            </blockquote>
+          </div>
+          <div class="case-study-details">
+            <div class="case-study-author">
+              <div class="author-avatar">
+                <span>SM</span>
+              </div>
+              <div class="author-info">
+                <strong>Sarah M.</strong>
+                <span>Homeowner, Bristol</span>
+              </div>
+            </div>
+            <div class="case-study-stats">
+              <div class="stat">
+                <span class="stat-value">£33k</span>
+                <span class="stat-label">Additional value identified</span>
+              </div>
+              <div class="stat">
+                <span class="stat-value">2.1%</span>
+                <span class="stat-label">Doorstep variance from sale</span>
+              </div>
+            </div>
+            <div class="case-study-rating">
+              <div class="stars">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              </div>
+              <span>5.0</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="case-study-card-small">
+          <blockquote>"The comparable sales data was exactly what I needed to negotiate with confidence. Saved me from overpaying by at least £15,000."</blockquote>
+          <div class="case-study-author">
+            <div class="author-avatar"><span>JT</span></div>
+            <div class="author-info">
+              <strong>James T.</strong>
+              <span>First-time buyer, Manchester</span>
+            </div>
+          </div>
+          <div class="case-study-rating">
+            <div class="stars">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </div>
+            <span>5.0</span>
+          </div>
+        </div>
+
+        <div class="case-study-card-small">
+          <blockquote>"Finally, a valuation I can actually trust. The flood risk and planning data convinced me to walk away from a property that looked perfect on paper."</blockquote>
+          <div class="case-study-author">
+            <div class="author-avatar"><span>PK</span></div>
+            <div class="author-info">
+              <strong>Priya K.</strong>
+              <span>Property investor, London</span>
+            </div>
+          </div>
+          <div class="case-study-rating">
+            <div class="stars">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </div>
+            <span>5.0</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Section -->
+  <section class="blog-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Property insights</h2>
+        <p class="section-subtitle">Expert analysis and market updates</p>
+      </div>
+      <div class="blog-grid">
+        <a href="#" class="blog-card">
+          <div class="blog-image">
+            <img src="blog-budget.jpg" alt="Rachel Reeves announcing the budget">
+            <span class="blog-category">Market Analysis</span>
+          </div>
+          <div class="blog-content">
+            <h3>What the 2024 Budget means for your property value</h3>
+            <p>Rachel Reeves' first budget introduced significant changes to stamp duty and capital gains. Here's what it means for homeowners and buyers.</p>
+            <div class="blog-meta">
+              <span>5 min read</span>
+              <span>Nov 2024</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="#" class="blog-card">
+          <div class="blog-image">
+            <img src="blog-interest-rates.jpg" alt="Bank of England">
+            <span class="blog-category">Interest Rates</span>
+          </div>
+          <div class="blog-content">
+            <h3>Interest rate cuts in 2025: How they'll impact house prices</h3>
+            <p>With the Bank of England signalling potential rate cuts, we analyse what this means for property values across different UK regions.</p>
+            <div class="blog-meta">
+              <span>4 min read</span>
+              <span>Nov 2024</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="#" class="blog-card">
+          <div class="blog-image">
+            <img src="blog-epc.jpg" alt="EPC rating certificate">
+            <span class="blog-category">Guides</span>
+          </div>
+          <div class="blog-content">
+            <h3>How EPC ratings affect your property's value in 2025</h3>
+            <p>New regulations mean EPC ratings matter more than ever. We reveal the price premium for energy-efficient homes and what you can do to improve yours.</p>
+            <div class="blog-meta">
+              <span>6 min read</span>
+              <span>Oct 2024</span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Common questions</h2>
+      </div>
+
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>How long does it take to get my report?</span>
+            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M6 9l6 6 6-6"/>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            <p>Reports are delivered instantly. Our AI analyses your property in seconds, cross-referencing 38+ data sources to generate your professional valuation report.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>How accurate is the valuation?</span>
+            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M6 9l6 6 6-6"/>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            <p>Our valuations have an average accuracy of ±3.5%, significantly better than free online estimates (±10-15%). Every valuation includes a confidence score and range.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>Is this a RICS valuation?</span>
+            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M6 9l6 6 6-6"/>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            <p>Our reports are desktop valuations using RICS Red Book methodology, but they are not formal RICS survey reports. They're ideal for getting an accurate picture of your property's value before making decisions.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>Can I use this for a mortgage application?</span>
+            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M6 9l6 6 6-6"/>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            <p>Our reports give you an excellent indication of value before applying, but most lenders require their own formal valuation. However, our data helps you enter negotiations informed and confident.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>What's included in the report?</span>
+            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M6 9l6 6 6-6"/>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            <p>The Executive Summary includes valuation, confidence score, comparables, and market overview. The Professional Report adds 15-20 detailed comparables, environmental assessments, planning data, and area intelligence.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>How does the AI calculate my valuation?</span>
+            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M6 9l6 6 6-6"/>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            <p>Our proprietary AI cross-references 38+ authoritative data sources including Land Registry sales, EPC data, local schools, transport links, and environmental factors to calculate a precise valuation with comparable evidence.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="demo-section" id="contact">
+    <div class="container">
+      <div class="demo-content">
+        <div class="demo-text">
+          <div class="demo-badge">Get In Touch</div>
+          <h2>Have a Question?</h2>
+          <p>Whether you're curious about our valuations, need help with a report, or just want to chat about property data – we're here to help.</p>
+          <ul class="demo-benefits">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+              Response within 24 hours
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+              No obligation or pressure
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+              Real humans, not chatbots
+            </li>
+          </ul>
+          <div class="contact-alternatives">
+            <p style="margin-bottom: 12px; font-weight: 600; color: var(--color-teal-dark);">Or reach us directly:</p>
+            <a href="mailto:contact@doorstepsolutions.uk" style="display: inline-flex; align-items: center; gap: 8px; color: var(--color-teal); text-decoration: none; font-weight: 500;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>
+              contact@doorstepsolutions.uk
+            </a>
+          </div>
+        </div>
+        <div class="demo-form-container">
+          <form class="demo-form" id="contactForm" onsubmit="submitContactForm(event)">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="contact-name">Your Name *</label>
+                <input type="text" id="contact-name" name="name" required placeholder="John Smith">
+              </div>
+              <div class="form-group">
+                <label for="contact-email">Email Address *</label>
+                <input type="email" id="contact-email" name="email" required placeholder="john@example.com">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="contact-subject">What can we help with? *</label>
+              <select id="contact-subject" name="subject" required>
+                <option value="">Select a topic...</option>
+                <option value="valuation-question">Question about a valuation</option>
+                <option value="report-help">Help with my report</option>
+                <option value="pricing">Pricing enquiry</option>
+                <option value="partnership">Partnership opportunity</option>
+                <option value="feedback">Feedback or suggestion</option>
+                <option value="other">Something else</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="contact-message">Your Message *</label>
+              <textarea id="contact-message" name="message" rows="4" required placeholder="Tell us how we can help..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary demo-submit">
+              <span>Send Message</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+            <p class="form-disclaimer">We'll respond within 24 hours. Your data is safe with us.</p>
+          </form>
+          <div class="demo-form-success" id="contactFormSuccess" style="display: none;">
+            <div class="success-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M9 12l2 2 4-4"/>
+              </svg>
+            </div>
+            <h3>Message Sent!</h3>
+            <p>Thanks for reaching out. We'll get back to you within 24 hours.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA Section -->
+  <section class="final-cta-section">
+    <div class="container">
+      <h2>Ready to find out what your property is worth?</h2>
+      <p>Get a professional valuation delivered instantly. Powered by 38+ data sources for accuracy you can trust.</p>
+      <div class="final-cta-buttons">
+        <a href="#hero" class="btn btn-coral btn-large">Get your valuation</a>
+      </div>
+      <p class="disclaimer">Are you a surveyor or lender? <a href="professionals.html" style="color: var(--color-gold);">See our professional solutions &rarr;</a></p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-top">
+        <div class="footer-column footer-brand">
+          <img src="doorstep-logo.png" alt="Doorstep" class="footer-logo">
+          <p class="footer-tagline">Professional valuations, instant delivery</p>
+          <div class="footer-founders">
+            <h4>Founded by</h4>
+            <div class="founders-grid">
+              <div class="founder">
+                <div class="founder-photo">
+                  <img src="william-motchman.jpg" alt="William Motchman" onerror="this.style.display='none'">
+                  <div class="founder-placeholder">WM</div>
+                </div>
+                <div class="founder-info">
+                  <div class="founder-name">William Motchman</div>
+                  <div class="founder-title">Co-Founder</div>
+                </div>
+              </div>
+              <div class="founder">
+                <div class="founder-photo">
+                  <img src="joseph-garratt.jpg" alt="Joseph Garratt" onerror="this.style.display='none'">
+                  <div class="founder-placeholder">JG</div>
+                </div>
+                <div class="founder-info">
+                  <div class="founder-name">Joseph Garratt</div>
+                  <div class="founder-title">Co-Founder</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h4>Product</h4>
+          <ul class="footer-links">
+            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="the-doorstep-difference.html">The Difference</a></li>
+            <li><a href="#pillars">Our Approach</a></li>
+            <li><a href="#contact">Pricing</a></li>
+            <li><a href="#contact">Request Demo</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Company</h4>
+          <ul class="footer-links">
+            <li><a href="#contact">About Us</a></li>
+            <li><a href="mailto:contact@doorstepsolutions.uk">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Resources</h4>
+          <ul class="footer-links">
+            <li><a href="data-sources.html">Data Sources</a></li>
+            <li><a href="the-doorstep-difference.html">The Difference</a></li>
+            <li><a href="valuation-report.html" target="_blank">Sample Report</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Legal</h4>
+          <ul class="footer-links">
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="terms-of-service.html">Terms of Service</a></li>
+            <li><a href="cookie-policy.html">Cookie Policy</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column footer-contact">
+          <h4>Get In Touch</h4>
+          <div class="footer-contact-info">
+            <a href="mailto:contact@doorstepsolutions.uk" class="footer-email">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="4" width="20" height="16" rx="2"/>
+                <path d="m2 7 10 7 10-7"/>
+              </svg>
+              contact@doorstepsolutions.uk
+            </a>
+            <p class="footer-address">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              London, United Kingdom
+            </p>
+          </div>
+          <div class="footer-social">
+            <a href="https://linkedin.com/company/doorstepsolutions" aria-label="LinkedIn" class="social-link" target="_blank" rel="noopener">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+              </svg>
+            </a>
+            <a href="https://twitter.com/doorstepsuk" aria-label="Twitter/X" class="social-link" target="_blank" rel="noopener">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-bottom-left">
+          <p>&copy; 2025 Doorstep Solutions Ltd. All rights reserved. Company No. 15847293</p>
+        </div>
+        <div class="footer-bottom-right">
+          <div class="footer-badges">
+            <span class="security-badge">🔒 ISO 27001</span>
+            <span class="security-badge">✓ GDPR Compliant</span>
+            <span class="security-badge">🛡️ SOC 2 Type II</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="report-generator.js"></script>
+  <script>
+    // Store current valuation data for report generation
+    let currentValuationData = null;
+
+    function generateValuation() {
+      const address = document.getElementById('property-address').value;
+
+      if (!address || address.trim() === '') {
+        alert('Please enter a postcode or address');
+        return;
+      }
+
+      // Simulate API call with random valuation
+      const baseValue = Math.floor(Math.random() * (900000 - 400000) + 400000);
+      const roundedValue = Math.round(baseValue / 5000) * 5000;
+      const lowerRange = roundedValue - 30000;
+      const upperRange = roundedValue + 30000;
+
+      // Generate random confidence level
+      const confidenceLevels = ['low', 'medium', 'high'];
+      const confidenceLabels = ['Low Confidence', 'Medium Confidence', 'High Confidence'];
+      const randomConfidence = Math.floor(Math.random() * 3);
+      const confidenceLevel = confidenceLevels[randomConfidence];
+      const confidenceLabel = confidenceLabels[randomConfidence];
+
+      // Store valuation data for report generation
+      currentValuationData = {
+        address: address,
+        valuation: roundedValue,
+        lowerRange: lowerRange,
+        upperRange: upperRange,
+        confidence: confidenceLevel,
+        confidenceLabel: confidenceLabel,
+        valuationDate: new Date().toISOString().split('T')[0],
+        reportDate: new Date().toLocaleDateString('en-GB'),
+        postcode: extractPostcode(address),
+        propertyType: 'House', // Would come from API in production
+        bedrooms: estimateBedrooms(roundedValue) // Estimate based on value
+      };
+
+      // Update result display
+      document.getElementById('result-address').textContent = address;
+      document.getElementById('result-price').textContent = '£' + roundedValue.toLocaleString();
+      document.getElementById('result-range').textContent = 'Range: £' + lowerRange.toLocaleString() + ' - £' + upperRange.toLocaleString();
+
+      // Update confidence gauge
+      const confidenceBar = document.getElementById('confidence-bar');
+      const confidenceText = document.getElementById('confidence-text');
+
+      // Remove existing classes
+      confidenceBar.className = 'confidence-bar';
+      confidenceText.className = 'confidence-text';
+
+      // Add new confidence class
+      confidenceBar.classList.add(confidenceLevel);
+      confidenceText.classList.add(confidenceLevel);
+      confidenceText.textContent = confidenceLabel;
+
+      // Show result
+      document.getElementById('valuation-result').style.display = 'block';
+
+      // Smooth scroll to result
+      setTimeout(() => {
+        document.getElementById('valuation-result').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }, 100);
+    }
+
+    function purchaseReport(event, reportType, price) {
+      event.preventDefault();
+
+      if (!currentValuationData) {
+        alert('Please generate a valuation first');
+        return;
+      }
+
+      // In production, this would:
+      // 1. Redirect to Stripe checkout with product ID
+      // 2. After payment success, generate and email PDF
+      // 3. Store transaction in database
+      // 4. Send confirmation email with download link
+
+      // For demo purposes, show what would happen
+      const reportName = reportType === 'executive' ? 'Executive Summary' : 'Full RICS Report';
+
+      if (confirm(`Purchase ${reportName} for £${price.toFixed(2)}?\n\nIn production, this would redirect to secure payment.\nClick OK to preview the report.`)) {
+        generateAndDownloadReport(reportType);
+      }
+    }
+
+    function generateAndDownloadReport(reportType) {
+      // Add report type to valuation data
+      currentValuationData.reportType = reportType;
+
+      // Generate the HTML report
+      const reportHTML = reportType === 'executive'
+        ? generateExecutiveReport(currentValuationData)
+        : generateReportHTML(currentValuationData);
+
+      // Create a new window with the report for printing/saving as PDF
+      const reportWindow = window.open('', '_blank');
+      reportWindow.document.write(reportHTML);
+      reportWindow.document.close();
+
+      // Trigger print dialog (user can save as PDF)
+      setTimeout(() => {
+        reportWindow.print();
+      }, 500);
+
+      // Show success message
+      const reportName = reportType === 'executive' ? 'Executive Summary (2-3 pages)' : 'Full RICS Report (20+ pages)';
+      alert(`Your ${reportName} is ready! Use your browser's print dialog to save as PDF.\n\nIn production, this would be:\n• Automatically generated after payment\n• Emailed to you as a PDF attachment\n• Available in your account dashboard`);
+    }
+
+    function generateExecutiveReport(data) {
+      // Simplified report for customers
+      return `<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Executive Valuation Summary - ${data.address}</title>
+    ${getExecutiveReportStyles()}
+</head>
+<body>
+    <div class="container">
+        <div class="logo-container">
+            <img src="doorstep-logo.png" alt="Doorstep" style="height: 80px;">
+        </div>
+        <div class="header">
+            <h1>Executive Valuation Summary</h1>
+            <div class="subtitle">Instant Property Valuation Report</div>
+        </div>
+
+        <div class="summary-card">
+            <h2>Your Property</h2>
+            <div class="property-address">${data.address}</div>
+            <div class="valuation-box">
+                <div class="label">Estimated Value</div>
+                <div class="amount">£${data.valuation.toLocaleString()}</div>
+                <div class="range">Range: £${data.lowerRange.toLocaleString()} - £${data.upperRange.toLocaleString()}</div>
+            </div>
+            <div class="confidence-badge ${data.confidence}">${data.confidenceLabel}</div>
+        </div>
+
+        <div class="section">
+            <h2>Key Insights</h2>
+            <ul>
+                <li>Estimated ${data.bedrooms} bedroom property</li>
+                <li>Valuation based on recent comparable sales in ${data.postcode}</li>
+                <li>Confidence level: ${data.confidenceLabel}</li>
+                <li>Current market conditions: Balanced</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>What This Means</h2>
+            <p>This valuation provides an instant estimate of your property's market value based on comparable sales data, property characteristics, and local market conditions.</p>
+            <p><strong>Next Steps:</strong> For mortgage lending or legal transactions, commission a full RICS survey with physical inspection.</p>
+        </div>
+
+        <div class="footer">
+            <p>Report generated: ${data.reportDate}</p>
+            <p>© ${new Date().getFullYear()} Doorstep - Instant Property Valuations</p>
+        </div>
+    </div>
+</body>
+</html>`;
+    }
+
+    function getExecutiveReportStyles() {
+      return `<style>
+        body { font-family: 'Segoe UI', sans-serif; color: #333; background: #fff; margin: 0; padding: 20px; }
+        .container { max-width: 800px; margin: 0 auto; }
+        .logo-container { text-align: center; margin-bottom: 30px; }
+        .header { text-align: center; border-bottom: 3px solid #19727F; padding-bottom: 20px; margin-bottom: 30px; }
+        .header h1 { color: #19727F; font-size: 28px; margin: 0; }
+        .header .subtitle { color: #666; font-size: 14px; margin-top: 8px; }
+        .summary-card { background: #F9F9F9; border-left: 5px solid #19727F; padding: 25px; margin-bottom: 30px; }
+        .summary-card h2 { color: #19727F; font-size: 20px; margin-top: 0; }
+        .property-address { font-size: 16px; font-weight: 600; margin-bottom: 20px; }
+        .valuation-box { background: linear-gradient(135deg, #19727F 0%, #145A65 100%); color: white; padding: 25px; text-align: center; border-radius: 8px; margin: 20px 0; }
+        .valuation-box .amount { font-size: 40px; font-weight: bold; margin: 10px 0; }
+        .valuation-box .label { font-size: 14px; opacity: 0.9; }
+        .valuation-box .range { font-size: 14px; opacity: 0.9; margin-top: 8px; }
+        .confidence-badge { display: inline-block; padding: 8px 16px; border-radius: 20px; font-weight: 600; margin-top: 12px; }
+        .confidence-badge.high { background: #10B981; color: white; }
+        .confidence-badge.medium { background: #F59E0B; color: white; }
+        .confidence-badge.low { background: #EF4444; color: white; }
+        .section { margin-bottom: 30px; }
+        .section h2 { color: #19727F; font-size: 20px; border-bottom: 2px solid #EF6A68; padding-bottom: 8px; }
+        ul { padding-left: 20px; }
+        ul li { margin: 10px 0; }
+        .footer { text-align: center; padding-top: 20px; border-top: 2px solid #E5E7EB; color: #666; font-size: 12px; margin-top: 40px; }
+      </style>`;
+    }
+
+    function extractPostcode(address) {
+      // Simple postcode extraction (UK format)
+      const postcodeRegex = /[A-Z]{1,2}\d{1,2}\s?\d[A-Z]{2}/i;
+      const match = address.match(postcodeRegex);
+      return match ? match[0] : '';
+    }
+
+    function estimateBedrooms(value) {
+      // Simple bedroom estimation based on value
+      if (value < 300000) return 2;
+      if (value < 500000) return 3;
+      if (value < 700000) return 4;
+      return 5;
+    }
+
+    // Allow Enter key to submit
+    document.addEventListener('DOMContentLoaded', function() {
+      const input = document.getElementById('property-address');
+      if (input) {
+        input.addEventListener('keypress', function(e) {
+          if (e.key === 'Enter') {
+            generateValuation();
+          }
+        });
+      }
+    });
+
+    // Professional Report Checkout Functions
+    function openExecutiveSample() {
+      // Open the Executive Summary sample report
+      window.open('valuation-report.html', '_blank');
+    }
+
+    function openProfessionalSample() {
+      // Open the Professional Property Report sample
+      window.open('professional-report.html', '_blank');
+    }
+
+    function purchaseExecutiveReport() {
+      // Check if postcode has been entered
+      const postcodeInput = document.getElementById('property-address');
+      if (!postcodeInput || !postcodeInput.value.trim()) {
+        alert('Please enter a postcode first to generate a personalized report');
+        postcodeInput.focus();
+        return;
+      }
+
+      // In production, this would process payment first
+      if (confirm('Purchase Executive Summary for £2.49?\n\nIn production, this would redirect to secure payment.\nClick OK to generate report with mock data.')) {
+        // Generate report with mock data for entered postcode
+        const reportWindow = window.open('valuation-report.html', '_blank');
+
+        // Show success message
+        setTimeout(() => {
+          alert('Your Executive Summary is ready!\n\nIn production, this would be:\n• Generated after payment confirmation\n• Emailed to you as PDF\n• Available in your dashboard');
+        }, 500);
+      }
+    }
+
+    function purchaseProfessionalReport() {
+      // Check if postcode has been entered
+      const postcodeInput = document.getElementById('property-address');
+      if (!postcodeInput || !postcodeInput.value.trim()) {
+        alert('Please enter a postcode first to generate a personalized report');
+        postcodeInput.focus();
+        return;
+      }
+
+      // Open the professional checkout modal with add-ons
+      openProfessionalCheckout();
+    }
+
+    function openProfessionalCheckout() {
+      document.getElementById('professionalCheckoutModal').style.display = 'flex';
+      updateCheckoutTotal();
+    }
+
+    function closeProfessionalCheckout() {
+      document.getElementById('professionalCheckoutModal').style.display = 'none';
+    }
+
+    function updateCheckoutTotal() {
+      const basePrice = 9.99;
+      let total = basePrice;
+      let addonsSelected = [];
+
+      // Check which add-ons are selected
+      const professionalUpgrade = document.getElementById('addon-professional');
+      const officialDocs = document.getElementById('addon-docs');
+      const dataExport = document.getElementById('addon-export');
+
+      if (professionalUpgrade && professionalUpgrade.checked) {
+        total += 12.00;
+        addonsSelected.push('Professional Upgrade');
+      }
+
+      if (officialDocs && officialDocs.checked) {
+        total += 7.00;
+        addonsSelected.push('Official Documents');
+      }
+
+      if (dataExport && dataExport.checked) {
+        total += 5.00;
+        addonsSelected.push('Raw Data Export');
+      }
+
+      document.getElementById('checkout-total').textContent = '£' + total.toFixed(2);
+
+      // Update summary
+      const summaryItems = document.getElementById('checkout-summary-items');
+      let summaryHTML = '<div class="summary-item"><span>Professional Property Report</span><span>£9.99</span></div>';
+
+      if (professionalUpgrade && professionalUpgrade.checked) {
+        summaryHTML += '<div class="summary-item"><span>→ Professional Upgrade</span><span>+£12.00</span></div>';
+      }
+      if (officialDocs && officialDocs.checked) {
+        summaryHTML += '<div class="summary-item"><span>→ Official Documents</span><span>+£7.00</span></div>';
+      }
+      if (dataExport && dataExport.checked) {
+        summaryHTML += '<div class="summary-item"><span>→ Raw Data Export</span><span>+£5.00</span></div>';
+      }
+
+      summaryItems.innerHTML = summaryHTML;
+    }
+
+    function proceedToReport() {
+      // Get selected add-ons
+      const professionalUpgrade = document.getElementById('addon-professional').checked;
+      const officialDocs = document.getElementById('addon-docs').checked;
+      const dataExport = document.getElementById('addon-export').checked;
+
+      // Build URL with parameters
+      let url = 'professional-report.html';
+      const params = [];
+
+      if (professionalUpgrade) params.push('professional=true');
+      if (officialDocs) params.push('docs=true');
+      if (dataExport) params.push('export=true');
+
+      if (params.length > 0) {
+        url += '?' + params.join('&');
+      }
+
+      // In production, this would go to payment first
+      // For now, just open the report
+      window.open(url, '_blank');
+      closeProfessionalCheckout();
+    }
+
+    // Close modal when clicking outside
+    window.onclick = function(event) {
+      const modal = document.getElementById('professionalCheckoutModal');
+      if (event.target === modal) {
+        closeProfessionalCheckout();
+      }
+    }
+
+    // Contact form submission handler
+    function submitContactForm(event) {
+      event.preventDefault();
+
+      const form = document.getElementById('contactForm');
+      const formData = new FormData(form);
+
+      // Collect form data
+      const data = {
+        name: formData.get('name'),
+        email: formData.get('email'),
+        subject: formData.get('subject'),
+        message: formData.get('message')
+      };
+
+      // Construct mailto link
+      const subjectLine = encodeURIComponent(`Contact Form: ${data.subject} - from ${data.name}`);
+      const body = encodeURIComponent(
+        `Name: ${data.name}\n` +
+        `Email: ${data.email}\n` +
+        `Subject: ${data.subject}\n\n` +
+        `Message:\n${data.message}`
+      );
+
+      // Open email client
+      window.location.href = `mailto:contact@doorstepsolutions.uk?subject=${subjectLine}&body=${body}`;
+
+      // Show success message
+      form.style.display = 'none';
+      document.getElementById('contactFormSuccess').style.display = 'block';
+    }
+  </script>
+
+  <!-- Professional Report Checkout Modal -->
+  <div id="professionalCheckoutModal" class="checkout-modal">
+    <div class="checkout-modal-content">
+      <div class="checkout-header">
+        <h2>Professional Property Report</h2>
+        <button class="checkout-close" onclick="closeProfessionalCheckout()">&times;</button>
+      </div>
+
+      <div class="checkout-body">
+        <!-- Base Package -->
+        <div class="checkout-section">
+          <div class="checkout-base-package">
+            <div class="base-package-header">
+              <div>
+                <h3>Base Report Package</h3>
+                <p>Comprehensive pre-inspection intelligence</p>
+              </div>
+              <div class="base-package-price">£9.99</div>
+            </div>
+            <ul class="base-package-features">
+              <li>✓ Complete valuation with confidence scoring</li>
+              <li>✓ 15-20 comparable properties</li>
+              <li>✓ Full transaction history</li>
+              <li>✓ Environmental & risk assessment</li>
+              <li>✓ Area market intelligence</li>
+              <li>✓ Planning search (200m, 2 years)</li>
+              <li>✓ Schools, transport, demographics</li>
+              <li>✓ Crime & safety analysis</li>
+              <li>✓ 25+ page professional report</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Add-Ons -->
+        <div class="checkout-section">
+          <h3 class="section-title">Enhance Your Report</h3>
+          <p class="section-subtitle">Optional add-ons for deeper analysis</p>
+
+          <div class="addon-options">
+            <!-- Professional Upgrade -->
+            <label class="addon-option">
+              <input type="checkbox" id="addon-professional" onchange="updateCheckoutTotal()">
+              <div class="addon-content">
+                <div class="addon-header">
+                  <div>
+                    <h4>Professional Upgrade</h4>
+                    <span class="addon-badge">MOST POPULAR</span>
+                  </div>
+                  <div class="addon-price">+£12.00</div>
+                </div>
+                <ul class="addon-features">
+                  <li>Expand to 50+ comparable properties</li>
+                  <li>ML-powered similarity scoring</li>
+                  <li>3-year market forecast & predictions</li>
+                  <li>BTL investment calculator & ROI analysis</li>
+                  <li>Extended planning search (500m, 5 years)</li>
+                  <li>Future development plans</li>
+                </ul>
+              </div>
+            </label>
+
+            <!-- Official Documents -->
+            <label class="addon-option">
+              <input type="checkbox" id="addon-docs" onchange="updateCheckoutTotal()">
+              <div class="addon-content">
+                <div class="addon-header">
+                  <div>
+                    <h4>Official Documents Bundle</h4>
+                    <span class="addon-badge-secondary">LEGAL</span>
+                  </div>
+                  <div class="addon-price">+£7.00</div>
+                </div>
+                <ul class="addon-features">
+                  <li>Land Registry title register & plan (£6 value)</li>
+                  <li>Complete EPC history & recommendations</li>
+                  <li>10-year planning history report</li>
+                  <li>Ownership & tenure details</li>
+                </ul>
+                <p class="addon-note">*Fulfilled by Land Registry - official documents</p>
+              </div>
+            </label>
+
+            <!-- Raw Data Export -->
+            <label class="addon-option">
+              <input type="checkbox" id="addon-export" onchange="updateCheckoutTotal()">
+              <div class="addon-content">
+                <div class="addon-header">
+                  <div>
+                    <h4>Raw Data Export</h4>
+                    <span class="addon-badge-secondary">DATA</span>
+                  </div>
+                  <div class="addon-price">+£5.00</div>
+                </div>
+                <ul class="addon-features">
+                  <li>Export all report data to CSV/Excel</li>
+                  <li>Comparable properties spreadsheet</li>
+                  <li>Market trend data tables</li>
+                  <li>Ideal for custom analysis & integration</li>
+                </ul>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <!-- Order Summary -->
+        <div class="checkout-section">
+          <div class="checkout-summary">
+            <h3>Order Summary</h3>
+            <div id="checkout-summary-items" class="summary-items">
+              <div class="summary-item">
+                <span>Professional Property Report</span>
+                <span>£9.99</span>
+              </div>
+            </div>
+            <div class="summary-total">
+              <span>Total</span>
+              <span id="checkout-total" class="total-amount">£9.99</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="checkout-footer">
+        <button class="btn btn-secondary" onclick="closeProfessionalCheckout()">Cancel</button>
+        <button class="btn btn-primary" onclick="proceedToReport()">Generate Report</button>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    /* Checkout Modal Styles */
+    .checkout-modal {
+      display: none;
+      position: fixed;
+      z-index: 10000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(15, 23, 42, 0.8);
+      backdrop-filter: blur(4px);
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .checkout-modal-content {
+      background: white;
+      border-radius: 16px;
+      max-width: 800px;
+      width: 100%;
+      max-height: 90vh;
+      overflow-y: auto;
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.12), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    }
+
+    .checkout-header {
+      padding: 24px 32px;
+      border-bottom: 1px solid #E2E8F0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      background: white;
+      z-index: 10;
+      border-radius: 16px 16px 0 0;
+    }
+
+    .checkout-header h2 {
+      margin: 0;
+      font-size: 24px;
+      font-weight: 700;
+      color: #0F172A;
+    }
+
+    .checkout-close {
+      background: none;
+      border: none;
+      font-size: 32px;
+      color: #64748B;
+      cursor: pointer;
+      line-height: 1;
+      padding: 0;
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+      transition: all 0.2s;
+    }
+
+    .checkout-close:hover {
+      background: #F1F5F9;
+      color: #0F172A;
+    }
+
+    .checkout-body {
+      padding: 32px;
+    }
+
+    .checkout-section {
+      margin-bottom: 32px;
+    }
+
+    .checkout-section:last-child {
+      margin-bottom: 0;
+    }
+
+    .section-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: #0F172A;
+      margin: 0 0 8px 0;
+    }
+
+    .section-subtitle {
+      font-size: 14px;
+      color: #64748B;
+      margin: 0 0 20px 0;
+    }
+
+    .checkout-base-package {
+      background: linear-gradient(135deg, #0F5257 0%, #0D9488 100%);
+      padding: 24px;
+      border-radius: 12px;
+      color: white;
+    }
+
+    .base-package-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+      margin-bottom: 16px;
+    }
+
+    .base-package-header h3 {
+      margin: 0 0 4px 0;
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    .base-package-header p {
+      margin: 0;
+      font-size: 14px;
+      opacity: 0.9;
+    }
+
+    .base-package-price {
+      font-size: 28px;
+      font-weight: 700;
+    }
+
+    .base-package-features {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 8px;
+    }
+
+    .base-package-features li {
+      font-size: 14px;
+      opacity: 0.95;
+    }
+
+    .addon-options {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .addon-option {
+      display: flex;
+      border: 2px solid #E2E8F0;
+      border-radius: 12px;
+      padding: 20px;
+      cursor: pointer;
+      transition: all 0.2s;
+      background: white;
+    }
+
+    .addon-option:hover {
+      border-color: #0D9488;
+      background: #F8FAFC;
+    }
+
+    .addon-option input[type="checkbox"] {
+      margin-right: 16px;
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+      cursor: pointer;
+      accent-color: #0D9488;
+      margin-top: 2px;
+    }
+
+    .addon-option input[type="checkbox"]:checked ~ .addon-content {
+      opacity: 1;
+    }
+
+    .addon-content {
+      flex: 1;
+      opacity: 0.7;
+      transition: opacity 0.2s;
+    }
+
+    .addon-option:has(input:checked) .addon-content {
+      opacity: 1;
+    }
+
+    .addon-option:has(input:checked) {
+      border-color: #0D9488;
+      background: rgba(13, 148, 136, 0.04);
+    }
+
+    .addon-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+      margin-bottom: 12px;
+    }
+
+    .addon-header h4 {
+      margin: 0 0 6px 0;
+      font-size: 16px;
+      font-weight: 700;
+      color: #0F172A;
+    }
+
+    .addon-price {
+      font-size: 18px;
+      font-weight: 700;
+      color: #0D9488;
+    }
+
+    .addon-badge {
+      display: inline-block;
+      background: #0D9488;
+      color: white;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 4px 8px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .addon-badge-secondary {
+      display: inline-block;
+      background: #64748B;
+      color: white;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 4px 8px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .addon-features {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 8px 0;
+    }
+
+    .addon-features li {
+      font-size: 14px;
+      color: #475569;
+      margin-bottom: 6px;
+      padding-left: 16px;
+      position: relative;
+    }
+
+    .addon-features li:before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: #0D9488;
+      font-weight: bold;
+    }
+
+    .addon-note {
+      font-size: 12px;
+      color: #64748B;
+      font-style: italic;
+      margin: 8px 0 0 0;
+    }
+
+    .checkout-summary {
+      background: #F8FAFC;
+      padding: 24px;
+      border-radius: 12px;
+      border: 2px solid #E2E8F0;
+    }
+
+    .checkout-summary h3 {
+      margin: 0 0 16px 0;
+      font-size: 18px;
+      font-weight: 700;
+      color: #0F172A;
+    }
+
+    .summary-items {
+      margin-bottom: 16px;
+    }
+
+    .summary-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 8px 0;
+      font-size: 14px;
+      color: #475569;
+    }
+
+    .summary-total {
+      display: flex;
+      justify-content: space-between;
+      padding-top: 16px;
+      border-top: 2px solid #E2E8F0;
+      font-size: 18px;
+      font-weight: 700;
+      color: #0F172A;
+    }
+
+    .total-amount {
+      color: #0D9488;
+      font-size: 24px;
+    }
+
+    .checkout-footer {
+      padding: 20px 32px;
+      border-top: 1px solid #E2E8F0;
+      display: flex;
+      gap: 12px;
+      justify-content: flex-end;
+      position: sticky;
+      bottom: 0;
+      background: white;
+      border-radius: 0 0 16px 16px;
+    }
+
+    .checkout-footer .btn {
+      padding: 12px 28px;
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    @media (max-width: 768px) {
+      .checkout-modal {
+        padding: 0;
+      }
+
+      .checkout-modal-content {
+        max-height: 100vh;
+        border-radius: 0;
+        max-width: 100%;
+      }
+
+      .checkout-header,
+      .checkout-body,
+      .checkout-footer {
+        padding: 20px;
+      }
+
+      .base-package-features {
+        grid-template-columns: 1fr;
+      }
+
+      .checkout-footer {
+        flex-direction: column-reverse;
+      }
+
+      .checkout-footer .btn {
+        width: 100%;
+      }
+    }
+  </style>
+
+  <!-- Mobile Menu Toggle Script -->
+  <script>
+    function toggleMobileMenu() {
+      const nav = document.getElementById('main-nav');
+      const toggle = document.querySelector('.mobile-menu-toggle');
+      nav.classList.toggle('open');
+      toggle.classList.toggle('active');
+    }
+
+    // Close mobile menu when clicking a link
+    document.querySelectorAll('.main-nav a').forEach(link => {
+      link.addEventListener('click', () => {
+        const nav = document.getElementById('main-nav');
+        const toggle = document.querySelector('.mobile-menu-toggle');
+        nav.classList.remove('open');
+        toggle.classList.remove('active');
+      });
+    });
+
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', (e) => {
+      const nav = document.getElementById('main-nav');
+      const toggle = document.querySelector('.mobile-menu-toggle');
+      if (!nav.contains(e.target) && !toggle.contains(e.target) && nav.classList.contains('open')) {
+        nav.classList.remove('open');
+        toggle.classList.remove('active');
+      }
+    });
+
+    // FAQ Toggle
+    function toggleFaq(button) {
+      const faqItem = button.parentElement;
+      const isOpen = faqItem.classList.contains('open');
+
+      // Close all other FAQs
+      document.querySelectorAll('.faq-item.open').forEach(item => {
+        item.classList.remove('open');
+      });
+
+      // Toggle current FAQ
+      if (!isOpen) {
+        faqItem.classList.add('open');
+      }
+    }
+
+  </script>
+
+</body>
+</html>

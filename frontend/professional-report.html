@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Professional Property Report | Doorstep</title>
+  <link rel="stylesheet" href="professional-report.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+
+  <!-- Report Header -->
+  <header class="report-header">
+    <div class="header-content">
+      <div class="header-logo">
+        <h1>Doorstep</h1>
+        <span class="header-subtitle">Professional Property Intelligence</span>
+      </div>
+      <div class="header-meta">
+        <div class="header-meta-item">
+          <span class="meta-label">Report ID:</span>
+          <span class="meta-value" id="report-id">DOR-2024-001542</span>
+        </div>
+        <div class="header-meta-item">
+          <span class="meta-label">Generated:</span>
+          <span class="meta-value" id="report-date">15 November 2024</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Report Container -->
+  <div class="report-container">
+
+    <!-- Section 1: Executive Intelligence Dashboard -->
+    <section class="report-section">
+      <div class="section-header">
+        <h2 class="section-title">Executive Intelligence Dashboard</h2>
+        <p class="section-subtitle">Property summary and risk indicators</p>
+      </div>
+
+      <div class="property-header-card">
+        <div class="property-title-row">
+          <h3 id="property-address">8 Mccorquodale Road, Wolverton, Milton Keynes, MK12 5GP</h3>
+          <div class="risk-status risk-status-low">Low Risk</div>
+        </div>
+        <div class="property-meta-grid">
+          <div class="property-meta-item">
+            <span class="meta-key">UPRN:</span>
+            <span class="meta-val">10013319852</span>
+          </div>
+          <div class="property-meta-item">
+            <span class="meta-key">Property Type:</span>
+            <span class="meta-val">Purpose Built Flat</span>
+          </div>
+          <div class="property-meta-item">
+            <span class="meta-key">Year Built:</span>
+            <span class="meta-val">2007</span>
+          </div>
+          <div class="property-meta-item">
+            <span class="meta-key">Tenure:</span>
+            <span class="meta-val">Leasehold</span>
+          </div>
+          <div class="property-meta-item">
+            <span class="meta-key">Council Tax:</span>
+            <span class="meta-val">Band B (£1,638/year)</span>
+          </div>
+          <div class="property-meta-item">
+            <span class="meta-key">EPC Rating:</span>
+            <span class="meta-val">C (74)</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Risk Flags Grid -->
+      <div class="risk-flags-grid">
+        <div class="risk-flag risk-flag-good">
+          <div class="risk-flag-icon">✓</div>
+          <div class="risk-flag-content">
+            <h4>Flood Risk</h4>
+            <p>Very Low</p>
+          </div>
+        </div>
+        <div class="risk-flag risk-flag-good">
+          <div class="risk-flag-icon">✓</div>
+          <div class="risk-flag-content">
+            <h4>Ground Stability</h4>
+            <p>No Known Issues</p>
+          </div>
+        </div>
+        <div class="risk-flag risk-flag-good">
+          <div class="risk-flag-icon">✓</div>
+          <div class="risk-flag-content">
+            <h4>Planning</h4>
+            <p>No Major Applications</p>
+          </div>
+        </div>
+        <div class="risk-flag risk-flag-good">
+          <div class="risk-flag-icon">✓</div>
+          <div class="risk-flag-content">
+            <h4>Conservation</h4>
+            <p>Not Listed</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Stats Grid -->
+      <div class="quick-stats-grid">
+        <div class="quick-stat-card">
+          <div class="quick-stat-label">Current Estimate</div>
+          <div class="quick-stat-value">£202,000</div>
+          <div class="quick-stat-change positive">+20.3% since last sale</div>
+        </div>
+        <div class="quick-stat-card">
+          <div class="quick-stat-label">Confidence Score</div>
+          <div class="quick-stat-value">78%</div>
+          <div class="quick-stat-change">High Confidence</div>
+        </div>
+        <div class="quick-stat-card">
+          <div class="quick-stat-label">Rental Yield</div>
+          <div class="quick-stat-value">5.1%</div>
+          <div class="quick-stat-change">£865 pcm</div>
+        </div>
+        <div class="quick-stat-card">
+          <div class="quick-stat-label">Price per sqft</div>
+          <div class="quick-stat-value">£261</div>
+          <div class="quick-stat-change">+8% vs area avg</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Valuation Analysis -->
+    <section class="report-section">
+      <div class="section-header">
+        <h2 class="section-title">Valuation Analysis</h2>
+        <p class="section-subtitle">Multi-source valuation intelligence</p>
+      </div>
+
+      <div class="valuation-main-card">
+        <div class="valuation-primary">
+          <div class="valuation-label">Doorstep Estimate</div>
+          <div class="valuation-amount">£202,000</div>
+          <div class="valuation-range">Range: £182,000 - £222,000</div>
+          <div class="confidence-badge confidence-high">High Confidence (78%)</div>
+        </div>
+        <div class="valuation-breakdown">
+          <h4>Confidence Breakdown</h4>
+          <div class="confidence-factors">
+            <div class="confidence-factor">
+              <span class="factor-name">Data Quality</span>
+              <div class="factor-bar-container">
+                <div class="factor-bar" style="width: 95%"></div>
+              </div>
+              <span class="factor-score">95%</span>
+            </div>
+            <div class="confidence-factor">
+              <span class="factor-name">Market Activity</span>
+              <div class="factor-bar-container">
+                <div class="factor-bar" style="width: 72%"></div>
+              </div>
+              <span class="factor-score">72%</span>
+            </div>
+            <div class="confidence-factor">
+              <span class="factor-name">Property Uniqueness</span>
+              <div class="factor-bar-container">
+                <div class="factor-bar" style="width: 85%"></div>
+              </div>
+              <span class="factor-score">85%</span>
+            </div>
+            <div class="confidence-factor">
+              <span class="factor-name">Area Stability</span>
+              <div class="factor-bar-container">
+                <div class="factor-bar" style="width: 68%"></div>
+              </div>
+              <span class="factor-score">68%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Market Intelligence Comparison (Professional Upgrade Feature) -->
+      <div class="professional-feature" data-feature="professional">
+        <div class="feature-locked-overlay">
+          <div class="feature-locked-content">
+            <h4>🔒 Professional Upgrade Required</h4>
+            <p>Advanced market analysis with ML forecasting and regional benchmarking</p>
+          </div>
+        </div>
+        <div class="avm-comparison-card">
+          <h4>Market Intelligence: Valuation Context</h4>
+          <p style="font-size: 12px; color: #64748B; margin-bottom: 16px;">Based on Land Registry HPI data and local transaction analysis</p>
+          <div class="simple-comparison-bars">
+            <div class="comparison-bar-row">
+              <span class="bar-label">Doorstep Valuation</span>
+              <div class="bar-container">
+                <div class="bar-fill" style="width: 100%; background: #0F5257;">£202,000</div>
+              </div>
+            </div>
+            <div class="comparison-bar-row">
+              <span class="bar-label">MK12 Market Average (2025 YTD)</span>
+              <div class="bar-container">
+                <div class="bar-fill" style="width: 92.9%; background: #0284C7;">£187,580</div>
+              </div>
+            </div>
+            <div class="comparison-bar-row">
+              <span class="bar-label">MK12 Median (2025 YTD)</span>
+              <div class="bar-container">
+                <div class="bar-fill" style="width: 91.7%; background: #7C3AED;">£185,250</div>
+              </div>
+            </div>
+            <div class="comparison-bar-row">
+              <span class="bar-label">MK12 12-Month Average</span>
+              <div class="bar-container">
+                <div class="bar-fill" style="width: 90.9%; background: #DC2626;">£183,613</div>
+              </div>
+            </div>
+          </div>
+          <div style="margin-top: 16px; padding: 12px; background: #F8FAFC; border-radius: 4px; border-left: 3px solid #0D9488;">
+            <p style="font-size: 12px; margin: 0; color: #475569;">
+              <strong>Market Position:</strong> Property valued at +7.7% above local market average.
+              Based on 28 comparable transactions in MK12 area (2025 YTD). Market confidence: Moderate (limited sample size).
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Price Per Sqft Analysis -->
+      <div class="price-analysis-grid">
+        <div class="price-analysis-card">
+          <h4>Property Price per sqft</h4>
+          <div class="price-large">£261</div>
+          <p>775 sqft total floor area</p>
+        </div>
+        <div class="price-analysis-card">
+          <h4>Area Average (2-bed flats)</h4>
+          <div class="price-large">£242</div>
+          <p class="price-diff positive">+£19 (+8%) premium</p>
+        </div>
+        <div class="price-analysis-card">
+          <h4>MK12 Postcode Average</h4>
+          <div class="price-large">£238</div>
+          <p class="price-diff positive">+£23 (+10%) premium</p>
+        </div>
+      </div>
+
+      <!-- Historical Value Chart -->
+      <div class="chart-card">
+        <h4>Historical Value Progression (10-Year)</h4>
+        <div class="simple-value-table">
+          <table class="value-progression-table">
+            <thead>
+              <tr>
+                <th>Year</th>
+                <th>Estimated Value</th>
+                <th>Change</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>2014</td><td>£145,000</td><td>-</td></tr>
+              <tr><td>2015</td><td>£152,000</td><td class="positive">+£7,000</td></tr>
+              <tr><td>2016</td><td>£168,000</td><td class="positive">+£16,000</td></tr>
+              <tr><td>2017</td><td>£175,000</td><td class="positive">+£7,000</td></tr>
+              <tr><td>2018</td><td>£189,000</td><td class="positive">+£14,000</td></tr>
+              <tr><td>2019</td><td>£195,000</td><td class="positive">+£6,000</td></tr>
+              <tr><td>2020</td><td>£202,000</td><td class="positive">+£7,000</td></tr>
+              <tr><td>2021</td><td>£218,000</td><td class="positive">+£16,000</td></tr>
+              <tr><td>2022</td><td>£210,000</td><td class="negative">-£8,000</td></tr>
+              <tr><td>2023</td><td>£198,000</td><td class="negative">-£12,000</td></tr>
+              <tr><td>2024</td><td>£202,000</td><td class="positive">+£4,000</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Rental Analysis -->
+      <div class="rental-analysis-card">
+        <h4>Rental Investment Analysis</h4>
+        <div class="rental-metrics-grid">
+          <div class="rental-metric">
+            <span class="rental-label">Market Rent Estimate</span>
+            <span class="rental-value">£865 pcm</span>
+          </div>
+          <div class="rental-metric">
+            <span class="rental-label">Annual Rental Income</span>
+            <span class="rental-value">£10,380</span>
+          </div>
+          <div class="rental-metric">
+            <span class="rental-label">Gross Yield</span>
+            <span class="rental-value">5.1%</span>
+          </div>
+          <div class="rental-metric">
+            <span class="rental-label">Net Yield (Est)</span>
+            <span class="rental-value">3.9%</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Transaction History -->
+    <section class="report-section">
+      <div class="section-header">
+        <h2 class="section-title">Transaction History & Ownership</h2>
+        <p class="section-subtitle">Complete Land Registry records</p>
+      </div>
+
+      <div class="transaction-timeline">
+        <div class="transaction-item">
+          <div class="transaction-date">September 2007</div>
+          <div class="transaction-details">
+            <div class="transaction-price">£167,950</div>
+            <div class="transaction-type">Sold - Leasehold</div>
+            <div class="transaction-note">Original purchase by current owner</div>
+          </div>
+          <div class="transaction-appreciation">
+            <div class="appreciation-label">Appreciation to Current</div>
+            <div class="appreciation-value">+£34,050 (+20.3%)</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ownership-card">
+        <h4>Current Ownership</h4>
+        <div class="ownership-detail">
+          <span class="ownership-label">Ownership Duration:</span>
+          <span class="ownership-value">17 years (September 2007 - Present)</span>
+        </div>
+        <div class="ownership-detail">
+          <span class="ownership-label">Average Annual Growth:</span>
+          <span class="ownership-value">1.19% per year</span>
+        </div>
+      </div>
+
+      <!-- Official Documents Feature -->
+      <div class="professional-feature" data-feature="docs">
+        <div class="feature-locked-overlay">
+          <div class="feature-locked-content">
+            <h4>🔒 Official Documents Add-On Required</h4>
+            <p>Access full Land Registry title documents</p>
+          </div>
+        </div>
+        <div class="documents-card">
+          <h4>Official Title Documents</h4>
+          <div class="document-list">
+            <div class="document-item">
+              <div class="document-icon">📄</div>
+              <div class="document-info">
+                <div class="document-name">Title Register</div>
+                <div class="document-desc">Full legal ownership details</div>
+              </div>
+              <button class="btn-download">Download PDF</button>
+            </div>
+            <div class="document-item">
+              <div class="document-icon">🗺️</div>
+              <div class="document-info">
+                <div class="document-name">Title Plan</div>
+                <div class="document-desc">Official boundary plan</div>
+              </div>
+              <button class="btn-download">Download PDF</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Comparable Properties -->
+    <section class="report-section">
+      <div class="section-header">
+        <h2 class="section-title">Comparable Properties Analysis</h2>
+        <p class="section-subtitle" id="comparables-subtitle">15 comparable properties identified</p>
+      </div>
+
+      <!-- Map -->
+      <div class="map-card">
+        <div id="comparablesMap" style="height: 400px; border-radius: 8px;"></div>
+      </div>
+
+      <!-- Comparables Table -->
+      <div class="table-card">
+        <table class="data-table" id="comparablesTable">
+          <thead>
+            <tr>
+              <th>Address</th>
+              <th>Distance</th>
+              <th>Sale Date</th>
+              <th>Price</th>
+              <th>£/sqft</th>
+              <th>Type</th>
+              <th>Size</th>
+              <th>Similarity</th>
+            </tr>
+          </thead>
+          <tbody id="comparablesTableBody">
+            <!-- Populated by JavaScript -->
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Professional Upgrade: Extended Comparables -->
+      <div class="professional-feature" data-feature="professional">
+        <div class="feature-locked-overlay">
+          <div class="feature-locked-content">
+            <h4>🔒 Professional Upgrade Required</h4>
+            <p>Unlock 35+ additional comparables with ML similarity scoring</p>
+          </div>
+        </div>
+        <div class="extended-comparables-preview">
+          <p class="preview-text">Professional upgrade includes 50+ total comparables with advanced filtering and ML-powered similarity analysis</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: Market Intelligence -->
+    <section class="report-section">
+      <div class="section-header">
+        <h2 class="section-title">Market Conditions & Intelligence</h2>
+        <p class="section-subtitle">Local market analysis for MK12</p>
+      </div>
+
+      <div class="market-stats-grid">
+        <div class="market-stat-card">
+          <h4>Asking Price Achievement</h4>
+          <div class="market-stat-value">97%</div>
+          <p>Properties selling close to asking</p>
+        </div>
+        <div class="market-stat-card">
+          <h4>Average Time on Market</h4>
+          <div class="market-stat-value">10 days</div>
+          <p>Fast-moving market</p>
+        </div>
+        <div class="market-stat-card">
+          <h4>Search Volume (28d)</h4>
+          <div class="market-stat-value">3,006</div>
+          <p>High buyer interest</p>
+        </div>
+        <div class="market-stat-card">
+          <h4>Active Listings</h4>
+          <div class="market-stat-value">23</div>
+          <p>Similar properties for sale</p>
+        </div>
+      </div>
+
+      <!-- Price Trends Chart -->
+      <div class="chart-card">
+        <h4>Price Trends: 2-Bed Flats in MK12</h4>
+        <div class="simple-value-table">
+          <table class="value-progression-table">
+            <thead>
+              <tr>
+                <th>Year</th>
+                <th>Property Type</th>
+                <th>MK Area Average</th>
+                <th>Difference</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>2014</td><td>£145,000</td><td>£138,000</td><td class="positive">+£7,000</td></tr>
+              <tr><td>2015</td><td>£152,000</td><td>£145,000</td><td class="positive">+£7,000</td></tr>
+              <tr><td>2016</td><td>£168,000</td><td>£158,000</td><td class="positive">+£10,000</td></tr>
+              <tr><td>2017</td><td>£175,000</td><td>£168,000</td><td class="positive">+£7,000</td></tr>
+              <tr><td>2018</td><td>£189,000</td><td>£182,000</td><td class="positive">+£7,000</td></tr>
+              <tr><td>2019</td><td>£195,000</td><td>£188,000</td><td class="positive">+£7,000</td></tr>
+              <tr><td>2020</td><td>£202,000</td><td>£195,000</td><td class="positive">+£7,000</td></tr>
+              <tr><td>2021</td><td>£218,000</td><td>£210,000</td><td class="positive">+£8,000</td></tr>
+              <tr><td>2022</td><td>£210,000</td><td>£203,000</td><td class="positive">+£7,000</td></tr>
+              <tr><td>2023</td><td>£198,000</td><td>£192,000</td><td class="positive">+£6,000</td></tr>
+              <tr><td>2024</td><td>£202,000</td><td>£196,000</td><td class="positive">+£6,000</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Market Forecast (Professional Feature) -->
+      <div class="professional-feature" data-feature="professional">
+        <div class="feature-locked-overlay">
+          <div class="feature-locked-content">
+            <h4>🔒 Professional Upgrade Required</h4>
+            <p>3-year market forecast with ML predictions</p>
+          </div>
+        </div>
+        <div class="forecast-card">
+          <h4>3-Year Market Forecast (ML Prediction)</h4>
+          <div class="simple-value-table">
+            <table class="value-progression-table">
+              <thead>
+                <tr>
+                  <th>Year</th>
+                  <th>Predicted Value</th>
+                  <th>Lower Range</th>
+                  <th>Upper Range</th>
+                  <th>YoY Change</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>2025</td><td>£208,000</td><td>£198,000</td><td>£218,000</td><td class="positive">+3.0%</td></tr>
+                <tr><td>2026</td><td>£215,000</td><td>£203,000</td><td>£227,000</td><td class="positive">+3.4%</td></tr>
+                <tr><td>2027</td><td>£223,000</td><td>£208,000</td><td>£238,000</td><td class="positive">+3.7%</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 6: Property Details -->
+    <section class="report-section">
+      <div class="section-header">
+        <h2 class="section-title">Property Details & Characteristics</h2>
+        <p class="section-subtitle">Complete property specifications</p>
+      </div>
+
+      <div class="property-details-grid">
+        <div class="detail-group">
+          <h4>Accommodation</h4>
+          <div class="detail-row">
+            <span class="detail-label">Bedrooms</span>
+            <span class="detail-value">2</span>
+          </div>
+          <div class="detail-row">
+            <span class="detail-label">Bathrooms</span>
+            <span class="detail-value">2</span>
+          </div>
+          <div class="detail-row">
+            <span class="detail-label">Reception Rooms</span>
+            <span class="detail-value">1</span>
+          </div>
+          <div class="detail-row">
+            <span class="detail-label">Total Floor Area</span>
+            <span class="detail-value">775 sqft (72 sqm)</span>
+          </div>
+        </div>
+
+        <div class="detail-group">
+          <h4>Construction</h4>
+          <div class="detail-row">
+            <span class="detail-label">Property Type</span>
+            <span class="detail-value">Purpose Built Flat</span>
+          </div>
+          <div class="detail-row">
+            <span class="detail-label">Year Built</span>
+            <span class="detail-value">2007</span>
+          </div>
+          <div class="detail-row">
+            <span class="detail-label">Construction Type</span>
+            <span class="detail-value">Standard brick/block</span>
+          </div>
+          <div class="detail-row">
+            <span class="detail-label">Parking</span>
+            <span class="detail-value">1 allocated space</span>
+          </div>
+        </div>
+
+        <div class="detail-group">
+          <h4>Legal & Tenure</h4>
+          <div class="detail-row">
+            <span class="detail-label">Tenure</span>
+            <span class="detail-value">Leasehold</span>
+          </div>
+          <div class="detail-row">
+            <span class="detail-label">Lease Remaining</span>
+            <span class="detail-value">~108 years (est)</span>
+          </div>
+          <div class="detail-row">
+            <span class="detail-label">Ground Rent</span>
+            <span class="detail-value">£150 per annum</span>
+          </div>
+          <div class="detail-row">
+            <span class="detail-label">Service Charge</span>
+            <span class="detail-value">£850 per annum (est)</span>
+          </div>
+        </div>
+
+        <div class="detail-group">
+          <h4>Energy & Council</h4>
+          <div class="detail-row">
+            <span class="detail-label">EPC Rating</span>
+            <span class="detail-value">C (74)</span>
+          </div>
+          <div class="detail-row">
+            <span class="detail-label">EPC Valid Until</span>
+            <span class="detail-value">12 March 2027</span>
+          </div>
+          <div class="detail-row">
+            <span class="detail-label">Council Tax Band</span>
+            <span class="detail-value">B</span>
+          </div>
+          <div class="detail-row">
+            <span class="detail-label">Annual Council Tax</span>
+            <span class="detail-value">£1,638</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- EPC Deep Dive (Professional Feature) -->
+      <div class="professional-feature" data-feature="docs">
+        <div class="feature-locked-overlay">
+          <div class="feature-locked-content">
+            <h4>🔒 Official Documents Add-On Required</h4>
+            <p>Full EPC history and upgrade recommendations</p>
+          </div>
+        </div>
+        <div class="epc-detail-card">
+          <h4>EPC Improvement Recommendations</h4>
+          <div class="epc-recommendations">
+            <div class="epc-rec-item">
+              <div class="epc-rec-title">Cavity Wall Insulation</div>
+              <div class="epc-rec-cost">Est Cost: £500-£1,500</div>
+              <div class="epc-rec-saving">Annual Saving: £180</div>
+            </div>
+            <div class="epc-rec-item">
+              <div class="epc-rec-title">Double Glazing Upgrade</div>
+              <div class="epc-rec-cost">Est Cost: £3,000-£6,000</div>
+              <div class="epc-rec-saving">Annual Saving: £95</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 7: Planning & Development -->
+    <section class="report-section">
+      <div class="section-header">
+        <h2 class="section-title">Planning & Development Intelligence</h2>
+        <p class="section-subtitle" id="planning-subtitle">Planning search: 200m radius, 2 years</p>
+      </div>
+
+      <div class="planning-summary-card">
+        <h4>Planning Applications Summary</h4>
+        <div class="planning-summary-stat">
+          <span class="planning-stat-number">0</span>
+          <span class="planning-stat-label">applications found at this property</span>
+        </div>
+        <div class="planning-summary-stat">
+          <span class="planning-stat-number">3</span>
+          <span class="planning-stat-label">applications within 200m (last 2 years)</span>
+        </div>
+      </div>
+
+      <div class="planning-list">
+        <div class="planning-item">
+          <div class="planning-item-header">
+            <span class="planning-ref">24/00145/FUL</span>
+            <span class="planning-status planning-status-approved">Approved</span>
+          </div>
+          <div class="planning-address">12 Wolverton Road, 0.15 miles</div>
+          <div class="planning-desc">Single storey rear extension</div>
+          <div class="planning-date">Decided: 15 March 2024</div>
+        </div>
+        <div class="planning-item">
+          <div class="planning-item-header">
+            <span class="planning-ref">23/02891/FUL</span>
+            <span class="planning-status planning-status-approved">Approved</span>
+          </div>
+          <div class="planning-address">Station Road, 0.19 miles</div>
+          <div class="planning-desc">Change of use to residential (2 flats)</div>
+          <div class="planning-date">Decided: 8 November 2023</div>
+        </div>
+        <div class="planning-item">
+          <div class="planning-item-header">
+            <span class="planning-ref">23/01204/FUL</span>
+            <span class="planning-status planning-status-refused">Refused</span>
+          </div>
+          <div class="planning-address">Wolverton Square, 0.18 miles</div>
+          <div class="planning-desc">3-storey mixed use development</div>
+          <div class="planning-date">Decided: 22 June 2023</div>
+        </div>
+      </div>
+
+      <!-- Extended Planning (Professional Feature) -->
+      <div class="professional-feature" data-feature="professional">
+        <div class="feature-locked-overlay">
+          <div class="feature-locked-content">
+            <h4>🔒 Professional Upgrade Required</h4>
+            <p>Extended planning search: 500m radius, 5-year history</p>
+          </div>
+        </div>
+        <div class="extended-planning-preview">
+          <p class="preview-text">Professional upgrade extends search to 500m radius with 5-year planning history and future development plans</p>
+        </div>
+      </div>
+
+      <div class="planning-status-grid">
+        <div class="planning-status-card">
+          <h4>Conservation Area</h4>
+          <div class="status-value status-no">No</div>
+        </div>
+        <div class="planning-status-card">
+          <h4>Listed Building</h4>
+          <div class="status-value status-no">No</div>
+        </div>
+        <div class="planning-status-card">
+          <h4>Tree Preservation Orders</h4>
+          <div class="status-value status-no">None</div>
+        </div>
+        <div class="planning-status-card">
+          <h4>Article 4 Direction</h4>
+          <div class="status-value status-no">No</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 8: Area Analysis -->
+    <section class="report-section">
+      <div class="section-header">
+        <h2 class="section-title">Location & Area Analysis</h2>
+        <p class="section-subtitle">Comprehensive area intelligence</p>
+      </div>
+
+      <!-- Schools -->
+      <div class="subsection">
+        <h3 class="subsection-title">Nearby Schools</h3>
+        <div class="schools-grid">
+          <div class="school-card">
+            <div class="school-header">
+              <h4>Wyvern Primary School</h4>
+              <span class="school-rating rating-outstanding">Outstanding</span>
+            </div>
+            <div class="school-detail">
+              <span class="school-label">Type:</span>
+              <span class="school-value">Primary (4-11)</span>
+            </div>
+            <div class="school-detail">
+              <span class="school-label">Distance:</span>
+              <span class="school-value">0.3 miles</span>
+            </div>
+          </div>
+          <div class="school-card">
+            <div class="school-header">
+              <h4>Radcliffe School</h4>
+              <span class="school-rating rating-good">Good</span>
+            </div>
+            <div class="school-detail">
+              <span class="school-label">Type:</span>
+              <span class="school-value">Secondary (11-18)</span>
+            </div>
+            <div class="school-detail">
+              <span class="school-label">Distance:</span>
+              <span class="school-value">0.8 miles</span>
+            </div>
+          </div>
+          <div class="school-card">
+            <div class="school-header">
+              <h4>St. Mary's CE Primary</h4>
+              <span class="school-rating rating-outstanding">Outstanding</span>
+            </div>
+            <div class="school-detail">
+              <span class="school-label">Type:</span>
+              <span class="school-value">Primary (4-11)</span>
+            </div>
+            <div class="school-detail">
+              <span class="school-label">Distance:</span>
+              <span class="school-value">1.1 miles</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Transport -->
+      <div class="subsection">
+        <h3 class="subsection-title">Transport Links</h3>
+        <div class="transport-list">
+          <div class="transport-item">
+            <div class="transport-icon">🚂</div>
+            <div class="transport-details">
+              <h4>Wolverton Station</h4>
+              <p>0.6 miles (12 min walk) • Direct to London Euston (50 mins)</p>
+            </div>
+          </div>
+          <div class="transport-item">
+            <div class="transport-icon">🚌</div>
+            <div class="transport-details">
+              <h4>Bus Stop</h4>
+              <p>0.1 miles (2 min walk) • Routes 4, 5, 7 to MK Centre</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Demographics -->
+      <div class="subsection">
+        <h3 class="subsection-title">Local Demographics</h3>
+        <div class="chart-card">
+          <h4>Age Distribution</h4>
+          <div class="simple-comparison-bars">
+            <div class="comparison-bar-row">
+              <span class="bar-label">0-17 years</span>
+              <div class="bar-container">
+                <div class="bar-fill" style="width: 51%; background: #475569;">18%</div>
+              </div>
+            </div>
+            <div class="comparison-bar-row">
+              <span class="bar-label">18-29 years</span>
+              <div class="bar-container">
+                <div class="bar-fill" style="width: 63%; background: #0F5257;">22%</div>
+              </div>
+            </div>
+            <div class="comparison-bar-row">
+              <span class="bar-label">30-44 years</span>
+              <div class="bar-container">
+                <div class="bar-fill" style="width: 80%; background: #0D9488;">28%</div>
+              </div>
+            </div>
+            <div class="comparison-bar-row">
+              <span class="bar-label">45-64 years</span>
+              <div class="bar-container">
+                <div class="bar-fill" style="width: 57%; background: #1E3A8A;">20%</div>
+              </div>
+            </div>
+            <div class="comparison-bar-row">
+              <span class="bar-label">65+ years</span>
+              <div class="bar-container">
+                <div class="bar-fill" style="width: 34%; background: #57534E;">12%</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Crime & Safety -->
+      <div class="subsection">
+        <h3 class="subsection-title">Crime & Safety</h3>
+        <div class="crime-summary-card">
+          <div class="crime-stat-large">
+            <div class="crime-stat-value">23%</div>
+            <div class="crime-stat-label">below national average</div>
+          </div>
+          <p>This area has lower crime rates than the England & Wales average across most categories.</p>
+        </div>
+        <div class="chart-card">
+          <h4>Crime Breakdown (Last 12 Months)</h4>
+          <div class="simple-comparison-bars">
+            <div class="comparison-bar-row">
+              <span class="bar-label">Anti-Social (30%)</span>
+              <div class="bar-container">
+                <div class="bar-fill" style="width: 100%; background: #0F5257;"></div>
+              </div>
+            </div>
+            <div class="comparison-bar-row">
+              <span class="bar-label">Violence (25%)</span>
+              <div class="bar-container">
+                <div class="bar-fill" style="width: 83%; background: #0D9488;"></div>
+              </div>
+            </div>
+            <div class="comparison-bar-row">
+              <span class="bar-label">Vehicle (18%)</span>
+              <div class="bar-container">
+                <div class="bar-fill" style="width: 60%; background: #1E3A8A;"></div>
+              </div>
+            </div>
+            <div class="comparison-bar-row">
+              <span class="bar-label">Other (15%)</span>
+              <div class="bar-container">
+                <div class="bar-fill" style="width: 50%; background: #78716C;"></div>
+              </div>
+            </div>
+            <div class="comparison-bar-row">
+              <span class="bar-label">Burglary (12%)</span>
+              <div class="bar-container">
+                <div class="bar-fill" style="width: 40%; background: #374151;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Environmental -->
+      <div class="subsection">
+        <h3 class="subsection-title">Environmental Factors</h3>
+        <div class="environmental-grid">
+          <div class="environmental-card">
+            <h4>Flood Risk</h4>
+            <div class="env-status env-status-low">Very Low</div>
+            <p>No significant flood risk from rivers or surface water</p>
+          </div>
+          <div class="environmental-card">
+            <h4>Air Quality</h4>
+            <div class="env-status env-status-good">Good</div>
+            <p>Air quality meets UK objectives</p>
+          </div>
+          <div class="environmental-card">
+            <h4>Green Space</h4>
+            <div class="env-status env-status-good">0.3 miles</div>
+            <p>Wolverton Mill Park nearby</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 9: Utilities & Connectivity -->
+    <section class="report-section">
+      <div class="section-header">
+        <h2 class="section-title">Utilities & Connectivity</h2>
+        <p class="section-subtitle">Broadband, mobile and utilities</p>
+      </div>
+
+      <div class="utilities-grid">
+        <div class="utility-card">
+          <h4>Broadband</h4>
+          <div class="utility-detail">
+            <span class="utility-label">Fastest Available:</span>
+            <span class="utility-value">Ultrafast (1000 Mbps)</span>
+          </div>
+          <div class="utility-detail">
+            <span class="utility-label">Technology:</span>
+            <span class="utility-value">FTTP (Full Fibre)</span>
+          </div>
+          <div class="utility-availability">
+            <span class="availability-good">✓ Available</span>
+          </div>
+        </div>
+
+        <div class="utility-card">
+          <h4>Mobile Coverage</h4>
+          <div class="utility-detail">
+            <span class="utility-label">4G Coverage:</span>
+            <span class="utility-value">All Networks</span>
+          </div>
+          <div class="utility-detail">
+            <span class="utility-label">5G Coverage:</span>
+            <span class="utility-value">EE, Vodafone</span>
+          </div>
+          <div class="utility-availability">
+            <span class="availability-good">✓ Excellent</span>
+          </div>
+        </div>
+
+        <div class="utility-card">
+          <h4>Utilities</h4>
+          <div class="utility-detail">
+            <span class="utility-label">Water:</span>
+            <span class="utility-value">Anglian Water</span>
+          </div>
+          <div class="utility-detail">
+            <span class="utility-label">Sewerage:</span>
+            <span class="utility-value">Mains</span>
+          </div>
+          <div class="utility-availability">
+            <span class="availability-good">✓ Connected</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 10: Data Sources & Methodology -->
+    <section class="report-section">
+      <div class="section-header">
+        <h2 class="section-title">Data Sources & Methodology</h2>
+        <p class="section-subtitle">Transparency and provenance</p>
+      </div>
+
+      <div class="methodology-card">
+        <h4>38+ Authoritative Data Sources</h4>
+        <div class="data-sources-grid">
+          <div class="data-source-item">HM Land Registry</div>
+          <div class="data-source-item">Ordnance Survey</div>
+          <div class="data-source-item">EPC Register (MHCLG)</div>
+          <div class="data-source-item">VOA Council Tax</div>
+          <div class="data-source-item">Planning Portal</div>
+          <div class="data-source-item">Environment Agency</div>
+          <div class="data-source-item">Police.uk</div>
+          <div class="data-source-item">Ofsted</div>
+          <div class="data-source-item">DfE School Data</div>
+          <div class="data-source-item">ONS Census Data</div>
+          <div class="data-source-item">TfL / National Rail</div>
+          <div class="data-source-item">Ofcom Broadband</div>
+          <div class="data-source-item">+26 additional sources</div>
+        </div>
+      </div>
+
+      <div class="confidence-methodology-card">
+        <h4>Market Intelligence Methodology</h4>
+        <p>Market average valuations are derived from Land Registry House Price Index (HPI) data:</p>
+        <ul>
+          <li><strong>Data Source:</strong> Official HM Land Registry transaction records (UK Government Open Data)</li>
+          <li><strong>Calculation Method:</strong> Median and mean prices calculated from all recorded sales in the postcode sector (MK12) for matching property type (flats)</li>
+          <li><strong>Sample Size:</strong> Based on 28 comparable transactions in 2025 YTD, and 42 transactions over the past 12 months</li>
+          <li><strong>Market Trends:</strong> Annual growth rate of +49.6% observed from 2024 to 2025 (YTD), indicating strong local market appreciation</li>
+          <li><strong>Position Analysis:</strong> Your property is valued at +7.7% above the local market average, reflecting premium characteristics or condition</li>
+        </ul>
+      </div>
+
+      <div class="confidence-methodology-card">
+        <h4>Confidence Score Calculation</h4>
+        <p>Our confidence score (78% for this property) reflects four key factors:</p>
+        <ul>
+          <li><strong>Data Quality (95%):</strong> Excellent coverage across all data sources with recent EPC records and comprehensive Land Registry history</li>
+          <li><strong>Market Activity (72%):</strong> Moderate sales volume in the area with good comparable evidence from recent transactions</li>
+          <li><strong>Property Uniqueness (85%):</strong> Standard property type with many similar comparables in the local market</li>
+          <li><strong>Area Stability (68%):</strong> Steady price growth with moderate volatility observed in recent years</li>
+        </ul>
+      </div>
+
+      <div class="limitations-card">
+        <h4>Limitations & Assumptions</h4>
+        <ul>
+          <li>This is a desktop valuation based on available data without physical inspection</li>
+          <li>Assumes property is in average condition for age and type</li>
+          <li>Does not account for internal improvements/deterioration not reflected in EPC data</li>
+          <li>Rental estimates based on market data; actual achievable rent may vary</li>
+          <li>Planning data accurate as of report generation date; verify directly with local authority</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Section 11: Data Export (if purchased) -->
+    <div class="professional-feature" data-feature="export">
+      <div class="feature-locked-overlay">
+        <div class="feature-locked-content">
+          <h4>🔒 Raw Data Export Add-On Required</h4>
+          <p>Export all report data to CSV/Excel</p>
+        </div>
+      </div>
+      <section class="report-section">
+        <div class="section-header">
+          <h2 class="section-title">Raw Data Export</h2>
+          <p class="section-subtitle">Download structured data for custom analysis</p>
+        </div>
+
+        <div class="export-card">
+          <h4>Available Data Exports</h4>
+          <div class="export-buttons">
+            <button class="btn-export" onclick="exportComparablesCSV()">
+              <span class="export-icon">📊</span>
+              <span class="export-text">
+                <strong>Comparable Properties</strong>
+                <span class="export-desc">Full comparables data with adjustments</span>
+              </span>
+            </button>
+            <button class="btn-export" onclick="exportPriceTrendsCSV()">
+              <span class="export-icon">📈</span>
+              <span class="export-text">
+                <strong>Price Trends</strong>
+                <span class="export-desc">Historical price data time series</span>
+              </span>
+            </button>
+            <button class="btn-export" onclick="exportFullDataCSV()">
+              <span class="export-icon">📋</span>
+              <span class="export-text">
+                <strong>Complete Report Data</strong>
+                <span class="export-desc">All data points in structured format</span>
+              </span>
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
+
+  </div>
+
+  <!-- Report Footer -->
+  <footer class="report-footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>Report Information</h4>
+        <p>Generated by Doorstep Professional Property Intelligence</p>
+        <p>Report ID: <span id="footer-report-id">DOR-2024-001542</span></p>
+        <p>Generated: <span id="footer-date">15 November 2024</span></p>
+      </div>
+      <div class="footer-section">
+        <h4>Important Notice</h4>
+        <p>This is a desktop valuation produced without physical inspection. For mortgage lending, legal transactions, or formal purposes, a physical inspection by a qualified surveyor is recommended.</p>
+      </div>
+      <div class="footer-section">
+        <h4>Disclaimer</h4>
+        <p>While we strive for accuracy, this report is provided for information purposes only. Users should independently verify critical information. Doorstep accepts no liability for decisions made based on this report.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Doorstep. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="professional-report.js"></script>
+  <script src="listing-report-integration.js"></script>
+</body>
+</html>

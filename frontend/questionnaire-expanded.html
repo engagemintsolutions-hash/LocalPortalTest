@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find Your Perfect Home - Doorstep</title>
+  <link rel="icon" type="image/png" href="doorstep-logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="questionnaire-wizard.css">
+  <style>
+    .importance-question { margin-bottom: 40px; padding-bottom: 40px; border-bottom: 1px solid #E5E7EB; }
+    .importance-question:last-child { border-bottom: none; }
+    .importance-header { margin-bottom: 20px; }
+    .importance-header h4 { font-size: 18px; color: var(--color-teal-dark); margin-bottom: 6px; }
+    .importance-header p { font-size: 14px; color: var(--color-text-secondary); margin: 0; }
+    .importance-slider-row { display: flex; align-items: center; gap: 16px; margin-bottom: 12px; }
+    .importance-slider-row span { font-size: 13px; color: var(--color-text-secondary); white-space: nowrap; }
+    .importance-slider-row input[type="range"] { flex: 1; }
+    .importance-result { font-size: 16px; font-weight: 600; color: var(--color-coral); text-align: center; min-height: 24px; }
+    .criteria-options { margin-top: 16px; padding: 16px; background: #F9FAFB; border-radius: 6px; }
+    .criteria-options.hidden { display: none; }
+    .criteria-options label { font-size: 13px; font-weight: 600; color: var(--color-teal-dark); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px; display: block; }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="header-content">
+        <a href="index.html" class="logo-link">
+          <img src="doorstep-logo.png" alt="Doorstep" class="header-logo">
+        </a>
+        <nav class="main-nav">
+          <a href="index.html">Home</a>
+          <a href="questionnaire-expanded.html" class="active">Find a Home</a>
+          <a href="professionals.html">Valuations</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="wizard-page">
+    <div class="wizard-container">
+
+      <!-- Progress Bar -->
+      <div class="progress-container">
+        <div class="progress-bar">
+          <div class="progress-fill" id="progress-fill"></div>
+        </div>
+        <div class="progress-steps">
+          <div class="progress-step active" data-step="1"><div class="step-circle">1</div><span>Budget</span></div>
+          <div class="progress-step" data-step="2"><div class="step-circle">2</div><span>Property</span></div>
+          <div class="progress-step" data-step="3"><div class="step-circle">3</div><span>Location</span></div>
+          <div class="progress-step" data-step="4"><div class="step-circle">4</div><span>Schools</span></div>
+          <div class="progress-step" data-step="5"><div class="step-circle">5</div><span>Transport</span></div>
+          <div class="progress-step" data-step="6"><div class="step-circle">6</div><span>Area</span></div>
+          <div class="progress-step" data-step="7"><div class="step-circle">7</div><span>Features</span></div>
+          <div class="progress-step" data-step="8"><div class="step-circle">8</div><span>Results</span></div>
+        </div>
+      </div>
+
+      <!-- Step 1: Budget -->
+      <div class="wizard-step active" id="step-1">
+        <div class="step-content">
+          <h1>What's your budget?</h1>
+          <p class="subtitle">We'll find properties within your price range</p>
+
+          <div class="form-group-large">
+            <label>Maximum budget</label>
+            <div class="budget-input">
+              <span class="currency">£</span>
+              <input type="number" id="budget-max" placeholder="500,000" step="10000" value="2000000" required>
+            </div>
+          </div>
+
+          <div class="form-group-large">
+            <label>Minimum budget (optional)</label>
+            <div class="budget-input">
+              <span class="currency">£</span>
+              <input type="number" id="budget-min" placeholder="200,000" step="10000">
+            </div>
+          </div>
+
+          <div class="popular-budgets">
+            <p>Popular budgets:</p>
+            <button type="button" class="budget-quick" onclick="setBudget(500000)">£500k</button>
+            <button type="button" class="budget-quick" onclick="setBudget(750000)">£750k</button>
+            <button type="button" class="budget-quick" onclick="setBudget(1000000)">£1M</button>
+            <button type="button" class="budget-quick" onclick="setBudget(1500000)">£1.5M</button>
+            <button type="button" class="budget-quick" onclick="setBudget(2000000)">£2M</button>
+          </div>
+
+          <button class="btn btn-primary btn-next" onclick="nextStep()">Continue</button>
+        </div>
+      </div>
+
+      <!-- Step 2: Property Basics -->
+      <div class="wizard-step" id="step-2">
+        <div class="step-content">
+          <h1>Property Requirements</h1>
+          <p class="subtitle">Tell us about your ideal home</p>
+
+          <div class="form-group-large">
+            <label>Minimum Bedrooms</label>
+            <div class="bedroom-selector">
+              <button type="button" class="bedroom-btn" data-beds="1">1</button>
+              <button type="button" class="bedroom-btn" data-beds="2">2</button>
+              <button type="button" class="bedroom-btn" data-beds="3">3</button>
+              <button type="button" class="bedroom-btn active" data-beds="4">4</button>
+              <button type="button" class="bedroom-btn" data-beds="5">5+</button>
+            </div>
+          </div>
+
+          <div class="form-group-large">
+            <label>Minimum Bathrooms</label>
+            <div class="bedroom-selector">
+              <button type="button" class="bathroom-btn" data-baths="1">Any</button>
+              <button type="button" class="bathroom-btn active" data-baths="2">2+</button>
+              <button type="button" class="bathroom-btn" data-baths="3">3+</button>
+              <button type="button" class="bathroom-btn" data-baths="4">4+</button>
+            </div>
+          </div>
+
+          <div class="form-group-large">
+            <label>Property Type (select all that interest you)</label>
+            <div class="property-type-grid">
+              <div class="property-type-card active" data-type="flat"><h3>Flat</h3><p>Apartment</p></div>
+              <div class="property-type-card" data-type="terraced"><h3>Terraced</h3><p>Town House</p></div>
+              <div class="property-type-card active" data-type="semi_detached"><h3>Semi-Detached</h3><p>Shared Wall</p></div>
+              <div class="property-type-card active" data-type="detached"><h3>Detached</h3><p>Standalone</p></div>
+            </div>
+          </div>
+
+          <div class="form-group-large">
+            <label>Tenure Preference</label>
+            <select id="tenure-pref" class="large-input">
+              <option value="any">Any</option>
+              <option value="freehold">Freehold only</option>
+              <option value="leasehold_ok">Leasehold acceptable</option>
+            </select>
+          </div>
+
+          <div class="wizard-nav">
+            <button class="btn btn-secondary" onclick="prevStep()">Back</button>
+            <button class="btn btn-primary btn-next" onclick="nextStep()">Continue</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 3: Location -->
+      <div class="wizard-step" id="step-3">
+        <div class="step-content">
+          <h1>Where do you want to live?</h1>
+          <p class="subtitle">Define your preferred areas</p>
+
+          <div class="form-group-large">
+            <label>Postcode areas or towns</label>
+            <input type="text" id="postcode-areas" placeholder="e.g. SW1, Chelsea, Brighton" class="large-input" value="London, SW1">
+            <small>Separate multiple areas with commas</small>
+          </div>
+
+          <div class="form-group-large">
+            <label>Search radius from these areas</label>
+            <div class="radius-slider-container">
+              <input type="range" id="radius-slider" min="1" max="50" value="20" step="1">
+              <div class="radius-value"><span id="radius-value">20</span> km</div>
+            </div>
+          </div>
+
+          <div class="wizard-nav">
+            <button class="btn btn-secondary" onclick="prevStep()">Back</button>
+            <button class="btn btn-primary btn-next" onclick="nextStep()">Continue</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 4: Schools & Family -->
+      <div class="wizard-step" id="step-4">
+        <div class="step-content">
+          <h1>Schools & Education</h1>
+          <p class="subtitle">How important are school quality and proximity?</p>
+
+          <div class="importance-question">
+            <div class="importance-header">
+              <h4>Outstanding-rated Schools Nearby</h4>
+              <p>Proximity to Ofsted Outstanding primary and secondary schools</p>
+            </div>
+            <div class="importance-slider-row">
+              <span>Not important</span>
+              <input type="range" id="imp-schools" min="0" max="10" value="0" class="priority-slider" onchange="updateImportance('schools', this.value)">
+              <span>Essential</span>
+            </div>
+            <div class="importance-result" id="result-schools">Not important</div>
+            <div id="criteria-schools" class="criteria-options hidden">
+              <label>Maximum distance to school</label>
+              <select id="max-school-dist">
+                <option value="500">500m</option>
+                <option value="1000" selected>1km</option>
+                <option value="2000">2km</option>
+                <option value="3000">3km</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="importance-question">
+            <div class="importance-header">
+              <h4>School Catchment Area</h4>
+              <p>Must be within catchment for specific schools</p>
+            </div>
+            <div class="importance-slider-row">
+              <span>Not important</span>
+              <input type="range" id="imp-catchment" min="0" max="10" value="0" class="priority-slider" onchange="updateImportance('catchment', this.value)">
+              <span>Essential</span>
+            </div>
+            <div class="importance-result" id="result-catchment">Not important</div>
+          </div>
+
+          <div class="wizard-nav">
+            <button class="btn btn-secondary" onclick="prevStep()">Back</button>
+            <button class="btn btn-primary btn-next" onclick="nextStep()">Continue</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 5: Transport & Commute -->
+      <div class="wizard-step" id="step-5">
+        <div class="step-content">
+          <h1>Transport & Connectivity</h1>
+          <p class="subtitle">How do you plan to get around?</p>
+
+          <div class="importance-question">
+            <div class="importance-header">
+              <h4>Walking Distance to Train/Tube Station</h4>
+              <p>Quick access to rail transport for commuting</p>
+            </div>
+            <div class="importance-slider-row">
+              <span>Not important</span>
+              <input type="range" id="imp-station" min="0" max="10" value="0" class="priority-slider" onchange="updateImportance('station', this.value)">
+              <span>Essential</span>
+            </div>
+            <div class="importance-result" id="result-station">Not important</div>
+            <div id="criteria-station" class="criteria-options hidden">
+              <label>Maximum walking distance to station</label>
+              <select id="max-station-dist">
+                <option value="400">5 min walk (400m)</option>
+                <option value="800" selected>10 min walk (800m)</option>
+                <option value="1200">15 min walk (1.2km)</option>
+                <option value="2000">25 min walk (2km)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="importance-question">
+            <div class="importance-header">
+              <h4>Proximity to Airport</h4>
+              <p>Convenient for frequent flyers</p>
+            </div>
+            <div class="importance-slider-row">
+              <span>Not important</span>
+              <input type="range" id="imp-airport" min="0" max="10" value="0" class="priority-slider" onchange="updateImportance('airport', this.value)">
+              <span>Essential</span>
+            </div>
+            <div class="importance-result" id="result-airport">Not important</div>
+            <div id="criteria-airport" class="criteria-options hidden">
+              <label>Target Airport</label>
+              <select id="target-airport">
+                <option value="LHR">London Heathrow</option>
+                <option value="LGW">London Gatwick</option>
+                <option value="STN">Stansted</option>
+                <option value="LCY">London City</option>
+                <option value="LTN">Luton</option>
+              </select>
+              <label style="margin-top: 12px;">Maximum distance</label>
+              <select id="max-airport-dist">
+                <option value="10">10km</option>
+                <option value="15" selected>15km</option>
+                <option value="25">25km</option>
+                <option value="50">50km</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="importance-question">
+            <div class="importance-header">
+              <h4>Good Bus Connectivity</h4>
+              <p>Regular bus services nearby</p>
+            </div>
+            <div class="importance-slider-row">
+              <span>Not important</span>
+              <input type="range" id="imp-bus" min="0" max="10" value="0" class="priority-slider" onchange="updateImportance('bus', this.value)">
+              <span>Essential</span>
+            </div>
+            <div class="importance-result" id="result-bus">Not important</div>
+          </div>
+
+          <div class="wizard-nav">
+            <button class="btn btn-secondary" onclick="prevStep()">Back</button>
+            <button class="btn btn-primary btn-next" onclick="nextStep()">Continue</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 6: Area Quality & Safety -->
+      <div class="wizard-step" id="step-6">
+        <div class="step-content">
+          <h1>Area Quality & Safety</h1>
+          <p class="subtitle">Define your safety and quality standards</p>
+
+          <div class="importance-question">
+            <div class="importance-header">
+              <h4>Low Crime Area</h4>
+              <p>Safety and low crime rates (bottom 25th percentile)</p>
+            </div>
+            <div class="importance-slider-row">
+              <span>Not important</span>
+              <input type="range" id="imp-crime" min="0" max="10" value="0" class="priority-slider" onchange="updateImportance('crime', this.value)">
+              <span>Essential</span>
+            </div>
+            <div class="importance-result" id="result-crime">Not important</div>
+          </div>
+
+          <div class="importance-question">
+            <div class="importance-header">
+              <h4>High Quality Area (IMD Decile)</h4>
+              <p>Low deprivation, high quality neighborhood</p>
+            </div>
+            <div class="importance-slider-row">
+              <span>Not important</span>
+              <input type="range" id="imp-imd" min="0" max="10" value="0" class="priority-slider" onchange="updateImportance('imd', this.value)">
+              <span>Essential</span>
+            </div>
+            <div class="importance-result" id="result-imd">Not important</div>
+            <div id="criteria-imd" class="criteria-options hidden">
+              <label>Minimum area quality</label>
+              <select id="min-imd">
+                <option value="5">Average (5+/10)</option>
+                <option value="7" selected>Good (7+/10)</option>
+                <option value="9">Excellent (9+/10)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="importance-question">
+            <div class="importance-header">
+              <h4>Flood Risk</h4>
+              <p>Avoid properties in flood risk areas</p>
+            </div>
+            <div class="importance-slider-row">
+              <span>Not important</span>
+              <input type="range" id="imp-flood" min="0" max="10" value="0" class="priority-slider" onchange="updateImportance('flood', this.value)">
+              <span>Essential</span>
+            </div>
+            <div class="importance-result" id="result-flood">Not important</div>
+            <div id="criteria-flood" class="criteria-options hidden">
+              <label>Maximum acceptable flood risk</label>
+              <select id="max-flood">
+                <option value="very_low" selected>Very Low only</option>
+                <option value="low">Low or better</option>
+                <option value="medium">Medium or better</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="wizard-nav">
+            <button class="btn btn-secondary" onclick="prevStep()">Back</button>
+            <button class="btn btn-primary btn-next" onclick="nextStep()">Continue</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 7: Property Features & Environment -->
+      <div class="wizard-step" id="step-7">
+        <div class="step-content">
+          <h1>Property Features</h1>
+          <p class="subtitle">Energy efficiency, connectivity, and special features</p>
+
+          <div class="importance-question">
+            <div class="importance-header">
+              <h4>Energy Performance (EPC Rating)</h4>
+              <p>Modern, energy-efficient property</p>
+            </div>
+            <div class="importance-slider-row">
+              <span>Not important</span>
+              <input type="range" id="imp-epc" min="0" max="10" value="0" class="priority-slider" onchange="updateImportance('epc', this.value)">
+              <span>Essential</span>
+            </div>
+            <div class="importance-result" id="result-epc">Not important</div>
+            <div id="criteria-epc" class="criteria-options hidden">
+              <label>Minimum EPC rating</label>
+              <select id="min-epc">
+                <option value="A">A (Best)</option>
+                <option value="B">B</option>
+                <option value="C" selected>C</option>
+                <option value="D">D</option>
+                <option value="E">E or better</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="importance-question">
+            <div class="importance-header">
+              <h4>Fast Broadband (300+ Mbps)</h4>
+              <p>Ultrafast internet for remote work</p>
+            </div>
+            <div class="importance-slider-row">
+              <span>Not important</span>
+              <input type="range" id="imp-broadband" min="0" max="10" value="0" class="priority-slider" onchange="updateImportance('broadband', this.value)">
+              <span>Essential</span>
+            </div>
+            <div class="importance-result" id="result-broadband">Not important</div>
+          </div>
+
+          <div class="importance-question">
+            <div class="importance-header">
+              <h4>Conservation Area</h4>
+              <p>Protected historic character area</p>
+            </div>
+            <div class="importance-slider-row">
+              <span>Avoid</span>
+              <input type="range" id="imp-conservation" min="-5" max="10" value="0" class="priority-slider" onchange="updateImportance('conservation', this.value)">
+              <span>Prefer</span>
+            </div>
+            <div class="importance-result" id="result-conservation">No preference</div>
+          </div>
+
+          <div class="importance-question">
+            <div class="importance-header">
+              <h4>Proximity to Coast/Beach</h4>
+              <p>Seaside living or weekend beach access</p>
+            </div>
+            <div class="importance-slider-row">
+              <span>Not important</span>
+              <input type="range" id="imp-coast" min="0" max="10" value="0" class="priority-slider" onchange="updateImportance('coast', this.value)">
+              <span>Essential</span>
+            </div>
+            <div class="importance-result" id="result-coast">Not important</div>
+            <div id="criteria-coast" class="criteria-options hidden">
+              <label>Maximum distance to coast</label>
+              <select id="max-coast-dist">
+                <option value="5">5km (seafront)</option>
+                <option value="10">10km (very close)</option>
+                <option value="25" selected>25km (day trip)</option>
+                <option value="50">50km (weekend)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="importance-question">
+            <div class="importance-header">
+              <h4>Near Parks & Green Spaces</h4>
+              <p>Access to parks, commons, or nature reserves</p>
+            </div>
+            <div class="importance-slider-row">
+              <span>Not important</span>
+              <input type="range" id="imp-parks" min="0" max="10" value="0" class="priority-slider" onchange="updateImportance('parks', this.value)">
+              <span>Essential</span>
+            </div>
+            <div class="importance-result" id="result-parks">Not important</div>
+          </div>
+
+          <div class="importance-question">
+            <div class="importance-header">
+              <h4>Value for Money (Undervalued)</h4>
+              <p>Properties priced below AVM estimate - investment opportunity</p>
+            </div>
+            <div class="importance-slider-row">
+              <span>Not important</span>
+              <input type="range" id="imp-value" min="0" max="10" value="0" class="priority-slider" onchange="updateImportance('value', this.value)">
+              <span>Essential</span>
+            </div>
+            <div class="importance-result" id="result-value">Not important</div>
+          </div>
+
+          <div class="importance-question">
+            <div class="importance-header">
+              <h4>No Planning Issues</h4>
+              <p>Avoid properties with recent planning refusals or concerns</p>
+            </div>
+            <div class="importance-slider-row">
+              <span>Not important</span>
+              <input type="range" id="imp-planning" min="0" max="10" value="0" class="priority-slider" onchange="updateImportance('planning', this.value)">
+              <span>Essential</span>
+            </div>
+            <div class="importance-result" id="result-planning">Not important</div>
+          </div>
+
+          <div class="wizard-nav">
+            <button class="btn btn-secondary" onclick="prevStep()">Back</button>
+            <button class="btn btn-primary btn-large" onclick="searchProperties()">
+              <span>Find My Perfect Home</span>
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M19 19L13 13M15 8C15 11.866 11.866 15 8 15C4.13401 15 1 11.866 1 8C1 4.13401 4.13401 1 8 1C11.866 1 15 4.13401 15 8Z" stroke="currentColor" stroke-width="2"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 8: Results -->
+      <div class="wizard-step" id="step-8">
+        <div class="step-content">
+          <div id="loading-state">
+            <div class="loading-spinner">
+              <div class="spinner"></div>
+              <p>Analyzing properties against your criteria...</p>
+            </div>
+          </div>
+
+          <div id="results-content" style="display: none;"></div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <script src="questionnaire-expanded.js"></script>
+  <script>
+    // Override totalSteps for expanded version
+    wizardState.totalSteps = 8;
+
+    // Importance tracking
+    const importance = {};
+
+    function updateImportance(key, value) {
+      const val = parseInt(value);
+      importance[key] = val;
+
+      // Update result text
+      const resultEl = document.getElementById(`result-${key}`);
+      const criteriaEl = document.getElementById(`criteria-${key}`);
+
+      if (val === 0) {
+        resultEl.textContent = "Not important";
+        resultEl.style.color = "#9CA3AF";
+        if (criteriaEl) criteriaEl.classList.add('hidden');
+      } else if (val <= 3) {
+        resultEl.textContent = `Somewhat important (${val}/10)`;
+        resultEl.style.color = "#F59E0B";
+        if (criteriaEl) criteriaEl.classList.remove('hidden');
+      } else if (val <= 7) {
+        resultEl.textContent = `Important (${val}/10)`;
+        resultEl.style.color = "#EF6A68";
+        if (criteriaEl) criteriaEl.classList.remove('hidden');
+      } else {
+        resultEl.textContent = `Very important (${val}/10)`;
+        resultEl.style.color = "#19727F";
+        if (criteriaEl) criteriaEl.classList.remove('hidden');
+      }
+    }
+
+    // Override search to include all importance weights
+    async function searchProperties() {
+      wizardState.currentStep = 8;
+      showStep(8);
+      updateProgress();
+
+      document.getElementById('loading-state').style.display = 'block';
+      document.getElementById('results-content').style.display = 'none';
+
+      const questionnaire = buildExpandedQuestionnaire();
+
+      try {
+        const response = await fetch('http://localhost:8000/api/search', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(questionnaire)
+        });
+
+        if (!response.ok) throw new Error('Search failed');
+
+        const data = await response.json();
+        displayResults(data);
+
+      } catch (error) {
+        console.error('Search error:', error);
+        document.getElementById('loading-state').style.display = 'none';
+        document.getElementById('results-content').innerHTML = `
+          <div style="text-align: center; padding: 60px 20px;">
+            <h2 style="color: var(--color-teal-dark); margin-bottom: 16px;">Oops! Something went wrong</h2>
+            <p>We couldn't complete your search. Please try again.</p>
+            <button class="btn btn-primary" onclick="prevStep()">Back</button>
+          </div>
+        `;
+        document.getElementById('results-content').style.display = 'block';
+      }
+    }
+
+    function buildExpandedQuestionnaire() {
+      saveStepData(1);
+      saveStepData(2);
+      saveStepData(3);
+
+      const postcodes = wizardState.data.postcodeAreas
+        .split(',')
+        .map(p => p.trim().toUpperCase())
+        .filter(p => p);
+
+      return {
+        budget_max: wizardState.data.budget_max,
+        budget_min: wizardState.data.budget_min,
+        bedrooms_min: wizardState.data.bedrooms,
+        bathrooms_min: parseInt(document.querySelector('.bathroom-btn.active')?.dataset.baths) || 1,
+        property_types: wizardState.data.propertyTypes.length > 0 ? wizardState.data.propertyTypes : null,
+        tenure_preference: document.getElementById('tenure-pref').value,
+
+        location: {
+          postcode_areas: postcodes,
+          radius_km: wizardState.data.radius
+        },
+
+        importance_weights: {
+          schools: (importance.schools || 0) / 10,
+          catchment: (importance.catchment || 0) / 10,
+          station: (importance.station || 0) / 10,
+          airport: (importance.airport || 0) / 10,
+          bus: (importance.bus || 0) / 10,
+          crime: (importance.crime || 0) / 10,
+          imd: (importance.imd || 0) / 10,
+          flood: (importance.flood || 0) / 10,
+          epc: (importance.epc || 0) / 10,
+          broadband: (importance.broadband || 0) / 10,
+          conservation: (importance.conservation || 0) / 10,
+          coast: (importance.coast || 0) / 10,
+          parks: (importance.parks || 0) / 10,
+          value: (importance.value || 0) / 10,
+          planning: (importance.planning || 0) / 10
+        },
+
+        criteria: {
+          max_school_dist_m: importance.schools > 0 ? parseInt(document.getElementById('max-school-dist')?.value || 1000) : null,
+          max_station_dist_m: importance.station > 0 ? parseInt(document.getElementById('max-station-dist')?.value || 800) : null,
+          target_airport: importance.airport > 0 ? document.getElementById('target-airport')?.value : null,
+          max_airport_dist_km: importance.airport > 0 ? parseInt(document.getElementById('max-airport-dist')?.value || 15) : null,
+          min_imd_decile: importance.imd > 0 ? parseInt(document.getElementById('min-imd')?.value || 7) : null,
+          max_flood_risk: importance.flood > 0 ? document.getElementById('max-flood')?.value : null,
+          min_epc_rating: importance.epc > 0 ? document.getElementById('min-epc')?.value : null,
+          max_coast_dist_km: importance.coast > 0 ? parseInt(document.getElementById('max-coast-dist')?.value || 25) : null
+        }
+      };
+    }
+
+    // Setup bathroom selector
+    document.querySelectorAll('.bathroom-btn').forEach(btn => {
+      btn.addEventListener('click', function() {
+        document.querySelectorAll('.bathroom-btn').forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+      });
+    });
+  </script>
+
+</body>
+</html>
